@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Me
+{% endblock %}
+
+{% block main %}
+    <div id="box" style="width:90%; margin:auto">
+        <h1>{{ username }}'s Spots</h1>
+        <i>The more the merrier!</i>
+    </div>
+    {% if not rows %}
+        <br>Looking a little bit empty here, why not <a href="/create" style="color:#000000; font-size:20px">create one</a> today!<br>
+    {% else %}
+    <div class="row" text-align="center">
+        {% for data in rows %}
+        <div class="coloumn">
+            <div id="box">
+                <img src={{ data[5] | joinroute }} style="max-height:55%; max-width:100%"><br>
+                <div style="padding-left:2px;padding-right:2px">
+                Event | {{ data[0] }}<br>
+                Postal | {{ data[1] }}<br>
+                Place | {{ data[2] }}<br>
+                Created On {{ data[3] }} | 
+                {{ data[4] }}<br>
+                <form action="" method="post">
+                <button class="btn btn-danger" type="submit" name="del" value="{{ data[7] }}">Delete</button></form><br>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+{% endblock %}

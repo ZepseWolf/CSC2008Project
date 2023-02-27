@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    <div id="userbox">
+        <h1 style="padding-top:10px">Profile</h1>
+    {% if rows[0] != None %}
+        <img src="{{ rows[0] | joinroute }}" style="max-height:55%"><br>
+    {% else %}    
+        Pic | None<hr>
+    {% endif %}
+    <hr>
+    Username | {{ rows[1] }}<hr>
+    Email | {{ rows[2] }}<hr>
+    </div>
+    <a href="/change"><button id="btn" type="submit">Edit Profile</button></a>
+{% endblock %}

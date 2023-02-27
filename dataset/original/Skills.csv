@@ -1,0 +1,506 @@
+Skill;SP Cost;Type;Power;Attribute;Inheritable;Description
+Acceleration Boost;6;Support;0;Neutral;Yes;Doubles damage output in the next turn.
+Adhesive Bubble Blow;2;Physical;25;Plant;No;Physical attack, 25 Plant damage to one foe. 10% chance of reducing target's SPD by 10%.
+Agility Charge;6;Support;0;Neutral;Yes;Increases EVA of one battle member by 10%.
+Aguichant Levres;40;Magic;0;Light;No;INT-penetrating strong Light attack on one foe. Absorbs 50% of the damage as HP.
+Air Bubbles;2;Magic;30;Water;No;Magic attack, 30 Water damage to one foe.
+Air Shot;5;Magic;50;Wind;No;Magic attack, 50 Wind damage to one foe. 10% chance of increasing SPD by 10%.
+Ambush Crunch;10;Physical;90;Neutral;No;Physical attack, 90 Neutral damage to one foe. Tends to critical more often.
+Amethyst Mandala;20;Magic;70;Light;No;Magic attack, 70 Light damage to all foes. Undoes base stat boosts on target.
+Animal Nail;15;Physical;115;Earth;No;Physical attack, 115 Earth damage to one foe.
+Anti-Bug;4;Support;0;Neutral;Yes;Recover Bug from one party member and restore some HP.
+Anti-Panic;4;Support;0;Neutral;Yes;Recover Panic from one party member and restore some HP.
+Anti-Paralysis;4;Support;0;Neutral;Yes;Recover Paralyze from one party member and restore some HP.
+Anti-Poison;4;Support;0;Neutral;Yes;Recover Poison from one party member and restore some HP.
+Anti-Sleep;4;Support;0;Neutral;Yes;Recover Sleep from one party member and restore some HP.
+Anti-Stun;4;Support;0;Neutral;Yes;Recover Stun from one party member and restore some HP.
+Antidote;4;Support;0;Neutral;Yes;Recover Dot from one party member and restore some HP.
+Arctic Blizzard;20;Physical;125;Water;No;Physical attack, 125 Water damage to one foe. 40% chance of stunning target.
+Atomic Blaster;15;Physical;250;Electric;No;Physical attack, 250 Electric damage to one foe. Cannot move from recoil for one turn.
+Atomic Ray;20;Physical;125;Electric;No;Physical attack, 125 Electric damage to one foe. 40% chance of stunning target.
+Attack Break;6;Support;0;Neutral;Yes;Reduces ATK of one enemy by 10%.
+Attack Break Field;20;Support;0;Neutral;Yes;Reduces ATK of all enemies by 10%.
+Attack Charge;6;Support;0;Neutral;Yes;Increases ATK of one member by 10%.
+Attack Charge Field;20;Support;0;Neutral;Yes;Increases ATK of all battle members by 10%.
+Aura;10;Support;0;Neutral;Yes;Restores a little HP for all party members.
+Aurora Blaster;25;Magic;120;Light;No;Magic attack, 120 Light damage to one foe. Undoes stat boosts on target.
+Aurora Undulation;20;Magic;80;Light;No;Magic Attack, 80 Light damage to all foes. Always hits. Removes all abnormal statuses.
+Awesome Quake I;4;Physical;30;Earth;Yes;Physical attack, 30 Earth damage to all foes. 95% accuracy.
+Awesome Quake II;7;Physical;45;Earth;Yes;Physical attack, 45 Earth damage to all foes. 95% accuracy.
+Awesome Quake III;10;Physical;75;Earth;Yes;Physical attack, 75 Earth damage to all foes. 95% accuracy.
+Baby Breath;5;Physical;75;Fire;No;Physical attack, 75 Fire damage to one foe.
+Banana Slip;20;Magic;115;Dark;No;Magic attack, 115 Dark damage to one foe. 80% chance of stunning target.
+Bantyo Blade;20;Physical;150;Neutral;No;Physical attack, 150 Neutral damage to one foe. Damage tends to fluctuate.
+Berserk Sword;15;Direct;0;Neutral;No;Inflict Death on one enemy. 30% accuracy.
+Bifrost;25;Magic;120;Light;No;Magic attack, 120 Light damage to one foe. Increases SPD by 10%.
+Big Bang Voice;30;Physical;0;Neutral;No;DEF-penetrating medium Neutral attack on all foes. 20% chance of inflicting Paralysis.
+Bit Fire;10;Physical;30;Fire;No;3 physical attacks, 30 Fire damage to one foe.
+Bite;2;Physical;40;Neutral;No;Physical attack, 40 Neutral damage to one foe.
+Biting Crush;25;Physical;145;Water;No;Physical attack, 145 Water damage to one foe. 15% chance of instantly killing target.
+Black Aura Blast;25;Magic;110;Dark;No;Magic attack, 110 Dark damage to one foe. Decreases target's DEF by 20%
+Black Aura Blast;25;Magic;110;Dark;No;Magic attack, 110 Dark damage to one foe. Reduces target's DEF by 20%.
+Black Pearl Blast;5;Magic;25;Water;No;Magic attack, 25 Water damage to all foes.
+Black Rain;25;Physical;110;Dark;No;Physical attack, 110 Dark damage to all foes. 20% chance of confusing target.
+Black Tornado;35;Physical;0;Dark;No;DEF-penetrating extra strong Dark attack on one foe.
+Blade of the Dragon King;25;Physical;150;Light;No;Physical attack, 150 Light damage to one foe.
+Blade of the Dragon King;25;Physical;120;Light;No;Physical attack, 120 Light damage to one foe.
+Blaze Sonic Breath;15;Physical;100;Fire;No;Physical attack, 100 Fire damage to one foe. Increases SPD by 10%.
+Blazing Ice;5;Magic;60;Water;No;Magic attack, 60 Water damage to one foe.
+Blinded;15;Physical;115;Neutral;No;Physical attack, 115 Neutral damage to one foe. Tends to critical more often.
+Blinding Ray;5;Magic;65;Light;No;Magic attack, 65 Light damage to one foe.
+Blue Blaster;5;Physical;65;Fire;No;Physical attack, 65 Fire damage to one foe. 10% chance of reducing target's DEF by 10%.
+Blue Flare Breath;10;Physical;85;Fire;No;Physical attack, 85 Fire damage to one foe. Always hits. Reduces target's DEF by 10%.
+Brain Rupture;20;Magic;115;Electric;No;Magic attack, 115 Electric damage to one foe. 50% chance of confusing target.
+Branch Drain;10;Physical;75;Plant;No;Physical attack, 75 Plant damage to one foe, absorbs 20% into HP.
+Brave Metal;20;Physical;200;Dark;No;Physical attack, 200 Dark damage to one foe. Cannot move from recoil for one turn.
+Breath of the Gods;10;Support;0;Neutral;No;Nullifies any damage received until next turn.
+Bubble Blow;2;Magic;30;Water;No;Magic attack, 30 Water damage to one foe.
+Bubbles;2;Magic;30;Water;No;Magic attack, 30 Water damage to one foe.
+Bunny Blades;15;Physical;55;Wind;No;2 physical attacks, 55 Wind damage to one foe.
+Burning Fist;10;Physical;80;Fire;No;Physical attack, 80 Fire damage to one foe. 30% chance of increasing ATK by 10%.
+Burst Flame I;3;Magic;55;Fire;Yes;Magic attack, 55 Fire damage to one foe. 95% accuracy.
+Burst Flame II;6;Magic;75;Fire;Yes;Magic attack, 75 Fire damage to one foe. 95% accuracy.
+Burst Flame III;9;Magic;95;Fire;Yes;Magic attack, 95 Fire damage to one foe. 95% accuracy.
+Burst Shot;20;Physical;50;Fire;No;2 physical attacks, 50 Fire damage to all foes.
+Catastrophe Cannon;20;Physical;80;Fire;No;3 physical attacks, 80 Fire damage to a foe. Cannot move from recoil for one turn.
+Celestial Arrow;15;Magic;100;Light;No;Magic attack, 100 Light damage to one foe. Always hits.
+Celestial Blade;20;Magic;90;Electric;No;Magic attack, 90 Electric damage to all foes.
+Celestial Blade;30;Physical;110;Light;No;Physical attack, 110 Light damage to all foes. Always hits.
+Chain Loss;8;Support;0;Neutral;Yes;Reduce COMBO for one enemy by 100%.
+Chain Max;8;Support;0;Neutral;Yes;Increase COMBO for one member by 100%.
+Chain Minus;4;Support;0;Neutral;Yes;Reduce COMBO for one enemy by 50%.
+Chain Plus;4;Support;0;Neutral;Yes;Increase COMBO for one member by 50%.
+Chaos Degradation;25;Direct;0;Neutral;No;Reduces HP of all foes by 25%.
+Character Reversal;10;Magic;30;Neutral;Yes;Magic attack, 30 Neutral damage to one foe. Makes target buggy. 70% accuracy.
+Cheese Bomb;5;Physical;70;Fire;No;Physical attack, 70 Fire damage to one foe.
+Cherry Bomb;15;Physical;65;Plant;No;Physical attack, 65 Plant damage to all foes.
+Chrono Breaker;10;Fixed;0;Neutral;No;Fixed damage of 150 to one foe. 30% chance of reducing target's SPD by 10%.
+Cog Crusher;5;Physical;70;Dark;No;Physical attack, 70 Dark damage to one foe. Always hits.
+Cold Flame;15;Physical;100;Fire;No;Physical attack, 100 Fire damage to one foe. Increases INT by 10%.
+Comet Hammer I;3;Physical;65;Earth;Yes;Physical attack, 65 Earth damage to one foe. 95% accuracy.
+Comet Hammer II;6;Physical;85;Earth;Yes;Physical attack, 85 Earth damage to one foe. 95% accuracy.
+Comet Hammer III;9;Physical;105;Earth;Yes;Physical attack, 105 Earth damage to one foe. 95% accuracy.
+Corona Blaster;15;Physical;30;Fire;No;3-6 physical attacks, 30 Fire damage to one foe.
+Corona Destroyer;40;Physical;0;Dark;No;DEF-penetrating strong Dark attack on one foe. Absorbs 20% of the damage as HP.
+Crazy Giggle;5;Physical;75;Dark;No;Physical attack, 75 Dark damage to one foe.
+Crescent Leaf I;3;Physical;65;Plant;Yes;Physical attack, 65 Plant damage to one foe. 95% accuracy.
+Crescent Leaf II;6;Physical;85;Plant;Yes;Physical attack, 85 Plant damage to one foe. 95% accuracy.
+Crescent Leaf III;9;Physical;105;Plant;Yes;Physical attack, 105 Plant damage to one foe. 95% accuracy.
+Crimson Curse;10;Physical;45;Fire;No;Physical attack, 45 Fire damage to all foes.
+Critical Charge;6;Support;0;Neutral;Yes;Increases CRIT of one battle member by 10%.
+Cross Blade;15;Physical;110;Light;No;Physical attack, 110 Light damage to one foe. Tends to critical more often.
+Cross-Counter;6;Support;0;Neutral;Yes;Counterattacks the enemy when you receive a physical attack.
+Crystal Cloud;10;Magic;30;Water;No;Magic attack, 30 Water damage to all foes.
+Crystal Revolution;25;Magic;90;Water;No;Magic attack, 90 Water damage to all foes. 20% of damage restored as HP.
+D-Grenade;10;Physical;40;Fire;No;Physical attack, 40 Fire damage to all foes. Always hits.
+Dark Prominence;40;Magic;0;Dark;No;INT-penetrating extra strong Dark attack on one foe. 50% chance of inflicting Crystallization.
+Dark Pupil;15;Physical;110;Dark;No;Physical attack, 110 Dark damage to one foe. 80% chance of poisoning target.
+Dark Roar;15;Physical;130;Dark;No;Physical attack, 130 Dark damage to one foe. 90% accuracy, tends to critical more often.
+Dark Terra Force;20;Physical;100;Dark;No;Physical attack, 100 Dark damage to all foes. 30% chance of increasing DEF by 20%.
+Darkness Wave;15;Magic;35;Dark;No;2 magic attacks, 35 Dark damage to all foes.
+Darkness Zone;40;Fixed;0;Neutral;No;Fixed damage of 444 to all foes.
+Data Crusher;10;Physical;90;Dark;No;Physical attack, 90 Dark damage to one foe. 5% chance of instantly killing target.
+Data Drain;5;Physical;35;Dark;No;Physical attack, 35 Dark damage to one foe, with 30% of damage restored as HP.
+Dead or Alive;25;Magic;130;Neutral;No;Magic attack, 130 Neutral damage to one foe. 10% to inflict a status effect, 5% chance of instantly killing target.
+Death Charm;10;Direct;0;Neutral;No;Reduce 10% HP from one enemy.
+Death Claw;10;Fixed;0;Neutral;No;Fixed damage of 200 to one foe. Absorbs 20% of the damage as HP.
+Death Parade Blaster;15;Physical;40;Light;No;2 physical attacks, 40 Light damage to all foes.
+Demi Darts;5;Physical;20;Dark;No;Physical attack, 20 Dark damage to all foes, absorbs 5% into HP.
+Demonic Disaster;25;Physical;140;Dark;No;Physical attack, 140 Dark damage to one foe.
+Desolation Claw;15;Physical;115;Neutral;No;Physical attack, 115 Neutral damage to one foe. 10% chance of instantly killing target.
+Destroyed Hook;35;Physical;0;Electric;No;DEF-penetrating strong Electric attack on one foe. 80% accuracy. Inflicts poison.
+Destroyed Rush;20;Physical;25;Earth;No;5 physical attacks, 25 Earth damage to one foe. Tends to critical more often.
+Destruction;10;Physical;40;Dark;Yes;Physical attack, 40 Dark damage to one foe. 10% chance to inflict Death.
+Destruction Cannon I;3;Physical;65;Dark;Yes;Physical attack, 65 Dark damage to one foe. 95% accuracy.
+Destruction Cannon II;6;Physical;85;Dark;Yes;Physical attack, 85 Dark damage to one foe. 95% accuracy.
+Destruction Cannon III;9;Physical;105;Dark;Yes;Physical attack, 105 Dark damage to one foe. 95% accuracy.
+Destruction Crush;20;Magic;80;Earth;No;Magic attack, 85 Earth damage to all foes.
+Diamond Shell;5;Physical;60;Earth;No;Physical attack, 60 Earth damage to one foe. 10% chance of increasing DEF by 10%.
+Diamond Storm;5;Magic;25;Plant;No;Magic attack, 25 Plant damage to all foes.
+Digital Bomb;15;Magic;80;Fire;No;Magic attack, 80 Fire damage to one foe. 5% chance of reducing base stats by 10%.
+Dimension Scissor;35;Physical;0;Plant;No;DEF-penetrating strong Plant attack on one foe. Tends to critical more often.
+Disaster Blaster;15;Magic;65;Light;No;Magic attack, 65 Light damage to all foes.
+Dispel;25;Support;0;Neutral;Yes;Remove basic debuffs from one party member and restore some HP.
+Divine Atonement;50;Magic;200;Light;No;Magic attack, 200 Light damage to all foes. Decreases INT by 50%. 90% accuracy.
+Divine Dragon Slash;35;Physical;0;Neutral;No;DEF-penetrating strong Neutral attack on one foe. Increases SPD by 10%.
+Divine Pierce;5;Magic;65;Light;No;Magic attack, 65 Light damage to one foe.
+Divine Pierce (Awake);20;Magic;90;Light;No;Magic attack, 90 Light damage to one foe.
+Dot Matrix;35;Physical;0;Neutral;No;DEF-penetrating strong Neutral attack on one foe. Absorbs 30% of the damage as HP.
+Double Backhand;5;Physical;20;Neutral;No;2 physical attacks, 20 Neutral damage to all foes.
+Double Impact;25;Physical;20;Dark;No;8 physical attacks, 20 Dark damage to one foe. 90% accuracy.
+Double Scissor Claw;30;Physical;0;Neutral;No;DEF-penetrating strong Neutral attack on one foe.
+Dragon Impulse;15;Physical;250;Wind;No;Physical attack, 250 Wind damage to one foe. Receive damage equal to 50% of HP from recoil.
+Dragon's Roar;25;Physical;60;Fire;No;2 physical attacks, 60 Fire damage to a foe and absorbs 50% of the damage as HP.
+Dragonic Impact;50;Physical;100;Fire;No;Physical attack, 100 Fire damage to all foes. Also knocks back targets.
+Dumdum Uppercut;10;Physical;90;Neutral;No;Physical attack, 90 Neutral damage to one foe. 10% chance of stunning target.
+Earth-Shattering Stomp;15;Physical;30;Dark;No;3-5 physical attacks, 30 Dark damage to one foe, with 20% of damage restored as HP.
+Eden's Javelin;20;Magic;120;Light;No;Magic attack, 120 Light damage to one foe. 30% chance of increasing INT by 20%.
+Eiseiryuoujin;35;Physical;0;Electric;No;DEF-penetrating strong Electric attack on one foe. Tends to critical hit more often.
+Elastic Bubbles;2;Magic;30;Water;No;Magic attack, 30 Water damage to one foe.
+Electric Shock;5;Magic;55;Electric;No;Magic attack, 55 Electric damage to one foe. 10% chance of paralyzing target.
+Electric Stun Blast;5;Physical;65;Electric;No;Physical attack, 65 Electric damage to one foe. 15% chance of paralyzing target.
+Electro Shocker;10;Magic;80;Electric;No;Magic attack, 80 Electric damage to one foe.
+Energy Bomb;15;Magic;100;Electric;No;Magic attack, 100 Electric damage to one foe. Always hits.
+Escape Dash;0;Support;0;Neutral;Yes;Flee from a battle.
+Eternal Nightmare;50;Magic;0;Dark;No;INT-penetrating medium Dark attack on all foes. 50% chance of putting target to sleep.
+Exhaust Flame;10;Physical;85;Fire;No;Physical attack, 85 Fire damage to one foe. 10% chance of increasing ATK by 10%.
+Extinction Wave;25;Magic;80;Light;No;Magic attack, 80 Light damage to all foes. Always hits.
+Extinction Wave;25;Magic;80;Light;No;Magic attack, 80 Light damage to all foes. Always hits.
+Eye of Nightmares;5;Magic;50;Dark;No;Magic attack, 50 Dark damage to one foe, 10% of damage restored as HP. Confuses target.
+Eye of the Gorgon;20;Support;0;Neutral;No;Decreases one foe's DEF by 30% and inflicts Confusion.
+Fang Strike;10;Physical;90;Fire;No;Physical attack, 90 Fire damage to one foe. 10% chance to stun.
+Feather Slash;10;Physical;0;Wind;No;DEF-penetrating medium Wind attack on one foe.
+Fenrir Sword;15;Physical;130;Water;No;Physical attack, 130 Water damage to one foe. 15% chance of instantly killing target.
+Fiery Fastball;5;Physical;70;Fire;No;Physical attack, 70 Fire damage to one foe.
+Fif Cross;10;Physical;55;Earth;No;2 physical attacks, 55 Earth damage to one foe. 90% accuracy.
+Fifth Rush;5;Physical;20;Earth;No;5 physical attacks, 20 Earth damage to one foe. 80% accuracy.
+Final Aura;40;Support;0;Neutral;Yes;Restores a lot of HP for all party members.
+Final Heal;16;Support;0;Neutral;Yes;Restores a lot of HP for one party member.
+Final Shining Burst;50;Physical;200;Fire;No;Physical attack, 200 Fire damage to all foes. Decreases ATK by 50%. 90% accuracy.
+Fire Breath;10;Physical;90;Fire;No;Physical attack, 90 Fire damage to one foe. Tends to critical more often.
+Fire Tornado;20;Magic;95;Light;No;Magic attack, 95 Light damage to all foes.
+Firedrake Strike;25;Physical;140;Fire;No;Physical attack, 140 Fire damage to one foe.
+Fist of Athena;40;Physical;0;Fire;No;DEF-penetrating extra strong Fire attack on one foe. 30% chance of stunning target.
+Fist of Athena;40;Physical;0;Fire;No;DEF-penetrating extra strong Fire attack on one foe.
+Fist of Ice;15;Physical;110;Water;No;Physical attack, 110 Water damage to one foe. 15% chance of stunning target.
+Fist of the Beast King;10;Physical;95;Earth;No;Physical attack, 95 Earth damage to one foe.
+Flame Cannon;20;Physical;100;Fire;No;Physical attack, 100 Fire damage to all foes.
+Flame Inferno;25;Magic;90;Fire;No;Magic attack, 90 Fire damage to all foes.
+Flaming Fist;10;Physical;70;Fire;No;Physical attack, 70 Fire damage to all foes.
+Flashy Boss Punch;20;Physical;130;Light;No;Physical attack, 130 Light damage to one foe. 75% chance of stunning target.
+Flower Cannon;15;Magic;105;Plant;No;Magic attack, 105 Plant damage to one foe. 50% chance of paralyzing target.
+Flying Kick;10;Physical;95;Plant;No;Physical attack, 95 Plant damage to one foe.
+Forbidden Trident;15;Physical;115;Water;No;Physical attack, 115 Water damage to one foe.
+Fossil Bite;10;Physical;30;Water;No;3 physical attacks, 30 Water damage to one foe.
+Fox Fire;10;Physical;85;Fire;No;Physical attack, 85 Fire damage to one foe. 10% chance of increasing SPD by 10%.
+Fox Tail;2;Physical;35;Light;No;Physical attack, 35 Light damage to one foe.
+Freeze Fang;10;Physical;85;Water;No;Physical attack, 85 Water damage to one foe. 10% chance of increasing SPD by 10%.
+Freezing Breath;20;Magic;120;Water;No;Magic attack, 120 Water damage to one foe. 25% chance of paralyzing target.
+Frozen Claw;20;Physical;0;Water;No;DEF-penetrating medium Water attack on one foe.
+Full Moon Blaster;20;Physical;135;Light;No;Physical attack, 135 Light damage to one foe. Always hits.
+Full Moon Kick;15;Physical;110;Earth;No;Physical attack, 110 Earth damage to one foe. Increasing SPD by 10%.
+Full Moon Meteor Impact;20;Physical;120;Light;No;Physical attack, 120 Light damage to one foe. 30% chance of stunning and tends to critical.
+Fungus Crusher;10;Physical;60;Plant;No;Physical attack, 60 Plant damage to one foe. 10% chance to inflict each abnormal status.
+Fury Fire;10;Physical;40;Light;No;Two physical attacks, 40 Light damage to one foe. Tends to critical hit more often.
+Fury Fire (Awake);20;Physical;60;Light;No;2 physical attacks, 60 Light damage to one foe. Tends to critical hit more often.
+Gaia Element I;3;Magic;55;Plant;Yes;Magic attack, 55 Plant damage to one foe. 95% accuracy.
+Gaia Element II;6;Magic;75;Plant;Yes;Magic attack, 75 Plant damage to one foe. 95% accuracy.
+Gaia Element III;9;Magic;95;Plant;Yes;Magic attack, 95 Plant damage to one foe. 95% accuracy.
+Galactic Flare;15;Magic;55;Neutral;No;Magic attack, 55 Neutral damage to all foes.
+Gale Storm I;4;Physical;30;Wind;Yes;Physical attack, 30 Wind damage to all foes. 95% accuracy.
+Gale Storm II;7;Physical;45;Wind;Yes;Physical attack, 45 Wind damage to all foes. 95% accuracy.
+Gale Storm III;10;Physical;75;Wind;Yes;Physical attack, 75 Wind damage to all foes. 95% accuracy.
+Garuru Tomahawk;20;Physical;140;Neutral;No;Physical attack, 140 Neutral damage to one foe. Always hits.
+Gear Stringer;5;Physical;25;Electric;No;3 physical attacks, 25 Electric damage to one foe.
+Genocidal Gears;15;Physical;60;Fire;No;Physical attack, 60 Fire damage to all foes.
+Genocide Attack;15;Physical;110;Fire;No;Physical attack, 110 Fire damage to one foe. Tends to critical more often.
+GeoGrey Sword;20;Physical;130;Fire;No;Physical attack, 130 Fire damage to one foe. Increases ATK by 10%.
+Gift of Darkness;40;Physical;0;Dark;No;DEF-penetrating extra strong Dark attack on one foe.
+Giga Blaster;20;Magic;130;Electric;No;Magic attack, 130 Electric damage to one foe.
+Giga Destroyer;15;Physical;115;Fire;No;Physical attack, 115 Fire damage to one foe.
+Glare Eye;2;Magic;30;Dark;No;Magic attack, 30 Dark damage to one foe.
+Glide Horn;10;Physical;85;Wind;No;Physical attack, 85 Wind damage to one foe. 15% chance of stunning target.
+Goblin Strike;5;Physical;65;Fire;No;Physical attack, 65 Fire damage to one foe. 10% chance of stunning target.
+God Flame;20;Physical;100;Light;No;Physical attack, 100 Light damage to all foes.
+God Matrix;50;Physical;0;Neutral;No;DEF-penetrating strong Neutral attack on all foes. Absorbs 10% damage as HP.
+Golden Rush;10;Physical;10;Light;No;2 physical attacks, 10 Light damage to all foes. 1% chance of instantly killing target.
+Golden Triangle;20;Magic;110;Light;No;Magic attack, 110 Light damage to one foe. 20% chance of increasing base stats by 10%.
+Golden Triangle I;15;Magic;90;Electric;No;Magic attack, 90 Electric damage to one foe. 5% chance of increasing base stats by 10%.
+Good Night Moon;20;Magic;120;Light;No;Magic attack, 120 Light damage to one foe. 50% chance of putting target to sleep.
+Grand Cross;30;Physical;0;Light;No;INT-penetrating medium Light attack on all foes.
+Grand Rock I;3;Magic;55;Earth;Yes;Magic attack, 55 Earth damage to one foe. 95% accuracy.
+Grand Rock II;6;Magic;75;Earth;Yes;Magic attack, 75 Earth damage to one foe. 95% accuracy.
+Grand Rock III;9;Magic;95;Earth;Yes;Magic attack, 95 Earth damage to one foe. 95% accuracy.
+Great Tornado;35;Physical;0;Neutral;No;DEF-penetrating strong Neutral attack on one foe.
+Great Weight;10;Physical;85;Earth;No;Physical attack, 85 Earth damage to one foe. 10% chance of reducing target's DEF by 10%.
+Green Flare Breath;20;Physical;0;Fire;No;DEF-penetrating medium Fire attack on one foe. Tends to critical more often.
+Guard Break;6;Support;0;Neutral;Yes;Reduces DEF of one enemy by 10%.
+Guard Break Field;20;Support;0;Neutral;Yes;Reduces DEF of all enemies by 10%.
+Guard Charge;6;Support;0;Neutral;Yes;Increases DEF of one member by 10%.
+Guard Charge Field;20;Support;0;Neutral;Yes;Increases DEF of all battle members by 10%.
+Hard Rock Spirit;20;Physical;65;Fire;No;2 physical attacks, 65 Fire damage to one foe.
+Harpoon Torpedo;10;Physical;90;Fire;No;Physical attack, 90 Fire damage to one foe. Always hits.
+Heal;4;Support;0;Neutral;Yes;Restores a little HP for one party member.
+Hearts Attack;20;Support;0;Neutral;No;Heals one ally's HP and increases ATK, DEF and INT by 10%.
+Heat Wave;15;Magic;75;Fire;No;Magic attack, 75 Fire damage to all foes.
+Heaven's Gate;15;Magic;100;Light;No;Magic attack, 100 Light damage to one foe. 10% chance of instantly killing target.
+Heaven's Judgment;20;Magic;90;Light;No;Magic attack, 90 Light damage to all foes. Tends to critical more often.
+Heaven's Knuckle;10;Physical;80;Light;No;Physical attack, 80 Light damage to one foe. 10% chance of increasing ATK & INT by 10%.
+Heaven's Thunder;25;Magic;20;Electric;No;8 magic attacks, 20 Electric damage to one foe. 30% chance of paralyzing target.
+Heaven's Thunder I;3;Magic;55;Thunder;Yes;Magic attack, 55 Thunder damage to one foe. 95% accuracy.
+Heaven's Thunder II;6;Magic;75;Thunder;Yes;Magic attack, 75 Thunder damage to one foe. 95% accuracy.
+Heaven's Thunder III;9;Magic;95;Thunder;Yes;Magic attack, 95 Thunder damage to one foe. 95% accuracy.
+Heavy Metal Fire;15;Physical;110;Fire;No;Physical attack, 110 Fire damage to one foe. 30% chance of increasing DEF by 10%.
+Heavy Strike I;3;Physical;70;Neutral;Yes;Physical attack, 70 Neutral damage to one foe. Always Hits.
+Heavy Strike II;6;Physical;90;Neutral;Yes;Physical attack, 90 Neutral damage to one foe. Always Hits.
+Heavy Strike III;9;Physical;110;Neutral;Yes;Physical attack, 110 Neutral damage to one foe. Always Hits.
+Hell Crusher I;4;Magic;20;Dark;Yes;Magic attack, 20 Dark damage to all foes. 95% accuracy.
+Hell Crusher II;7;Magic;35;Dark;Yes;Magic attack, 35 Dark damage to all foes. 95% accuracy.
+Hell Crusher III;10;Magic;65;Dark;Yes;Magic attack, 65 Dark damage to all foes. 95% accuracy.
+Hell Masquerade;15;Physical;35;Plant;No;3 physical attacks, 35 Plant damage to one foe. Tends to critical often.
+Hit Charge;6;Support;0;Neutral;Yes;Increases ACC of one battle member by 10%.
+Holy Light I;3;Magic;55;Light;Yes;Magic attack, 55 Light damage to one foe. 95% accuracy.
+Holy Light II;6;Magic;75;Light;Yes;Magic attack, 75 Light damage to one foe. 95% accuracy.
+Holy Light III;9;Magic;95;Light;Yes;Magic attack, 95 Light damage to one foe. 95% accuracy.
+Holy Shot;10;Magic;75;Light;No;Magic attack, 75 Light damage to one for. 10% chance of increasing INT by 10%.
+Horn Buster;30;Magic;0;Electric;No;INT-penetrating strong Electric attack on one foe.
+Howling Crusher;20;Physical;65;Earth;No;2 physical attacks, 65 Earth damage to one foe.
+Hydro Water I;3;Magic;55;Water;Yes;Magic attack, 55 Water damage to one foe. 95% accuracy.
+Hydro Water II;6;Magic;75;Water;Yes;Magic attack, 75 Water damage to one foe. 95% accuracy.
+Hydro Water III;9;Magic;95;Water;Yes;Magic attack, 95 Water damage to one foe. 95% accuracy.
+Hyper Cannon;10;Physical;200;Fire;No;Physical attack, 200 Fire damage to one foe. Cannot move from recoil for one turn.
+Hyper Heat;10;Physical;85;Fire;No;Physical attack, 85 Fire damage to one foe. 10% chance of reducing target's DEF by 10%.
+Hyper Infinity Cannon;25;Physical;115;Electric;No;Physical attack, 115 Electric damage to all foes.
+Hyper Smell;10;Physical;70;Earth;No;Physical attack, 70 Earth damage to one foe. 15% chance of confusing or paralyzing.
+Ice Archery I;3;Physical;65;Water;Yes;Physical attack, 65 Water damage to one foe. 95% accuracy.
+Ice Archery II;6;Physical;85;Water;Yes;Physical attack, 85 Water damage to one foe. 95% accuracy.
+Ice Archery III;9;Physical;105;Water;Yes;Physical attack, 105 Water damage to one foe. 95% accuracy.
+Ice Blast;10;Magic;75;Water;No;Magic attack, 75 Water damage to one foe. 10% chance of reducing target's SPD by 10%.
+Ice Wolf Claw;20;Physical;45;Water;No;2 physical attacks, 45 Water damage to all foes.
+Iceball Bomb;10;Physical;80;Water;No;Physical attack, 80 Water damage to one foe. Tends to critical more often.
+Idle Bubble;10;Magic;30;Water;Yes;Magic attack, 30 Water damage to one foe. Puts target to sleep. 70% accuracy.
+Infinity Cannon;20;Physical;115;Electric;No;Physical attack, 115 Electric damage to all foes. 80% accuracy.
+Infinity Dream;30;Support;0;Neutral;No;Has a 50% chance to inflict Poison, Confusion and Paralysis on all foes.
+Judecca Prison;25;Magic;115;Dark;No;Magic attack, 115 Dark damage to one foe. Always hits and undoes any stat reductions.
+Judgement of the Blade;25;Physical;30;Neutral;No;5 physical attacks, 30 Neutral damage to one foe.
+Justice Kick;20;Physical;130;Neutral;No;Physical attack, 130 Neutral damage to one foe. 5% chance of increasing ATK by 50%.
+Katana Attack;10;Physical;0;Neutral;No;DEF-penetrating medium Neutral attack on one foe.
+Knuckle Beater;5;Physical;75;Neutral;No;Physical attack, 75 Neutral damage to one foe.
+Kunai Wing;10;Physical;30;Wind;No;3 physical attacks, 30 Wind damage to one foe.
+Legendary Dragon Blade;30;Physical;0;Earth;No;DEF-penetrating strong Earth attack on one foe.
+Lightning Javelin;15;Magic;105;Electric;No;Magic attack, 105 Electric damage to one foe. 40% chance of paralyzing target.
+Lightning Joust;25;Physical;140;Light;No;Physical attack, 140 Light damage to one foe. 50% chance of increasing DEF by 10%.
+Lightning Joust;25;Physical;135;Light;No;Physical attack, 135 Light damage to one foe. 50% chance of increasing DEF by 10%.
+Lightning Paw;10;Fixed;0;Neutral;No;Fixed damage of 150 to one foe. 60% chance of confusing target.
+Lightning Spear;40;Magic;0;Electric;No;INT-penetrating strong Electric attack on one foe. Tends to critical more often.
+Lila Shower;15;Magic;60;Plant;No;Magic attack, 60 Plant damage to all foes. 20% chance of poisoning target.
+Little Horn;5;Physical;70;Neutral;No;Physical attack, 70 Neutral damage to one foe. 10% chance of reducing target's DEF by 10%.
+Love Serenade;30;Magic;0;Dark;No;INT-penetrating medium Dark attack on all foes. 15% chance of paralyzing target.
+Lullaby Bubble;5;Magic;55;Water;No;Magic attack, 55 Water damage to one foe. 10% chance of putting target to sleep.
+Lunatic Dance;15;Physical;100;Water;No;Physical attack, 100 Water damage to one foe. 50% chance of confusing target.
+Mach Rush I;4;Physical;35;Neutral;Yes;Physical attack, 35 Neutral damage to all foes. Always Hits.
+Mach Rush II;7;Physical;50;Neutral;Yes;Physical attack, 50 Neutral damage to all foes. Always Hits.
+Mach Rush III;10;Physical;80;Neutral;Yes;Physical attack, 80 Neutral damage to all foes. Always Hits.
+Mach Stinger V;20;Physical;20;Electric;No;6 physical attacks, 20 Electric damage to one foe. Tends to critical more often.
+Machinegun Destroyer;20;Physical;150;Fire;No;Physical attack, 150 Fire damage to one foe. Decreases DEF by 10%.
+Marching Fishes;5;Physical;15;Water;No;1-3 physical attacks, 15 Water damage to all foes.
+Mature Poop;10;Physical;75;Earth;No;Physical attack, 75 Earth damage to one foe. 30% chance of reducing target's INT by 10%.
+Mega Burst;10;Physical;45;Fire;No;Physical attack, 45 Fire damage to all foes.
+Mega Flame;10;Physical;95;Fire;No;Physical attack, 95 Fire damage to one foe.
+Megadeath;20;Magic;95;Dark;No;Magic attack, 95 Dark damage to all foes.
+Megiddo Flame;20;Physical;130;Fire;No;Physical attack, 130 Fire damage to one foe.
+Mental Break;6;Support;0;Neutral;Yes;Reduces INT of one enemy by 10%.
+Mental Break Field;20;Support;0;Neutral;Yes;Reduces INT of all enemies by 10%.
+Mental Charge;6;Support;0;Neutral;Yes;Increases INT of one member by 10%.
+Mental Charge Field;20;Support;0;Neutral;Yes;Increases INT of all battle members by 10%.
+Metal Armor Blade;20;Physical;0;Neutral;No;DEF-penetrating medium Neutral attack on one foe. Tends to critical hit more often.
+Metal Cannon;5;Physical;70;Neutral;No;Physical attack, 70 Neutral damage to one foe. 30% chance of increasing DEF by 10%.
+Metal Meteor;15;Physical;115;Earth;No;Physical attack, 115 Earth damage to one foe.
+Meteor Fall I;4;Physical;30;Fire;Yes;Physical attack, 30 Fire damage to all foes. 95% accuracy.
+Meteor Fall II;7;Physical;45;Fire;Yes;Physical attack, 45 Fire damage to all foes. 95% accuracy.
+Meteor Fall III;10;Physical;75;Fire;Yes;Physical attack, 75 Fire damage to all foes. 95% accuracy.
+Meteor Shower;10;Physical;40;Neutral;No;Physical attack, 40 Neutral damage to all foes. 90% accuracy. Tends to critical more often.
+Meteor Wing;10;Magic;25;Fire;No;Magic attack, 25 Fire damage to all foes. 10% chance of increasing SPD by 10%.
+Miracle Bomb;15;Physical;130;Fire;No;Physical attack, 130 Fire damage to one foe. Crystallizing attack occurs at random.
+Mirror Reflection;6;Support;0;Neutral;Yes;Counterattacks the enemy when you receive a magic attack.
+Monkey Wrench;40;Support;0;Neutral;No;Reduces all stats of one foe by 30% and decreases combo rate.
+Moon Night Bomb;10;Magic;60;Water;No;Magic attack, 60 Water damage to one foe. 50% chance of putting target to sleep.
+Mourning Dance;20;Physical;20;Dark;No;8 physical attacks, 20 Dark damage to one foe. Damage tends to fluctuate.
+Musical Fist;30;Magic;0;Neutral;No;INT-penetrating medium Neutral attack on all foes with 10% chance of reducing ATK/INT by 10%.
+Nail Bone;15;Direct;0;Neutral;No;Reduce HP of one foe by 20%. 50% chance of crystallizing target.
+Nail Scratch;2;Physical;40;Dark;No;Physical attack, 40 Dark damage to one foe.
+Nanomachine Break I;3;Physical;65;Thunder;Yes;Physical attack, 65 Thunder damage to one foe. 95% accuracy.
+Nanomachine Break II;6;Physical;85;Thunder;Yes;Physical attack, 85 Thunder damage to one foe. 95% accuracy.
+Nanomachine Break III;9;Physical;105;Thunder;Yes;Physical attack, 105 Thunder damage to one foe. 95% accuracy.
+Needle Spray;10;Physical;40;Plant;No;Physical attack, 40 Plant damage to all foes. 5% chance of paralyzing target.
+Night Raid;15;Magic;65;Dark;No;Magic attack, 65 Dark damage to all foes, absorbs 15% into HP.
+Nightmare I;3;Magic;55;Dark;Yes;Magic attack, 55 Dark damage to one foe. 95% accuracy.
+Nightmare II;6;Magic;75;Dark;Yes;Magic attack, 75 Dark damage to one foe. 95% accuracy.
+Nightmare III;9;Magic;95;Dark;Yes;Magic attack, 95 Dark damage to one foe. 95% accuracy.
+Nightmare Syndrome;15;Magic;0;Neutral;No;Reduce 15% HP from one enemy. 20% chance of putting target to sleep.
+Ninja Blade;5;Physical;35;Wind;No;Physical attack, 35 Wind damage to all foes.
+Ninja Claw;10;Physical;30;Neutral;No;3 physical attacks, 30 Neutral damage to one foe. Tends to critical more often.
+Nitro Stinger;30;Physical;0;Electric;No;DEF-penetrating strong Electric attack on one foe.
+Nuclear Laser;30;Physical;0;Electric;No;DEF-penetrating medium Electric attack on one foe. Increases DEF by 10%.
+Oblivion Bird;15;Physical;110;Fire;No;Physical attack, 110 Fire damage to one foe. 50% chance of reducing target's DEF by 10%.
+Ocean Love;20;Support;0;Neutral;No;Restore HP to all battle members and recover all status effects.
+Ocean Wave I;4;Magic;20;Water;Yes;Magic attack, 20 Water damage to all foes. 95% accuracy.
+Ocean Wave II;7;Magic;35;Water;Yes;Magic attack, 35 Water damage to all foes. 95% accuracy.
+Ocean Wave III;10;Magic;65;Water;Yes;Magic attack, 65 Water damage to all foes. 95% accuracy.
+Odin's Breath;25;Physical;105;Water;No;Physical attack, 105 Water damage to all foes. 10% chance of putting target to sleep.
+Omni Sword;30;Physical;150;Light;No;Physical attack, 150 Light damage to one foe. 30% chance of dotting target.
+Pandemonium Lost;25;Magic;80;Dark;No;Magic attack, 80 Dark damage to all foes, absorbs 20% into HP.
+Pandora Dialogue;15;Magic;0;Neutral;No;Reduces HP of all foes by 20%. Receive damage equal to 10% of HP from recoil.
+Panic Wisp;10;Magic;30;Fire;Yes;Magic attack, 30 Fire damage to one foe. Confuses target. 70% accuracy.
+Pendragon's Glory;25;Physical;145;Electric;No;Physical attack, 145 Electric damage to one foe.
+Pepper Breath;5;Physical;70;Fire;No;Physical attack, 70 Fire damage to one foe.
+Perfect Revival;60;Support;0;Neutral;Yes;Revive all fallen party members with full HP.
+Phantom Pain;50;Magic;0;Dark;No;INT-penetrating extra strong Dark attack on one foe. 35% chance of poisoning target.
+Physical Drain;3;Physical;50;Neutral;Yes;Physical attack, 50 Neutral damage to one foe. Absorb 10% SP.
+Pit Bomb;15;Magic;105;Fire;No;Magic attack, 105 Fire damage to one foe.
+Plasma Shot;25;Physical;35;Fire;No;3 physical attacks, 35 Fire damage to all foes.
+Plastic Blaze;5;Physical;60;Fire;No;Physical attack, 60 Fire damage to one foe. 10% chance of reducing target's INT by 10%.
+Platinum Junk;20;Physical;35;Earth;No;4 physical attacks, 35 Earth damage to one foe. 30% chance of reducing target's ATK by 10%.
+Poison Bubbles;2;Magic;25;Dark;No;Magic attack, 25 Dark damage to one foe. 10% chance of poisoning the target.
+Poison Ivy;5;Physical;65;Plant;No;Physical attack, 65 Plant damage to one foe. 10% chance of poisoning target.
+Poop;10;Physical;75;Earth;No;Physical attack, 75 Earth damage to one foe. 30% chance of reducing target's SPD by 10%.
+Poop Dunk;10;Physical;80;Earth;No;Physical attack, 80 Earth damage to one foe. 30% chance of reducing target's DEF by 10%.
+Poop Toss;10;Physical;75;Earth;No;Physical attack, 75 Earth damage to one foe. 30% chance of reducing target's ATK by 10%.
+Positron Laser;20;Physical;150;Light;No;Physical attack, 150 Light damage to one foe.
+Power Energy I;3;Magic;60;Neutral;Yes;Magic attack, 60 Neutral damage to one foe. Always Hits.
+Power Energy II;6;Magic;80;Neutral;Yes;Magic attack, 80 Neutral damage to one foe. Always Hits.
+Power Energy III;9;Magic;100;Neutral;Yes;Magic attack, 100 Neutral damage to one foe. Always Hits.
+Power Metal;10;Physical;90;Neutral;No;Physical attack, 90 Neutral damage to one foe. 30% chance of increasing attack by 10%.
+Prison Fist;10;Physical;20;Dark;No;3-5 physical attacks, 20 Dark damage to one foe, with 30% of damage restored as HP.
+Protect Wave;30;Support;0;Neutral;No;Prevents any abnormal statuses in all allies.
+Protect Wave (Awake);99;Support;0;Neutral;No;Nullifies damage received to all allies until next turn and prevents any abnormal statuses.
+Pummel Whack;10;Physical;90;Dark;No;Physical attack, 90 Dark damage to one foe.
+Puppet Pummel;20;Physical;125;Earth;No;Physical attack, 125 Earth damage to one foe. 50% chance of stunning target.
+Puppy Howl;10;Magic;0;Light;No;INT-penetrating medium Light attack on one foe. 10% chance of paralyzing target.
+Pyro Punch;10;Physical;45;Fire;No;2 physical attacks, 45 Fire damage to one foe.
+Quake!Blast!Fire!Father!;25;Physical;35;Fire;No;4 physical attacks, 35 Fire damage to one foe.
+Quo Vadis;40;Physical;0;Light;No;DEF-penetrating strong Light attack on one foe. Always hits. 10% chance of Instant Death.
+Rare Metal Poop;10;Physical;80;Earth;No;Physical attack, 80 Earth damage to one foe. Causes Knockback.
+Razor Wind;10;Physical;30;Neutral;No;2-4 physical attacks, 30 Neutral damage to one foe.
+Restore;25;Support;0;Neutral;Yes;Remove all status effects from one party member and restore some HP.
+Revenge Flame;15;Direct;0;Neutral;No;Counterattack the enemy when you receive a physical or magic attack.
+Revive;30;Support;0;Neutral;Yes;Revive one fallen party member with 50% HP.
+Ripping Net;10;Physical;40;Thunder;Yes;Physical attack, 40 Thunder damage to one foe. Paralyzes target. 70% accuracy.
+River of Power;20;Magic;130;Water;No;Magic attack, 130 Water damage to one foe.
+Rock Breaker;5;Physical;70;Earth;No;Physical attack, 70 Earth damage to one foe.
+Rock Fist;5;Physical;65;Earth;No;Physical attack, 65 Earth damage to one foe. 10% chance of increasing DEF by 10%.
+Rune Forest I;4;Magic;20;Plant;Yes;Magic attack, 20 Plant damage to all foes. 95% accuracy.
+Rune Forest II;7;Magic;35;Plant;Yes;Magic attack, 35 Plant damage to all foes. 95% accuracy.
+Rune Forest III;10;Magic;65;Plant;Yes;Magic attack, 65 Plant damage to all foes. 95% accuracy.
+S-Gold Solar Storm;25;Magic;75;Light;No;Magic attack, 75 Light damage to all foes. Increases DEF by 15%.
+Safety Guard;32;Support;0;Neutral;Yes;Make one member endure all attacks that could kill you once.
+Saint Knuckle I;3;Physical;65;Light;Yes;Physical attack, 65 Light damage to one foe. 95% accuracy.
+Saint Knuckle II;6;Physical;85;Light;Yes;Physical attack, 85 Light damage to one foe. 95% accuracy.
+Saint Knuckle III;9;Physical;105;Light;Yes;Physical attack, 105 Light damage to one foe. 95% accuracy.
+Savage Emperor;15;Magic;105;Light;No;Magic attack, 105 Light damage to one foe.
+Scissor Claw;20;Physical;0;Neutral;No;DEF-penetrating medium Neutral attack on one foe.
+Scrapless Claw;15;Physical;110;Earth;No;Physical attack, 110 Earth damage to one foe. Tends to critical hit more often.
+Seed Blast;5;Physical;15;Plant;No;2 physical attacks, 15 Plant damage to all foes.
+Seven's Fantasia;20;Magic;75;Light;No;Magic attack, 75 Light damage to all foes. 20% chance of confusing target.
+Shadow Wing;15;Magic;65;Fire;No;Magic attack, 65 Fire damage to all foes.
+Shield of the Just;25;Magic;115;Light;No;Magic attack, 115 Light damage to one foe. Always hits. Cancels negative effects on itself.
+Shield of the Just;25;Magic;110;Light;No;Magic attack, 110 Light damage to one foe. Always hits. Removes basic stat debuffs.
+Shine of Bee;35;Physical;0;Fire;No;DEF-penetrating strong Fire attack on all foes. Cannot move from recoil for one turn.
+Shining Laser I;4;Magic;20;Light;Yes;Magic attack, 20 Light damage to all foes. 95% accuracy.
+Shining Laser II;7;Magic;35;Light;Yes;Magic attack, 35 Light damage to all foes. 95% accuracy.
+Shining Laser III;10;Magic;65;Light;Yes;Magic attack, 65 Light damage to all foes. 95% accuracy.
+Shiny Ring;5;Physical;70;Light;No;Physical attack, 70 Light damage to one foe. Alwatys hits.
+Shock;10;Physical;40;Earth;Yes;Physical attack, 40 Earth damage to one foe. Stuns target. 70% accuracy.
+Silent Bullet;10;Physical;15;Dark;No;2-4 physical attacks, 15 Dark damage to all foes.
+Silent Bullet (Awake);20;Physical;30;Dark;No;2-4 physical attacks, 30 Dark damage to all foes.
+Sludge;10;Physical;40;Earth;No;Physical attack, 40 Earth damage to all foes. 10% chance to poison.
+Smile Bomber;15;Physical;110;Fire;No;Physical attack, 110 Fire damage to one foe. Always hits.
+Smile Fang;2;Physical;40;Neutral;No;Physical attack, 40 Neutral damage to one foe.
+Smile Warhead;20;Physical;110;Neutral;No;Physical attack, 110 Neutral damage to one foe. Causes knockback.
+Soap Flower;2;Magic;30;Water;No;Magic attack, 30 Water damage to one foe.
+Sonic Void I;3;Magic;55;Wind;Yes;Magic attack, 55 Wind damage to one foe. 95% accuracy.
+Sonic Void II;6;Magic;75;Wind;Yes;Magic attack, 75 Wind damage to one foe. 95% accuracy.
+Sonic Void III;9;Magic;95;Wind;Yes;Magic attack, 95 Wind damage to one foe. 95% accuracy.
+Sorrow Blue;40;Magic;0;Water;No;INT-penetrating medium Water attack on all foes. 25% chance of putting target to sleep.
+Soul Absorption;5;Physical;70;Dark;No;Physical attack, 70 Dark damage to one foe, with 30% of damage restored as HP.
+Soul Chopper;30;Magic;0;Dark;No;INT-penetrating extra strong dark attack on one foe. 10% chance of Instant Death.
+Soul Core Attack;30;Physical;0;Earth;No;DEF-penetrating strong Earth attack on one foe.
+Soul Digitalization;25;Magic;95;Neutral;No;Magic attack, 95 Neutral damage to all foes. 5% chance of instantly killing target.
+Soul Digitalization;25;Magic;90;Neutral;No;Magic attack, 90 Neutral damage to all foes.
+Speed Break;6;Support;0;Neutral;Yes;Reduces SPD of one enemy by 10%.
+Speed Break Field;20;Support;0;Neutral;Yes;Reduces SPD of all enemies by 10%.
+Speed Charge;6;Support;0;Neutral;Yes;Increases SPD of one member by 10%.
+Speed Charge Field;20;Support;0;Neutral;Yes;Increases SPD of all battle members by 10%.
+Speed Star;15;Physical;90;Light;No;Physical attack, 90 Light damage to one foe. Increases SPD by 20%.
+Spider Shooter;15;Physical;30;Fire;No;4 physical attacks, 30 Fire damage to one foe. 5% chance of reducing target's DEF by 10%.
+Spiking Strike;20;Physical;0;Plant;No;DEF-penetrating medium Plant attack on one foe. Tends to critical more often.
+Spinning Needle;10;Physical;45;Wind;No;Physical attak, 45 Wind damage to all foes.
+Spiral Blow;10;Physical;90;Wind;No;Physical attack, 90 Wind damage to one foe.
+Spiral Masquerade;25;Physical;30;Dark;No;4 physical attacks, 30 Dark damage to one foe. 30% chance of increasing SPD by 20%.
+Spiral Masquerade;25;Physical;30;Dark;No;4 physical attacks, 30 Dark damage to one foe.
+Spiral Sword;15;Physical;110;Electric;No;Physical attack, 110 Electric damage to one foe. Tends to critical more often.
+Spiral Twister;5;Magic;55;Fire;No;Magic attack, 55 Fire damage to one foe. 10% chance of increasing INT by 10%.
+Spirit Drain;3;Magic;40;Neutral;Yes;Magic attack, 40 Neutral damage to one foe. Absorb 10% SP.
+Spitfire Blast;5;Physical;35;Fire;No;Physical attack, 35 Fire damage to all foes. 10% chance of increasing ATK by 10%.
+Starlight Explosion;20;Magic;90;Light;No;Magic attack, 90 Light damage to all foes.
+Starlight Velocity;20;Physical;130;Light;No;Physical attack, 130 Light damage to one foe. Increases SPD by 10%.
+Status Barrier;16;Support;0;Neutral;Yes;Make one member immune to all status effects.
+Sticker Blade;10;Physical;25;Dark;No;3-5 physical attacks, 25 Dark damage to one foe, with 10% of damage restored as HP.
+Sticky Net;5;Physical;65;Plant;No;Physical attack, 65 Plant damage to one foe. 30% chance of reducing target's SPD by 10%.
+Strike of the Seven Stars;20;Magic;15;Light;No;7 magic attacks, 15 Light damage to all foes.
+Strike Roll;20;Physical;140;Neutral;No;Physical attack, 140 Neutral damage to one foe. Tends to critical more often.
+Sub-zero Ice Punch;10;Physical;80;Water;No;Physical attack, 80 Water damage to one foe. 10% chance of stunning target.
+Summon;5;Fixed;0;Neutral;No;Fixed damage of 100 to one foe. 30% chance of increasing INT by 10%.
+Sunshine Beam;10;Magic;80;Light;No;Magic attack, 80 Light damage to one foe.
+Super Bubble Blow;2;Magic;35;Water;No;Magic attack, 35 Water damage to one foe.
+Super Shocker;5;Magic;60;Electric;No;Magic attack, 60 Electric damage to one foe.
+Super Stinky Jet;10;Magic;20;Earth;No;Magic attack, 20 Earth damage to all foes. 30% chance of reducing target's SPD by 10%.
+Supersonic Voice;30;Magic;0;Wind;No;INT-penetrating extra strong Wind attack on one foe. 20% chance of inflicting Bug.
+Superstar Uppercut;15;Physical;110;Light;No;Physical attack, 110 Light damage to one foe.
+Support End;10;Magic;30;Light;Yes;Magic attack, 30 Light damage to one foe. Prevents the use of support skills.
+Supreme Cannon;30;Magic;0;Water;No;INT-penetrating strong Water attack on one foe.
+Supreme Cannon;30;Magic;95;Water;No;Magic attack, 95 Water damage to all foes.
+Symphony Crusher;20;Magic;0;Neutral;No;INT-penetrating medium Neutral attack on one foe.
+Table Flip;25;Physical;100;Earth;No;Physical attack, 100 Earth damage to all foes. 70% accuracy. Tends to critical more often.
+Tail Hammer;10;Physical;85;Earth;No;Physical attack, 85 Earth damage to one foe. 15% chance of stunning target.
+Taizoukai Mandala;20;Magic;70;Dark;No;Magic attack, 70 Dark damage to all foes. Undoes ACU, EVA, or CRT boosts on target. Always hits.
+Talisman of Light;15;Magic;105;Dark;No;Magic attack, 105 Dark damage to one foe.
+Tearing Shot;5;Magic;65;Water;No;Magic attack, 65 Water damage to one foe.
+Terra Force;20;Physical;90;Fire;No;Physical attack, 90 Fire damage to all foes. 30% chance of increasing ATK by 20%.
+Terrier Tornado;5;Magic;20;Wind;No;Magic attack, 20 Wind damage to all foes.
+Terrors Cluster;20;Physical;125;Electric;No;Physical attack, 125 Electric damage to one foe. 50% chance of paralyzing target.
+Texture Blow;10;Physical;40;Wind;Yes;Physical attack, 40 Wind damage to one foe. Crystallizes target. 70% accuracy.
+The King of Fists;15;Physical;55;Wind;No;1-3 physical attacks, 55 Wind damage to one foe. 15% chance of stunning target.
+The Ray of Victory;25;Physical;100;Light;No;Physical attack, 100 Light damage to all. Always hits. Increases SPD by 10%.
+Thorn Whip;20;Physical;120;Plant;No;Physical attack, 120 Plant damage to one foe, absorbs 50% into HP. 30% chance of paralyzing target.
+Thousand Fists;25;Physical;15;Wind;No;8 physical attacks, 15 Wind damage to one foe. Tends to critical more often.
+Thunder Cloud;5;Magic;30;Electric;No;2 magic attacks, 30 Electric damage to one foe.
+Thunder Cloud II;10;Magic;75;Electric;No;Magic attack, 75 Electric damage to one foe. 10% chance of paralyzing target.
+Thunder Fall I;4;Physical;30;Thunder;Yes;Physical attack, 30 Thunder damage to all foes. 95% accuracy.
+Thunder Fall II;7;Physical;45;Thunder;Yes;Physical attack, 45 Thunder damage to all foes. 95% accuracy.
+Thunder Fall III;10;Physical;75;Thunder;Yes;Physical attack, 75 Thunder damage to all foes. 95% accuracy.
+Tidal Wave;15;Magic;65;Water;No;Magic attack, 65 Water damage to all foes.
+Tomahawk Stinger;20;Physical;130;Neutral;No;Physical attack, 130 Neutral damage to one foe. 40% chance of confusing target.
+Top Gun;15;Magic;110;Wind;No;Magic attack, 110 Wind damage to one foe.
+Transcendent Sword;30;Physical;115;Fire;No;Physical attack, 115 Fire damage to all foes.
+Transcendent Sword;30;Physical;130;Fire;No;Physical attack, 130 Fire damage to one foe.
+Tri-Horn Attack;15;Physical;150;Earth;No;Physical attack, 150 Earth damage to one foe. Stuns target. 50% accuracy.
+Trick or Treat;15;Physical;100;Neutral;No;Physical attack, 100 Neutral damage to one foe. Decrease target's INT by 10%.
+Trident Revolver;15;Physical;40;Fire;No;3 physical attacks, 40 Fire damage to one foe.
+Trident Saber;15;Physical;40;Neutral;No;3 physical attacks, 40 Neutral damage to one foe.
+Trump Sword;20;Magic;35;Neutral;No;4 magic attacks, 35 Neutral damage to one foe. Prevents the use of support skills.
+Turbo Stinger;10;Physical;25;Electric;No;4 physical attacks, 25 Electric damage to one foe.
+Twenty Dive;5;Physical;75;Neutral;No;Physical attack, 75 Neutral damage to one foe.
+Ultimate Flare;20;Physical;90;Fire;No;3 physical attacks, 90 Fire damage to one foe. Cannot move from recoil for one turn.
+Ultimate Ouryuken;50;Physical;0;Neutral;No;DEF-penetrating extra strong Neutral attack on one foe.
+Unidentified Flying Kiss;15;Magic;95;Dark;No;Magic attack, 95 Dark damage to one foe. 15% chance of dotting target.
+V-Nova Blast;10;Physical;105;Fire;No;Physical attack, 105 Fire damage to one foe. After use, receive 5% HP damage from recoil.
+Vantheon;10;Physical;15;Neutral;No;4-8 physical attacks, 15 Neutral damage to one foe. 20% chance of increasing ATK by 10%.
+Vee Laser;10;Physical;95;Light;No;Physical attack, 95 Light damage to one foe.
+Veemon Headbutt;5;Physical;75;Neutral;No;Physical attack, 75 Neutral damage to one foe.
+Venom Infusion;20;Physical;135;Dark;No;Physical attack, 135 Dark damage to one foe. 50% chance of poisoning target.
+Venom Trap;10;Physical;40;Plant;Yes;Physical attack, 40 Plant damage to one foe. Poisons target. 70% accuracy.
+Victory Sword;25;Physical;65;Wind;No;2 physical attacks, 65 Wind damage to one foe.
+Volcanic Driver;20;Physical;130;Fire;No;Physical attack, 130 Fire damage to one foe. Tends to critical more often.
+Volcanic Strike;10;Physical;95;Fire;No;Physical attack, 95 Fire damage to one foe.
+Vortex Penetration;35;Physical;0;Water;No;DEF-penetrating strong Water attack on one foe. Always hits.
+Vulcan Crusher;30;Physical;145;Earth;No;Physical attack, 145 Earth damage to one foe. 35% chance of stunning target. 95% accuracy.
+Vulcan's Hammer;15;Physical;115;Electric;No;Physical attack, 115 Electric damage to one foe.
+Waltz's End;25;Physical;35;Neutral;No;3 physical attacks, 35 Neutral damage to all foes.
+Weltgeist;15;Support;0;Neutral;No;Nullify all received damage until the next turn, and counterattacks when receiving physical or magic attacks.
+Will-o'-Wisp;10;Magic;30;Fire;No;Magic attack, 30 Fire damage to all foes.
+Will-O'-Wisp Slash;20;Physical;70;Fire;No;2 physical attacks, 70 Fire damage to one foe.
+Wind Claw I;3;Physical;65;Wind;Yes;Physical attack, 65 Wind damage to one foe. 95% accuracy.
+Wind Claw II;6;Physical;85;Wind;Yes;Physical attack, 85 Wind damage to one foe. 95% accuracy.
+Wind Claw III;9;Physical;105;Wind;Yes;Physical attack, 105 Wind damage to one foe. 95% accuracy.
+Wind Cutter Sword;15;Physical;40;Wind;No;3 physical attacks, 40 Wind damage to one foe.
+Winning Knuckle;15;Physical;115;Neutral;No;Physical attack, 115 Neutral damage to one foe. 20% chance of stunning target.
+Wolf Claw;15;Physical;120;Neutral;No;Physical attack, 120 Neutral damage to one foe.
+Wolkenapalm I;3;Physical;65;Fire;Yes;Physical attack, 65 Fire damage to one foe. 95% accuracy.
+Wolkenapalm II;6;Physical;85;Fire;Yes;Physical attack, 85 Fire damage to one foe. 95% accuracy.
+Wolkenapalm III;9;Physical;105;Fire;Yes;Physical attack, 105 Fire damage to one foe. 95% accuracy.
+Wyvern's Breath;25;Physical;110;Wind;No;Physical attack, 110 Wind damage to all foes. Receive recoil damage equal to 20% of HP.
+X-Aura;25;Support;0;Neutral;Yes;Restores HP for all party members.
+X-Heal;8;Support;0;Neutral;Yes;Restores HP for one party member.
+Zwei Glanze;20;Physical;150;Neutral;No;Physical attack, 150 Neutral damage to one foe.
+Zwei Sieger;10;Physical;90;Light;No;Physical attack, 90 Light damage to one for. Tends to critical more often.

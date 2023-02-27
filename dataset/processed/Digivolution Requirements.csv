@@ -1,0 +1,342 @@
+Digimon;Level;HP;SP;ATK;DEF;INT;SPD;ABI;CAM;Extra Condition
+Kuramon;0;;;;;;;;;Starter digimon
+Pabumon;0;;;;;;;;;Starter digimon
+Punimon;0;;;;;;;;;Starter digimon
+Botamon;0;;;;;;;;;Starter digimon
+Poyomon;0;;;;;;;;;Starter digimon
+Arcadiamon In-Tr.;8;;;;;;;5;;Cleared Hacker's Memory
+Koromon;3;;;15;;;;;;
+Tanemon;5;;;;;;;;;
+Tsunomon;5;;;;;;;;;
+Tsumemon;5;;;;;;;;;
+Tokomon;5;;;;;;;;;
+Nyaromon;3;;;;;10;;;;
+Pagumon;5;;;;;;;;;
+Yokomon;3;50;;;;;;;;
+Bukamon;3;;;;;15;;;;
+Motimon;3;;;;15;;;;;
+Wanyamon;5;;;;;;;;;
+Agumon;9;;;30;;;;;10%;
+Agumon (Blk);8;;;30;;;;;;
+Arcadiamon Rookie;6;;;90;;;20;;;Cleared Hacker's Memory
+Armadillomon;7;75;;;20;;;;10%;
+Impmon;7;;20;;;30;;;;
+Elecmon;7;75;20;;;;20;;;
+Otamamon;7;;;;;20;;;;
+Gaomon;9;;;20;;;20;;10%;
+Gazimon;9;;;15;;;20;;;
+Gabumon;7;75;;20;;;20;;;
+Gabumon (Blk);6;80;;30;;;;;;
+Guilmon;7;;;30;;;20;;;
+Kudamon;8;;20;;;20;;;;
+Keramon;9;;;20;;;20;;;
+Gotsumon;8;;;;30;;;;;
+Goblimon;7;;;40;;;;;;
+Gomamon;8;100;;;;;;;10%;
+Syakomon;7;;;;15;20;;;;
+Zubamon;10;;;20;;;20;;;
+Solarmon;6;75;;;25;;;;;
+Chuumon;6;;;;;;30;;;
+Terriermon;8;;;;;;30;;10%;
+Tentomon;9;;;;20;;;;;
+ToyAgumon;8;75;;;20;;;;;
+Dracmon;8;;;30;;;20;;;
+Dracomon;6;;;50;20;;;;10%;
+Dorumon;8;;;20;;;30;;;
+Hagurumon;7;75;;;30;;;;10%;
+Patamon;7;;;;;20;20;;10%;
+Hackmon;9;;;20;;;;20;;
+Palmon;8;100;;;;;;;10%;
+DemiDevimon;8;;;;;;30;;;
+Biyomon;8;;;;;20;20;;10%;
+Falcomon;9;;;;;;30;;;
+FanBeemon;6;;;;;;30;;;
+Veemon;6;;;20;;;20;;10%;
+Salamon;7;;20;;;20;;;10%;
+Betamon;8;;;;;40;;;;
+Hawkmon;7;;;;;;30;;10%;
+Mushroomon;8;75;;;10;;;;;
+Monodramon;8;;;35;;;;;10%;
+Lalamon;9;75;;;;;;;;
+Lucemon;30;;80;;;130;;80;;
+Lunamon;8;;30;;;20;;;;
+Renamon;7;;;20;;20;20;;;
+Lopmon;8;;;15;;20;;;;
+Wormmon;8;;;;20;;;;10%;
+IceDevimon;15;;;40;;40;;;;
+Icemon;15;110;;;50;;;;;
+Aquilamon;14;;;;;;55;;;
+Agunimon;15;150;;50;;;;;;Item: Human Spirit of Flame
+Arcadiamon Champion;16;;;50;;40;;;;Cleared Hacker's Memory
+Ankylomon;15;150;;;40;;;;;
+Ikkakumon;15;300;;;;;;;25%;
+Wizardmon;14;;35;;;55;;;;
+Lobomon;15;45;;;;;55;;;Item: Human Spirit of Light
+Woodmon;14;500;;;;;;;;
+Airdramon;14;;;35;;;45;;;
+ExVeemon;14;;;40;;;40;;25%;
+Angemon;16;;;;;40;;5;;
+Ogremon;14;;;55;;;;;;
+Guardromon;14;;;;55;;;;;
+Guardromon (Gold);14;130;;;60;;;;;
+GaoGamon;15;;;;;;55;;;
+Kabuterimon;14;;;;40;40;;;;
+ShellNumemon;14;150;;;55;;;;;
+Gargomon;15;150;;;;;40;;;
+Garurumon;15;;;;;;50;;25%;
+Garurumon (Blk);15;;;35;;;50;;;
+Kyubimon;14;;40;;;40;40;;;
+Growlmon;15;;;50;;;20;;;
+Kurisarimon;16;150;;40;;;;;;
+Greymon;16;;;55;;;;;50%;
+Greymon (Blue);16;150;;50;;;;;;
+Clockmon;14;;;;;35;;;;
+Kuwagamon;14;;;55;;;;;;
+Gekomon;14;;40;;;40;;;;
+Geremon;12;130;25;;40;;;;;
+Coredramon (Blue);14;;;60;;;25;;;
+Coredramon (Green);14;;;40;25;;40;;;
+GoldNumemon;18;;;;;;;5;;
+Golemon;14;150;;;60;;;;;
+Cyclonemon;14;;;30;40;;;;;
+Sangloupmon;15;;;50;;;55;;;
+Sunflowmon;14;150;;;;40;;;;
+Seadramon;14;;;;30;40;;;;
+Coelamon;14;300;;;;;30;;;
+GeoGreymon;15;150;;50;;;;;;
+Sukamon;12;150;;;40;;;;;
+Starmon;14;150;;;35;;;;;
+Stingmon;14;;;40;;;55;;;
+Strikedramon;15;;;45;;;50;;;
+Zubaeagermon;20;;;50;;;50;;;
+Socerimon;16;;40;;;40;;;;
+Tankmon;14;;;;55;;;;;
+MudFrigimon;14;150;;;40;;;;;
+Tyrannomon;14;150;;40;;;;;;
+Gatomon;16;;;;;40;;;25%;
+Devimon;16;;;40;;;;5;;
+Turuiemon;14;;;45;;;40;;;
+Togemon;16;300;;;30;;;;25%;
+Dorugamon;14;;;40;;;40;;;
+Nanimon;12;;;40;40;;;;;
+Numemon;12;150;;;40;;;;;
+Birdramon;14;40;;;;40;40;;;
+BaoHuckmon;16;;;55;;;50;;;
+Bakemon;13;;40;;;30;;;;
+Veedramon;16;;;40;;;35;;;
+Hudiemon;15;;40;;;;40;;100%;Cleared Hacker's Memory
+PlatinumSukamon;20;;;;;;;;;
+BlackGatomon;16;;;;;40;;;25%;
+Vegiemon;12;300;;;;;;;;
+Peckmon;14;;;;;;50;;;
+Meramon;14;;;40;;;;;;
+Monochromon;14;;;55;55;;;;;
+Frigimon;14;250;;30;;;;;;
+Unimon;13;;;;;40;40;;10%;
+Raptordramon;15;130;;50;;;;;;
+Raremon;12;500;;;;;;;;
+Leomon;16;;;55;;;;;;
+Lekismon;15;;;35;;;40;;;
+Reppamon;16;;;;;;40;5;;
+Waspmon;14;;;40;;;40;;;
+MegaKabuterimon;28;400;;;95;;;;;
+Arcadiamon Ultimate;30;;;110;;85;;;;Cleared Hackers's Memory
+Antylamon;28;;;65;;75;85;;;
+Andromon;28;;;75;75;75;;;;
+Meteormon;26;;;;110;;;;;
+Infermon;30;;;95;;;80;;;
+Myotismon;30;;;70;;90;;10;;
+Wingdramon;30;;;80;;;95;10;;
+BurningGreymon;30;500;;120;60;;;;;Item: Beast Spirit of Flame
+AeroVeedramon;30;;;75;;;95;;25%;
+Etemon;26;;75;;75;;65;;;
+Angewomon;30;;75;;;100;;10;;
+Okuwamon;26;;;95;90;;;;;
+Garudamon;30;;;75;;;75;;;
+KendoGarurumon;30;300;;100;;;85;;;Item: Beast Spirit of Light
+Gigadramon;26;800;;75;95;;;;;
+CatchMamemon;26;700;;;85;;;;;
+CannonBeemon;28;;;;75;;75;;;
+Groundramon;30;400;;125;;;;10;;
+GrapLeomon;26;400;;95;;;;;;
+Grademon;30;400;;80;;;70;;;
+Crescemon;30;;60;70;;;;;;
+Cyberdramon;28;400;;75;;;75;;;
+Shakkoumon;30;;;;75;65;;;100%;Digimon: Angemon, Ankylomon
+Cherrymon;28;800;;;70;;;;;
+Silphymon;30;;;60;;75;75;;100%;Digimon: Gatomon, Aquilamon
+SuperStarmon;28;;70;70;80;;;;;
+SkullGreymon;28;;;120;85;;70;;;
+SkullSatamon;28;;;80;;70;;;;
+Zudomon;30;800;;75;;;;;50%;
+SaviorHuckmon;30;;;90;;;80;;;
+Taomon;30;;60;;;75;60;;;
+Dragomon;28;;70;;;85;;;;
+Chirinmon;30;;75;;;;100;10;;
+Dinobeemon;30;400;;90;;;75;;;Digimon: Stingmon, ExVeemon
+Digitamamon;30;700;;;75;;;;;
+SkullMeramon;28;500;;95;;;;;;
+Duramon;40;800;;80;80;;;;;
+ShogunGekomon;26;900;;;;;;;;
+Triceramon;28;;;75;75;;;;;
+DoruGreymon;30;400;;95;75;;;;;
+Knightmon;30;;;75;75;;;;;
+Datamon;28;;60;;;85;;;;
+Paildramon;30;;;90;60;;75;;100%;Digimon: Stingmon, ExVeemon
+Panjyamon;28;350;;75;;;75;;;
+Pandamon;26;;;65;65;;;;;
+Pumpkinmon;26;850;;60;;60;;;;
+Piximon;26;;75;;;80;80;;;
+HippoGryphonmon;26;;;;;65;65;;;
+Phantomon;28;;80;;;80;;;;
+BlackKingNumemon;32;;;;;;;;;
+BlueMeramon;28;400;;80;;70;;;;
+Vademon;26;;85;;;;;;;
+Whamon;28;850;;;75;75;;;;
+MagnaAngemon;30;;;;;80;80;10;;
+Volcanomon;26;;;80;75;;;;;
+Matadormon;28;;;75;;;80;;;
+MachGaogamon;26;;;75;;;80;;;
+Mamemon;26;;;75;80;;;;;
+MegaSeadramon;30;400;70;;;70;;;;
+Megadramon;26;400;;95;;;75;;;
+WarGrowlmon;30;;;105;;;75;;;
+MetalGreymon;30;350;;100;;;;;50%;
+MetalGreymon (Blue);30;450;;110;;;;;;
+MetalTyrannomon;28;;;75;95;;;;;
+MetalMamemon;26;;;;80;65;;;;
+Monzaemon;26;600;;60;;;;;;
+Crowmon;30;;75;;;;90;;;
+RizeGreymon;30;350;;100;;;75;;50%;
+Lilamon;30;;75;;;75;;;;
+Rapidmon;28;;;75;;;75;;50%;
+Lillymon;30;;;;;75;75;;50%;
+Lucemon FM;55;;;180;;240;180;80;;
+LadyDevimon;30;;75;;;95;;10;;
+WereGarurumon;28;;;90;;;85;;50%;
+WereGarurumon (Blk);28;400;;90;;;70;;;
+Wisemon;28;;75;;;100;;;;
+Arcadiamon Mega;60;;130;200;;;100;40;;Cleared Hacker's Memory
+Alphamon;60;;;150;170;135;;80;;
+UlforceVeedramon;60;;;120;;;145;80;;
+Ebemon;45;;120;;;120;;20;;
+Imperialdramon DM;55;1600;;;150;;150;20;;
+Imperialdramon FM;0;;;;;;;;;Mode Change
+Vikemon;50;1700;;130;130;120;;20;;
+Valkyrimon;50;;;130;;130;160;20;;
+Varodurumon;55;;120;;;145;130;40;;
+VenomMyotismon;55;1200;110;110;;110;;40;;
+WarGreymon;55;1700;;160;130;;;20;80%;
+Ophanimon;55;;120;;120;145;;40;;
+Gaiomon;50;;;120;100;;100;20;;
+KaiserGreymon;55;1500;;150;120;;;20;80%;
+ChaosGallantmon;60;;;130;130;130;;40;;
+Chaosdramon;50;1500;;130;120;;;20;;
+Gankoomon;60;1700;;145;120;;;80;;
+KingEtemon;45;;;110;130;;100;20;;
+Kuzuhamon;55;;120;;;135;120;20;;
+GranKuwagamon;45;1500;;120;120;;;20;;
+GranDracmon;50;1300;;110;;110;;40;;
+GroundLocomon;50;;;;160;;120;20;;
+Gryphonmon;50;;110;;;140;;20;;
+Craniamon;60;;110;;180;140;;80;;
+Kerpymon (Blk);55;1100;100;;;100;;40;;
+Kerpymon (Good);55;;120;;;145;100;40;;
+Goldramon;55;;;130;120;120;;40;;
+SaberLeomon;50;;;145;;;120;20;;
+Sakuyamon;55;;120;;;120;120;20;;
+Jesmon;60;;;180;;;180;80;80%;
+ShineGreymon;55;;;140;;;130;20;80%;
+ShineGreymon BM;60;2000;;250;;;;30;100%;
+Justimon;50;1000;;130;110;;;20;80%;
+Kentaurosmon;60;;;;140;120;150;80;;
+Slayerdramon;55;1300;;130;;;130;20;;
+Seraphimon;55;;130;;130;150;;40;50%;
+MegaGargomon;50;;;;130;;130;20;;
+Darkdramon;50;;;150;140;;;20;;
+TigerVespamon;50;1000;;120;;;130;20;;
+Titamon;55;1400;;150;;120;;20;;
+TyrantKabuterimon;55;1600;;140;130;;;40;;
+Dianamon;55;;;;120;130;130;20;;
+Diaboromon;55;1100;;180;;;130;20;;
+Creepymon;60;1600;;230;;160;;80;;
+Gallantmon;60;;;140;140;140;;80;50%;
+Dynasmon;60;1200;;140;120;;130;80;;
+Durandamon;60;1500;;140;120;;;20;;
+Leopardmon;60;;100;;;120;140;80;;
+Leopardmon LM;0;;;;;;;;;Mode Change
+Dorugoramon;50;1600;;160;;;;20;;
+Neptunemon;55;1000;100;;;130;;20;;
+HiAndromon;55;;;100;130;100;;20;;
+PileVolcamon;50;;;120;135;;;20;;
+Barbamon;60;;160;;120;200;;80;;
+BanchoLeomon;55;;;120;130;;;20;;
+Piedmon;50;;;130;;160;110;20;;
+Puppetmon;50;;;130;130;130;;20;;
+PlatinumNumemon;65;;;;;;;10;;
+BlackWarGreymon;55;1800;;140;140;;;20;;
+PrinceMamemon;45;;;;150;;;20;;
+Breakdramon;55;1500;;160;140;;;20;;
+Plesiomon;50;;100;;120;145;;20;;
+HerculesKabuterimon;50;1100;;;150;120;;20;;
+Beelzemon;60;2000;;250;;;150;80;;
+Beelzemon BM;80;2100;;300;;;220;100;100%;
+Belphemon SM;60;1700;140;;;180;;80;;
+Hououmon;50;;;;;130;150;20;;
+Magnadramon;55;900;120;;;145;;20;;
+Boltmon;50;;;145;100;;;20;;
+MagnaGarurumon;50;;;130;;;160;20;80%;
+MagnaGarurumon (SV);0;;;;;;;;;Mode Change
+Mastemon;60;;120;120;;120;;80;100%;Digimon: LadyDevimon, Angewomon
+MarineAngemon;50;;110;;;135;;20;50%;
+Minervamon;55;;;150;;;140;20;;
+MirageGaogamon;55;;;120;;;130;20;;
+MirageGaogamon BM;60;;;200;;;200;30;100%;
+Machinedramon;50;1300;;130;130;;;20;;
+Megidramon;55;1700;;180;;;;40;;
+MetalEtemon;45;;100;120;140;;;20;;
+MetalGarurumon;55;;;130;120;;150;20;80%;
+MetalGarurumon (Blk);55;;;;135;;125;20;;
+MetalSeadramon;50;;120;;120;120;;20;;
+Merukimon;55;;;130;;110;160;20;;
+RustTyranomon;55;1300;;180;150;;;20;;
+Leviamon;60;2000;140;140;140;140;;80;;
+Lilithmon;60;;200;;;250;130;80;;
+Ravemon;55;;;130;;;160;20;;
+Ravemon BM;60;;160;;;;250;30;100%;
+Crusadermon;60;;;120;;135;150;80;50%;
+Rosemon;55;;120;;;120;;20;;
+Rosemon BM;60;;170;;;180;;30;100%;
+Lotosmon;55;;;;;170;130;20;;
+Armageddemon;70;2000;140;290;;;;100;;
+Arcadiamon Ultra;70;;150;250;;150;160;60;;Cleared Hacker's Memory
+Alphamon Ouryuken;60;;;180;170;150;;80;100%;Digimon: Ouryumon, Alphamon
+Imperialdramon PM;70;;;160;160;160;160;100;;
+Examon;60;1650;;150;;;150;100;100%;Digimon: Slayerdramon, Breakdramon
+Omnimon;60;;;200;;150;150;40;100%;Digimon: WarGreymon, MetalGarurumon
+Omnimon Zwart;60;1500;;150;200;;;40;100%;Digimon: BlackWarGreymon, MetalGarurumon (Blk)
+Chaosmon;60;;;255;;;;40;100%;Digimon: Darkdramon, BanchoLeomon
+Chaosmon VA;60;;;155;;100;;40;100%;Digimon: BanchoLeomon, Varodurumon
+Susanomon;60;1000;;150;;150;;100;100%;Digimon: KaiserGreymon, MagnaGarurumon
+Gallantmon CM;80;;;185;185;185;;80;100%;
+Belphemon RM;0;;;;;;;;;Mode Change
+Lucemon SM;70;1400;160;130;;250;170;100;;
+Flamedramon;14;;;40;;;40;;25%;Item: Digi-Egg of Courage
+Magnamon;60;;;120;145;;;80;50%;Item: Digi-Egg of Miracles
+Rapidmon (Armor);50;;;100;120;120;;40;50%;Item: Digi-Egg of Destiny
+Shoutmon;8;;;30;;;20;;10%;
+OmniShoutmon;60;;;130;130;;120;80;;
+Ryudamon;8;;;30;30;;;;;
+Ginryumon;14;;;40;40;;;;;
+Hisyaryumon;30;400;;95;75;;;;;
+Ouryumon;50;1300;;180;;;;20;;
+Apocalymon;99;;;;;;;120;;
+Sistermon Blanc;7;;;;;30;20;;50%;
+Sistermon B (Awake.);60;1150;130;;;150;;50;;
+Sistermon Ciel;14;;40;;;;50;;10%;
+Sistermon C (Awake.);60;1150;;130;;;150;50;;
+Alphamon NX;0;;;;;;;;;Cannot digivolve
+Crusadermon NX;0;;;;;;;;;Cannot digivolve
+Leopardmon NX;0;;;;;;;;;Cannot digivolve
+Omnimon NX;0;;;;;;;;;Cannot digivolve
+Gallantmon NX;0;;;;;;;;;Cannot digivolve

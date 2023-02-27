@@ -1,0 +1,1626 @@
+Number;Digimon;Skill;Level
+1;Kuramon;Glare Eye;1
+2;Pabumon;Adhesive Bubble Blow;1
+3;Punimon;Bubble Blow;1
+4;Botamon;Bubble Blow;1
+5;Poyomon;Super Bubble Blow;1
+6;Arcadiamon In-Tr.;Data Drain;1
+6;Arcadiamon In-Tr.;Physical Drain;5
+7;Koromon;Bubbles;1
+7;Koromon;Wolkenapalm I;5
+8;Tanemon;Adhesive Bubble Blow;1
+8;Tanemon;Gaia Element I;5
+9;Tsunomon;Bubbles;1
+9;Tsunomon;Comet Hammer I;5
+10;Tsumemon;Nail Scratch;1
+10;Tsumemon;Destruction Cannon I;5
+11;Tokomon;Bite;1
+11;Tokomon;Heavy Strike I;5
+12;Nyaromon;Fox Tail;1
+12;Nyaromon;Saint Knuckle I;5
+13;Pagumon;Poison Bubbles;1
+13;Pagumon;Nightmare I;5
+14;Yokomon;Soap Flower;1
+14;Yokomon;Crescent Leaf I;5
+15;Bukamon;Air Bubbles;1
+15;Bukamon;Hydro Water I;5
+16;Motimon;Elastic Bubbles;1
+16;Motimon;Power Energy I;5
+17;Wanyamon;Smile Fang;1
+17;Wanyamon;Wind Claw I;5
+18;Agumon;Pepper Breath;1
+18;Agumon;Heavy Strike I;6
+18;Agumon;Attack Charge;12
+19;Agumon (Blk);Spitfire Blast;1
+19;Agumon (Blk);Wolkenapalm I;6
+19;Agumon (Blk);Guard Charge;12
+20;Arcadiamon Rookie;Soul Absorption;1
+20;Arcadiamon Rookie;Acceleration Boost;6
+20;Arcadiamon Rookie;Destruction Cannon I;12
+21;Armadillomon;Diamond Shell;1
+21;Armadillomon;Grand Rock I;6
+21;Armadillomon;Shock;12
+22;Impmon;Summon;1
+22;Impmon;Nightmare I;6
+22;Impmon;Idle Bubble;12
+23;Elecmon;Thunder Cloud;1
+23;Elecmon;Heaven's Thunder I;6
+23;Elecmon;Ripping Net;12
+24;Otamamon;Lullaby Bubble;1
+24;Otamamon;Hydro Water I;6
+24;Otamamon;Anti-Sleep;12
+25;Gaomon;Double Backhand;1
+25;Gaomon;Anti-Stun;6
+25;Gaomon;Agility Charge;12
+26;Gazimon;Electric Stun Blast;1
+26;Gazimon;Destruction Cannon I;6
+26;Gazimon;Panic Wisp;12
+27;Gabumon;Blue Blaster;1
+27;Gabumon;Burst Flame I;6
+27;Gabumon;Anti-Stun;12
+28;Gabumon (Blk);Little Horn;1
+28;Gabumon (Blk);Grand Rock I;6
+28;Gabumon (Blk);Anti-Panic;12
+29;Guilmon;Rock Breaker;1
+29;Guilmon;Wolkenapalm I;6
+29;Guilmon;Attack Charge;12
+30;Kudamon;Blinding Ray;1
+30;Kudamon;Saint Knuckle I;6
+30;Kudamon;Holy Light I;12
+31;Keramon;Crazy Giggle;1
+31;Keramon;Destruction Cannon I;6
+31;Keramon;Guard Break;12
+32;Gotsumon;Rock Fist;1
+32;Gotsumon;Guard Charge;6
+32;Gotsumon;Comet Hammer I;12
+33;Goblimon;Goblin Strike;1
+33;Goblimon;Comet Hammer I;6
+33;Goblimon;Shock;12
+34;Gomamon;Marching Fishes;1
+34;Gomamon;Idle Bubble;6
+34;Gomamon;Anti-Panic;12
+35;Syakomon;Black Pearl Blast;1
+35;Syakomon;Ice Archery I;6
+35;Syakomon;Anti-Sleep;12
+36;Zubamon;Twenty Dive;1
+36;Zubamon;Heavy Strike I;6
+36;Zubamon;Attack Charge;12
+37;Solarmon;Shiny Ring;1
+37;Solarmon;Holy Light I;6
+37;Solarmon;Shining Laser I;12
+38;Chuumon;Cheese Bomb;1
+38;Chuumon;Heavy Strike I;6
+38;Chuumon;Escape Dash;12
+39;Terriermon;Terrier Tornado;1
+39;Terriermon;Heal;6
+39;Terriermon;Speed Charge;12
+40;Tentomon;Super Shocker;1
+40;Tentomon;Nanomachine Break I;6
+40;Tentomon;Ripping Net;12
+41;ToyAgumon;Plastic Blaze;1
+41;ToyAgumon;Power Energy I;6
+41;ToyAgumon;Burst Flame I;12
+42;Dracmon;Eye of Nightmares;1
+42;Dracmon;Destruction Cannon I;6
+42;Dracmon;Destruction;12
+43;Dracomon;Baby Breath;1
+43;Dracomon;Wolkenapalm I;6
+43;Dracomon;Heavy Strike I;12
+44;Dorumon;Metal Cannon;1
+44;Dorumon;Wolkenapalm I;6
+44;Dorumon;Critical Charge;12
+45;Hagurumon;Cog Crusher;1
+45;Hagurumon;Nanomachine Break I;6
+45;Hagurumon;Heaven's Thunder I;12
+46;Patamon;Air Shot;1
+46;Patamon;Sonic Void I;6
+46;Patamon;Mental Charge;12
+47;Hackmon;Fifth Rush;1
+47;Hackmon;Heal;6
+47;Hackmon;Wolkenapalm III;12
+48;Palmon;Poison Ivy;1
+48;Palmon;Crescent Leaf I;6
+48;Palmon;Anti-Poison;12
+49;DemiDevimon;Demi Darts;1
+49;DemiDevimon;Panic Wisp;6
+49;DemiDevimon;Attack Break;12
+50;Biyomon;Spiral Twister;1
+50;Biyomon;Sonic Void I;6
+50;Biyomon;Mental Charge;12
+51;Falcomon;Ninja Blade;1
+51;Falcomon;Speed Charge;6
+51;Falcomon;Anti-Paralysis;12
+52;FanBeemon;Gear Stringer;1
+52;FanBeemon;Nanomachine Break I;6
+52;FanBeemon;Chain Plus;12
+53;Veemon;Veemon Headbutt;1
+53;Veemon;Heavy Strike I;6
+53;Veemon;Wind Claw I;12
+54;Salamon;Puppy Howl;1
+54;Salamon;Holy Light I;6
+54;Salamon;Heal;12
+55;Betamon;Electric Shock;1
+55;Betamon;Ice Archery I;6
+55;Betamon;Anti-Paralysis;12
+56;Hawkmon;Feather Slash;1
+56;Hawkmon;Wind Claw I;6
+56;Hawkmon;Sonic Void I;12
+57;Mushroomon;Fungus Crusher;1
+57;Mushroomon;Venom Trap;6
+57;Mushroomon;Crescent Leaf I;12
+58;Monodramon;Knuckle Beater;1
+58;Monodramon;Heavy Strike I;6
+58;Monodramon;Attack Charge;12
+59;Lalamon;Seed Blast;1
+59;Lalamon;Venom Trap;6
+59;Lalamon;Anti-Poison;12
+60;Lucemon;Grand Cross;1
+60;Lucemon;Revive;15
+60;Lucemon;Holy Light III;25
+60;Lucemon;Shining Laser II;35
+60;Lucemon;X-Aura;45
+61;Lunamon;Tearing Shot;1
+61;Lunamon;Heal;6
+61;Lunamon;Idle Bubble;12
+62;Renamon;Diamond Storm;1
+62;Renamon;Gaia Element I;6
+62;Renamon;Anti-Panic;12
+63;Lopmon;Blazing Ice;1
+63;Lopmon;Grand Rock I;6
+63;Lopmon;Mental Break;12
+64;Wormmon;Sticky Net;1
+64;Wormmon;Venom Trap;6
+64;Wormmon;Speed Break;12
+65;IceDevimon;Frozen Claw;1
+65;IceDevimon;Ice Archery II;10
+65;IceDevimon;Spirit Drain;18
+65;IceDevimon;Hell Crusher I;25
+66;Icemon;Iceball Bomb;1
+66;Icemon;Ice Archery II;10
+66;Icemon;Comet Hammer II;18
+66;Icemon;Ocean Wave I;25
+67;Aquilamon;Glide Horn;1
+67;Aquilamon;Wind Claw II;10
+67;Aquilamon;Sonic Void II;18
+67;Aquilamon;Gale Storm I;25
+68;Agunimon;Pyro Punch;1
+68;Agunimon;Wolkenapalm III;10
+68;Agunimon;Meteor Fall I;18
+68;Agunimon;Acceleration Boost;25
+69;Arcadiamon Champion;Prison Fist;1
+69;Arcadiamon Champion;Destruction Cannon II;10
+69;Arcadiamon Champion;Heavy Strike II;18
+69;Arcadiamon Champion;Cross-Counter;25
+70;Ankylomon;Tail Hammer;1
+70;Ankylomon;Grand Rock II;10
+70;Ankylomon;Anti-Stun;18
+70;Ankylomon;Awesome Quake I;25
+71;Ikkakumon;Harpoon Torpedo;1
+71;Ikkakumon;Ice Archery II;10
+71;Ikkakumon;Ocean Wave I;18
+71;Ikkakumon;Heal;25
+72;Wizardmon;Thunder Cloud;1
+72;Wizardmon;Nightmare II;10
+72;Wizardmon;Hell Crusher I;18
+72;Wizardmon;Sonic Void II;25
+73;Lobomon;Zwei Sieger;1
+73;Lobomon;Speed Charge;10
+73;Lobomon;Saint Knuckle II;18
+73;Lobomon;Heavy Strike II;25
+74;Woodmon;Branch Drain;1
+74;Woodmon;Gaia Element II;10
+74;Woodmon;Crescent Leaf II;18
+74;Woodmon;Power Energy II;25
+75;Airdramon;Spinning Needle;1
+75;Airdramon;Sonic Void II;10
+75;Airdramon;Gale Storm I;18
+75;Airdramon;Wolkenapalm II;25
+76;ExVeemon;Vee Laser;1
+76;ExVeemon;Heavy Strike II;10
+76;ExVeemon;Mach Rush I;18
+76;ExVeemon;Holy Light II;25
+77;Angemon;Heaven's Knuckle;1
+77;Angemon;Holy Light II;10
+77;Angemon;X-Heal;18
+77;Angemon;Shining Laser I;25
+78;Ogremon;Pummel Whack;1
+78;Ogremon;Commet Hammer II;10
+78;Ogremon;Critical Charge;18
+78;Ogremon;Destruction Cannon II;25
+79;Guardromon;D-Grenade;1
+79;Guardromon;Nanomachine Break II;10
+79;Guardromon;Guard Charge;18
+79;Guardromon;Heaven's Thunder II;25
+80;Guardromon (Gold);D-Grenade;1
+80;Guardromon (Gold);Heaven's Thunder II;10
+80;Guardromon (Gold);Mental Charge;18
+80;Guardromon (Gold);Thunder Fall I;25
+81;GaoGamon;Spiral Blow;1
+81;GaoGamon;Sonic Void II;10
+81;GaoGamon;Gale Storm I;18
+81;GaoGamon;Ice Archery II;25
+82;Kabuterimon;Electro Shocker;1
+82;Kabuterimon;Crescent Leaf II;10
+82;Kabuterimon;Mental Charge;18
+82;Kabuterimon;Heaven's Thunder II;25
+83;ShellNumemon;Mature Poop;1
+83;ShellNumemon;Idle Bubble;10
+83;ShellNumemon;Guard Break;18
+83;ShellNumemon;Guard Charge;25
+84;Gargomon;Dumdum Uppercut;1
+84;Gargomon;Ripping Net;10
+84;Gargomon;Thunder Fall I;18
+84;Gargomon;Mach Rush I;25
+85;Garurumon;Fox Fire;1
+85;Garurumon;Speed Charge;10
+85;Garurumon;Grand Rock II;18
+85;Garurumon;Escape Dash;25
+86;Garurumon (Blk);Freeze Fang;1
+86;Garurumon (Blk);Speed Charge;10
+86;Garurumon (Blk);Grand Rock II;18
+86;Garurumon (Blk);Agility Charge;25
+87;Kyubimon;Will-o'-Wisp;1
+87;Kyubimon;Burst Flame II;10
+87;Kyubimon;Panic Wisp;18
+87;Kyubimon;Mental Charge;25
+88;Growlmon;Exhaust Flame;1
+88;Growlmon;Wolkenapalm II;10
+88;Growlmon;Comet Hammer II;18
+88;Growlmon;Chain Plus;25
+89;Kurisarimon;Data Crusher;1
+89;Kurisarimon;Destruction Cannon II;10
+89;Kurisarimon;Nanomachine Break II;18
+89;Kurisarimon;Guard Break;25
+90;Greymon;Mega Flame;1
+90;Greymon;Wolkenapalm II;10
+90;Greymon;Heavy Strike II;18
+90;Greymon;Acceleration Boost;25
+91;Greymon (Blue);Bit Fire;1
+91;Greymon (Blue);Wolkenapalm II;10
+91;Greymon (Blue);Meteor Fall I;18
+91;Greymon (Blue);Hit Charge;25
+92;Clockmon;ChronoBreaker;1
+92;Clockmon;Heaven's Thunder II;10
+92;Clockmon;Heal;18
+92;Clockmon;Idle Bubble;25
+93;Kuwagamon;Scissor Claw;1
+93;Kuwagamon;Crescent Leaf II;10
+93;Kuwagamon;Destruction Cannon II;18
+93;Kuwagamon;Gale Storm I;25
+94;Gekomon;Symphony Crusher;1
+94;Gekomon;Hydro Water II;10
+94;Gekomon;Attack Break;18
+94;Gekomon;Anti-Sleep;25
+95;Geremon;Hyper Smell;1
+95;Geremon;Venom Trap;10
+95;Geremon;Guard Charge;18
+95;Geremon;Nanomachine Break II;25
+96;Coredramon (Blue);Blue Flare Breath;1
+96;Coredramon (Blue);Attack Charge;10
+ ;Coredramon (Blue);Wind Claw II;18
+ ;Coredramon (Blue);Gale Storm I;25
+97;Coredramon (Green);Green Flare Breath;1
+97;Coredramon (Green);Comet Hammer II;10
+97;Coredramon (Green);Shock;18
+97;Coredramon (Green);Critical Charge;25
+98;GoldNumemon;Golden Rush;1
+98;GoldNumemon;Antidote;10
+98;GoldNumemon;Revive;18
+98;GoldNumemon;Texture Blow;25
+99;Golemon;Crimson Curse;1
+99;Golemon;Awesome Quake I;10
+99;Golemon;Comet Hammer II;18
+99;Golemon;Meteor Fall I;25
+100;Cyclonemon;Hyper Heat;1
+100;Cyclonemon;Critical Charge;10
+100;Cyclonemon;Awesome Quake I;18
+100;Cyclonemon;Cross-Counter;25
+101;Sangloupmon;Sticker Blade;1
+101;Sangloupmon;Destruction Cannon II;10
+101;Sangloupmon;Nightmare II;18
+101;Sangloupmon;Physical Drain;25
+102;Sunflowmon;Sunshine Beam;1
+102;Sunflowmon;Gaia Element II;10
+102;Sunflowmon;Holy Light II;18
+102;Sunflowmon;X-Heal;25
+103;Seadramon;Ice Blast;1
+103;Seadramon;Hydro Water II;10
+103;Seadramon;Anti-Panic;18
+103;Seadramon;Mirror Reflection;25
+104;Coelamon;Fossil Bite;1
+104;Coelamon;Ice Archery II;10
+104;Coelamon;Chain Minus;18
+104;Coelamon;Heavy Strike II;25
+105;GeoGreymon;Mega Burst;1
+105;GeoGreymon;Wolkenapalm II;10
+105;GeoGreymon;Heavy Strike II;18
+105;GeoGreymon;Cross-Counter;25
+106;Sukamon;Poop;1
+106;Sukamon;Panic Wisp;10
+106;Sukamon;Mental Break;18
+106;Sukamon;Nightmare II;25
+107;Starmon;Meteor Shower;1
+107;Starmon;Heavy Strike II;10
+107;Starmon;Saint Knuckle II;18
+107;Starmon;Power Energy II;25
+108;Stingmon;Spiking Strike;1
+108;Stingmon;Crescent Leaf II;10
+108;Stingmon;Gale Storm I;18
+108;Stingmon;Wind Claw II;25
+109;Strikedramon;Fang Strike;1
+109;Strikedramon;Meteor Fall I;10
+109;Strikedramon;Guard Break;18
+109;Strikedramon;Mach Rush II;25
+110;Zubaeagermon;Vantheon;1
+110;Zubaeagermon;Mach Rush I;10
+110;Zubaeagermon;Heavy Strike II;18
+110;Zubaeagermon;Critical Charge;25
+111;Socerimon;Crystal Cloud;1
+111;Socerimon;Hydro Water II;10
+111;Socerimon;Mirror Reflection;18
+111;Socerimon;X-Heal;25
+112;Tankmon;Hyper Cannon;1
+112;Tankmon;Nanomachine Break II;10
+112;Tankmon;Hit Charge;18
+112;Tankmon;Shock;25
+113;MudFrigimon;Great Weight;1
+113;MudFrigimon;Comet Hammer II;10
+113;MudFrigimon;Aura;18
+113;MudFrigimon;Awesome Quake I;25
+114;Tyrannomon;Fire Breath;1
+114;Tyrannomon;Acceleration Boost;10
+114;Tyrannomon;Wolkenapalm II;18
+114;Tyrannomon;Heavy Strike II;25
+115;Gatomon;Lightning Paw;1
+115;Gatomon;Holy Light II;10
+115;Gatomon;Aura;18
+115;Gatomon;Revive;25
+116;Devimon;Death Claw;1
+116;Devimon;Destruction Cannon II;10
+116;Devimon;Physical Drain;18
+116;Devimon;Hell Crusher I;25
+117;Turuiemon;Ninja Claw;1
+117;Turuiemon;Comet Hammer II;10
+117;Turuiemon;Critical Charge;18
+117;Turuiemon;Mach Rush I;25
+118;Togemon;Needle Spray;1
+118;Togemon;Crescent Leaf II;10
+118;Togemon;Anti-Paralysis;18
+118;Togemon;Ripping Net;25
+119;Dorugamon;Power Metal;1
+119;Dorugamon;Comet Hammer II;10
+119;Dorugamon;Guard Charge;18
+119;Dorugamon;Speed Charge;25
+120;Nanimon;Poop Dunk;1
+120;Nanimon;Comet Hammer II;10
+120;Nanimon;Attack Break;18
+120;Nanimon;Shock;25
+121;Numemon;Poop Toss;1
+121;Numemon;Venom Trap;10
+121;Numemon;Speed Break;18
+121;Numemon;Ice Archery II;25
+122;Birdramon;Meteor Wing;1
+122;Birdramon;Burst Flame II;10
+122;Birdramon;Anti-Poison;18
+122;Birdramon;Meteor Fall I;25
+123;BaoHuckmon;Fif Cross;1
+123;BaoHuckmon;Attack Charge;10
+123;BaoHuckmon;Heavy Strike II;18
+123;BaoHuckmon;Meteor Fall II;25
+124;Bakemon;Death Charm;1
+124;Bakemon;Nightmare II;10
+124;Bakemon;Agility Charge;18
+124;Bakemon;Physical Drain;25
+125;Veedramon;V-Nova Blast;1
+125;Veedramon;Wind Claw II;10
+125;Veedramon;Chain Plus;18
+125;Veedramon;Saint Knuckle II;25
+126;Hudiemon;Infinity Dream;1
+126;Hudiemon;Flying Kick;1
+126;Hudiemon;Gaia Element II;10
+126;Hudiemon;Rune Forest I;18
+126;Hudiemon;Aura;25
+127;PlatinumSukamon;Rare Metal Poop;1
+127;PlatinumSukamon;Anti-Bug;10
+127;PlatinumSukamon;Mental Break;18
+127;PlatinumSukamon;Character Reversal;25
+128;BlackGatomon;Lightning Paw;1
+128;BlackGatomon;Nightmare II;10
+128;BlackGatomon;Grand Rock II;18
+128;BlackGatomon;Power Energy II;25
+129;Vegiemon;Super Stinky Jet;1
+129;Vegiemon;Gaia Element II;10
+129;Vegiemon;Speed Break;18
+129;Vegiemon;Venom Trap;25
+130;Peckmon;Kunai Wing;1
+130;Peckmon;Wind Claw II;10
+130;Peckmon;Agility Charge;18
+130;Peckmon;Escape Dash;25
+131;Meramon;Burning Fist;1
+131;Meramon;Attack Charge;10
+131;Meramon;Wolkenapalm II;18
+131;Meramon;Burst Flame II;25
+132;Monochromon;Volcanic Strike;1
+132;Monochromon;Comet Hammer II;10
+132;Monochromon;Acceleration Boost;18
+132;Monochromon;Awesome Quake I;25
+133;Frigimon;Sub-zero Ice Punch;1
+133;Frigimon;Ice Archery II;10
+133;Frigimon;Ocean Wave I;18
+133;Frigimon;Aura;25
+134;Unimon;Holy Shot;1
+134;Unimon;Sonic Void II;10
+134;Unimon;Speed Charge;18
+134;Unimon;Holy Light II;25
+135;Raptordramon;Ambush Crunch;1
+135;Raptordramon;Heavy Strike II;10
+135;Raptordramon;Comet Hammer II;18
+135;Raptordramon;Shock;25
+136;Raremon;Sludge;1
+136;Raremon;Venom Trap;10
+136;Raremon;Mach Rush I;18
+136;Raremon;Character Reversal;25
+137;Leomon;Fist of the Beast King;1
+137;Leomon;Comet Hammer II;10
+137;Leomon;Attack Charge;18
+137;Leomon;Saint Knuckle II;25
+138;Lekismon;Moon Night Bomb;1
+138;Lekismon;Ice Archery II;10
+138;Lekismon;Power Energy II;18
+138;Lekismon;Cross-Counter;25
+139;Reppamon;Razor Wind;1
+139;Reppamon;Saint Knuckle II;10
+139;Reppamon;Shining Laser I;18
+139;Reppamon;Aura;25
+140;Waspmon;Turbo Stinger;1
+140;Waspmon;Nanomachine Break II;10
+140;Waspmon;Hit Charge;18
+140;Waspmon;Ripping Net;25
+141;MegaKabuterimon;Horn Buster;1
+141;MegaKabuterimon;Rune Forest I;15
+141;MegaKabuterimon;Speed Break;25
+141;MegaKabuterimon;Gaia Element III;35
+141;MegaKabuterimon;Rune Forest II;45
+142;Arcadiamon Ultimate;Dot Matrix;1
+142;Arcadiamon Ultimate;Destruction ;15
+142;Arcadiamon Ultimate;Attack Break;25
+142;Arcadiamon Ultimate;Wind Claw II;35
+142;Arcadiamon Ultimate;Saint Knuckle II;45
+143;Antylamon;Bunny Blades;1
+143;Antylamon;Mach Rush I;15
+143;Antylamon;Anti-Paralysis;25
+143;Antylamon;Mach Rush II;35
+143;Antylamon;Power Energy III;45
+144;Andromon;Spiral Sword;1
+144;Andromon;Chain Plus;15
+144;Andromon;Aura;25
+144;Andromon;Nanomachine Break III;35
+144;Andromon;Sonic Void III;45
+145;Meteormon;Galactic Flare;1
+145;Meteormon;Awesome Quake I;15
+145;Meteormon;Meteor Fall I;25
+145;Meteormon;Grand Rock III;35
+145;Meteormon;Power Energy III;45
+146;Infermon;Spider Shooter;1
+146;Infermon;Destruction Cannon II;15
+146;Infermon;Destruction;25
+146;Infermon;Mach Rush II;35
+146;Infermon;Destruction Cannon III;45
+147;Myotismon;Night Raid;1
+147;Myotismon;Hell Crusher I;15
+147;Myotismon;Spirit Drain;25
+147;Myotismon;Nightmare III;35
+147;Myotismon;Destruction Cannon III;45
+148;Wingdramon;Blaze Sonic Breath;1
+148;Wingdramon;Speed Break;15
+148;Wingdramon;Mach Rush II;25
+148;Wingdramon;Wind Claw II;35
+148;Wingdramon;Gale Storm II;45
+149;BurningGreymon;Corona Blaster;1
+149;BurningGreymon;Acceleration Boost;15
+149;BurningGreymon;Wolkenapalm III;25
+149;BurningGreymon;Awesome Quake II;35
+149;BurningGreymon;Meteor Fall II;45
+150;AeroVeedramon;Dragon Impulse;1
+150;AeroVeedramon;Chain Plus;15
+150;AeroVeedramon;Speed Charge;25
+150;AeroVeedramon;Wind Claw III;35
+150;AeroVeedramon;Saint Knuckle III;45
+151;Etemon;Love Serenade;1
+151;Etemon;Hell Crusher I;15
+151;Etemon;Escape Dash;25
+151;Etemon;Mirror Reflection;35
+151;Etemon;Nightmare III;45
+152;Angewomon;Celestial Arrow;1
+152;Angewomon;Shining Laser I;15
+152;Angewomon;Aura;25
+152;Angewomon;Revive;35
+152;Angewomon;Holy Light III;45
+153;Okuwamon;Double Scissor Claw;1
+153;Okuwamon;Thunder Fall I;15
+153;Okuwamon;Venom Trap;25
+153;Okuwamon;Hit Charge;35
+153;Okuwamon;Crescent Leaf III;45
+154;Garudamon;Shadow Wing;1
+154;Garudamon;Meteor Fall I;15
+154;Garudamon;Gale Storm I;25
+154;Garudamon;Burst Flame III;35
+154;Garudamon;Mirror Reflection;45
+155;KendoGarurumon;Speed Star;1
+155;KendoGarurumon;Wind Claw II;15
+155;KendoGarurumon;Gale Storm I;25
+155;KendoGarurumon;Saint Knuckle III;35
+155;KendoGarurumon;Speed Charge Field;45
+156;Gigadramon;Genocidal Gears;1
+156;Gigadramon;Shock;15
+156;Gigadramon;Wolkenapalm II;25
+156;Gigadramon;Wind Claw III;35
+156;Gigadramon;Heaven's Thunder III;45
+157;CatchMamemon;Miracle Bomb;1
+157;CatchMamemon;Shock;15
+157;CatchMamemon;Meteor Fall I;25
+157;CatchMamemon;Ripping Net;35
+157;CatchMamemon;Nanomachine Break III;45
+158;CannonBeemon;Nitro Stinger;1
+158;CannonBeemon;Thunder Fall I;15
+158;CannonBeemon;Meteor Fall I;25
+158;CannonBeemon;Nanomachine Break III;35
+158;CannonBeemon;Panic Wisp;45
+159;Groundramon;Scrapless Claw;1
+159;Groundramon;Awesome Quake I;15
+159;Groundramon;Cross-Counter;25
+159;Groundramon;Comet Hammer III;35
+159;Groundramon;Awesome Quake II;45
+160;GrapLeomon;The King of Fists;1
+160;GrapLeomon;Thunder Fall I;15
+160;GrapLeomon;Agility Charge;25
+160;GrapLeomon;Nanomachine Break III;35
+160;GrapLeomon;Cross-Counter;45
+161;Grademon;Cross Blade;1
+161;Grademon;Anti-Bug;15
+161;Grademon;Saint Knuckle III;25
+161;Grademon;Shining Laser I;35
+161;Grademon;Heavy Strike III;45
+162;Crescemon;Lunatic Dance;1
+162;Crescemon;Ocean Wave I;15
+162;Crescemon;Hydro Water II;25
+162;Crescemon;Shining Laser I;35
+162;Crescemon;Ice Archery III;45
+163;Cyberdramon;Desolation Claw;1
+163;Cyberdramon;Venom Trap;15
+163;Cyberdramon;Attack Break;25
+163;Cyberdramon;Comet Hammer III;35
+163;Cyberdramon;Destruction Cannon III;45
+164;Shakkoumon;Disaster Blaster;1
+164;Shakkoumon;Shining Laser I;15
+164;Shakkoumon;Dispel;25
+164;Shakkoumon;Holy Light III;35
+164;Shakkoumon;Grand Rock III;45
+165;Cherrymon;Cherry Bomb;1
+165;Cherrymon;Rune Forest I;15
+165;Cherrymon;Physical Drain;25
+165;Cherrymon;Rune Forest II;35
+165;Cherrymon;Crescent Leaf III;45
+166;Silphymon;Top Gun;1
+166;Silphymon;Gale Storm I;15
+166;Silphymon;Critical Charge;25
+166;Silphymon;Sonic Void III;35
+166;Silphymon;Wind Claw III;45
+167;SuperStarmon;Superstar Uppercut;1
+167;SuperStarmon;Shining Laser I;15
+167;SuperStarmon;Anti-Sleep;25
+167;SuperStarmon;Mach Rush I;35
+167;SuperStarmon;Saint Knuckle III;45
+168;SkullGreymon;Oblivion Bird;1
+168;SkullGreymon;Acceleration Boost;15
+168;SkullGreymon;Destruction;25
+168;SkullGreymon;Destruction Cannon III;35
+168;SkullGreymon;Comet Hammer III;45
+169;SkullSatamon;Nail Bone;1
+169;SkullSatamon;Character Reversal;15
+169;SkullSatamon;Hell Crusher I;25
+169;SkullSatamon;Destruction Cannon III;35
+169;SkullSatamon;Nightmare III;45
+170;Zudomon;Vulcan's Hammer;1
+170;Zudomon;Gale Storm I;15
+170;Zudomon;Guard Break;25
+170;Zudomon;Ice Archery III;35
+170;Zudomon;Ocean Wave II;45
+171;SaviorHuckmon;Trident Saber;1
+171;SaviorHuckmon;Meteor Fall I;15
+171;SaviorHuckmon;Support End;25
+171;SaviorHuckmon;Saint Knuckle III;35
+171;SaviorHuckmon;Revive;45
+172;Taomon;Talisman of Light;1
+172;Taomon;Hell Crusher I;15
+172;Taomon;Mental Charge;25
+172;Taomon;Nightmare III;35
+172;Taomon;Hell Crusher II;45
+173;Dragomon;Forbidden Trident;1
+173;Dragomon;Panic Wisp;15
+173;Dragomon;Ocean Wave II;25
+173;Dragomon;Hydro Water II;35
+173;Dragomon;Hell Crusher II;45
+174;Chirinmon;Wind Cutter Sword;1
+174;Chirinmon;Shining Laser I;15
+174;Chirinmon;Anti-Poison;25
+174;Chirinmon;Revive;35
+174;Chirinmon;Holy Light III;45
+175;Dinobeemon;Hell Masquerade;1
+175;Dinobeemon;Crescent Leaf II;15
+175;Dinobeemon;Thunder Fall I;25
+175;Dinobeemon;Wind Claw III;35
+175;Dinobeemon;Cross-Counter;45
+176;Digitamamon;Nightmare Syndrome;1
+176;Digitamamon;Mach Rush I;15
+176;Digitamamon;Rune Forest I;25
+176;Digitamamon;Destruction;35
+176;Digitamamon;Heavy Strike III;45
+177;SkullMeramon;Heavy Metal Fire;1
+177;SkullMeramon;Speed Break;15
+177;SkullMeramon;Physical Drain;25
+177;SkullMeramon;Comet Hammer III;35
+177;SkullMeramon;Wolkenapalm III;45
+178;Duramon;Blinded;1
+178;Duramon;Agility Charge;15
+178;Duramon;Saint Knuckle II;25
+178;Duramon;Heavy Strike III;35
+178;Duramon;Mach Rush II;45
+179;ShogunGekomon;Musical Fist;1
+179;ShogunGekomon;Ocean Wave I;15
+179;ShogunGekomon;Idle Bubble;25
+179;ShogunGekomon;Ocean Wave II;35
+179;ShogunGekomon;Ice Archery III;45
+180;Triceramon;Tri-Horn Attack;1
+180;Triceramon;Awesome Quake I;15
+180;Triceramon;Hit Charge;25
+180;Triceramon;Wolkenapalm II;35
+180;Triceramon;Comet Hammer III;45
+181;DoruGreymon;Metal Meteor;1
+181;DoruGreymon;Awesome Quake I;15
+181;DoruGreymon;Attack Break;25
+181;DoruGreymon;Wolkenapalm III;35
+181;DoruGreymon;Cross-Counter;45
+182;Knightmon;Berserk Sword;1
+182;Knightmon;Mach Rush I;15
+182;Knightmon;Anti-Panic;25
+182;Knightmon;Heavy Strike III;35
+182;Knightmon;Mach Rush II;45
+183;Datamon;Digital Bomb;1
+183;Datamon;Ripping Net;15
+183;Datamon;Physical Drain;25
+183;Datamon;Heaven's Thunder III;35
+183;Datamon;Power Energy III;45
+184;Paildramon;Death Parade Blaster;1
+184;Paildramon;Mach Rush I;15
+184;Paildramon;Thunder Fall I;25
+184;Paildramon;Heavy Strike III;35
+184;Paildramon;Cross-Counter;45
+185;Panjyamon;Fist of Ice;1
+185;Panjyamon;Ocean Wave I;15
+185;Panjyamon;Agility Charge;25
+185;Panjyamon;Hydro Water III;35
+185;Panjyamon;Ice Archery III;45
+186;Pandamon;Animal Nail;1
+186;Pandamon;Mach Rush I;15
+186;Pandamon;Heal;25
+186;Pandamon;Heavy Strike III;35
+186;Pandamon;Comet Hammer III;45
+187;Pumpkinmon;Trick or Treat;1
+187;Pumpkinmon;Awesome Quake I;15
+187;Pumpkinmon;Meteor Fall I;25
+187;Pumpkinmon;Comet Hammer III;35
+187;Pumpkinmon;Texture Blow;45
+188;Piximon;Pit Bomb;1
+188;Piximon;Shining Laser I;15
+188;Piximon;Ocean Wave I;25
+188;Piximon;Holy Light III;35
+188;Piximon;X-Heal;45
+189;HippoGryphonmon;Heat Wave;1
+189;HippoGryphonmon;Sonic Void II;15
+189;HippoGryphonmon;Shining Laser I;25
+189;HippoGryphonmon;Speed Charge;35
+189;HippoGryphonmon;Sonic Void III;45
+190;Phantomon;Soul Chopper;1
+190;Phantomon;Hell Crusher I;15
+190;Phantomon;Destruction;25
+190;Phantomon;Nightmare III;35
+190;Phantomon;Hell Crusher II;45
+191;BlackKingNumemon;Dark Pupil;1
+191;BlackKingNumemon;Antidote;15
+191;BlackKingNumemon;Texture Blow;25
+191;BlackKingNumemon;Chain Minus;35
+191;BlackKingNumemon;Nightmare III;45
+192;BlueMeramon;Cold Flame;1
+192;BlueMeramon;Meteor Fall I;15
+192;BlueMeramon;Mental Break;25
+192;BlueMeramon;Burst Flame III;35
+192;BlueMeramon;Wolkenapalm III;45
+193;Vademon;Unidentified Flying Kiss;1
+193;Vademon;Venom Trap;15
+193;Vademon;Hell Crusher I;25
+193;Vademon;Character Reversal;35
+193;Vademon;Nightmare III;45
+194;Whamon;Tidal Wave;1
+194;Whamon;Ocean Wave I;15
+194;Whamon;X-Heal;25
+194;Whamon;Hydro Water III;35
+194;Whamon;Ice Archery III;45
+195;MagnaAngemon;Heaven's Gate;1
+195;MagnaAngemon;Shining Laser I;15
+195;MagnaAngemon;X-Heal;25
+195;MagnaAngemon;Holy Light III;35
+195;MagnaAngemon;Revive;45
+196;Volcanomon;Big Bang Voice;1
+196;Volcanomon;Chain Plus;15
+196;Volcanomon;Mach Rush I;25
+196;Volcanomon;Awesome Quake I;35
+196;Volcanomon;Wolkenapalm III;45
+197;Matadormon;Earth-Shattering Stomp;1
+197;Matadormon;Hell Crusher I;15
+197;Matadormon;Cross-Counter;25
+197;Matadormon;Mach Rush II;35
+197;Matadormon;Destruction Cannon III;45
+198;MachGaogamon;Winning Knuckle;1
+198;MachGaogamon;Thunder Fall I;15
+198;MachGaogamon;Anti-Stun;25
+198;MachGaogamon;Wind Claw III;35
+198;MachGaogamon;Gale Storm II;45
+199;Mamemon;Smile Bomber;1
+199;Mamemon;Awesome Quake I;15
+199;Mamemon;Escape Dash;25
+199;Mamemon;Comet Hammer III;35
+199;Mamemon;Awesome Quake II;45
+200;MegaSeadramon;Lightning Javelin;1
+200;MegaSeadramon;Idle Bubble;15
+200;MegaSeadramon;Mental Break;25
+200;MegaSeadramon;Hydro Water III;35
+200;MegaSeadramon;Heaven's Thunder III;45
+201;Megadramon;Genocide Attack;1
+201;Megadramon;Panic Wisp;15
+201;Megadramon;Wolkenapalm II;25
+201;Megadramon;Gale Storm II;35
+201;Megadramon;Wind Claw III;45
+202;WarGrowlmon;Atomic Blaster;1
+202;WarGrowlmon;Chain Plus;15
+202;WarGrowlmon;Guard Break;25
+202;WarGrowlmon;Wolkenapalm III;35
+202;WarGrowlmon;Saint Knuckle III;45
+203;MetalGreymon;Giga Destroyer;1
+203;MetalGreymon;Mach Rush I;15
+203;MetalGreymon;Attack Charge;25
+203;MetalGreymon;Meteor Fall I;35
+203;MetalGreymon;Wolkenapalm III;45
+204;MetalGreymon (Blue);Revenge Flame;1
+204;MetalGreymon (Blue);Awesome Quake I;15
+204;MetalGreymon (Blue);Critical Charge;25
+204;MetalGreymon (Blue);Meteor Fall II;35
+204;MetalGreymon (Blue);Wolkenapalm III;45
+205;MetalTyrannomon;Nuclear Laser;1
+205;MetalTyrannomon;Ripping Net;15
+205;MetalTyrannomon;Guard Charge;25
+205;MetalTyrannomon;Burst Flame III;35
+205;MetalTyrannomon;Nanomachine Break III;45
+206;MetalMamemon;Energy Bomb;1
+206;MetalMamemon;Escape Dash;15
+206;MetalMamemon;Hit Charge;25
+206;MetalMamemon;Nanomachine Break III;35
+206;MetalMamemon;Burst Flame III;45
+207;Monzaemon;Hearts Attack;1
+207;Monzaemon;Mach Rush I;15
+207;Monzaemon;Rune Forest I;25
+207;Monzaemon;Panic Wisp;35
+207;Monzaemon;Heavy Strike III;45
+208;Crowmon;Savage Emperor;1
+208;Crowmon;Gale Storm I;15
+208;Crowmon;Thunder Fall I;25
+208;Crowmon;Sonic Void III;35
+208;Crowmon;Mirror Reflection;45
+209;RizeGreymon;Trident Revolver;1
+209;RizeGreymon;Chain Plus;15
+209;RizeGreymon;Hit Charge;25
+209;RizeGreymon;Meteor Fall II;35
+209;RizeGreymon;Wolkenapalm III;45
+210;Lilamon;Lila Shower;1
+210;Lilamon;Rune Forest I;15
+210;Lilamon;Aura;25
+210;Lilamon;Rune Forest II;35
+210;Lilamon;Gaia Element III;45
+211;Rapidmon;Golden Triangle;1
+211;Rapidmon;Thunder Fall I;15
+211;Rapidmon;Meteor Fall I;25
+211;Rapidmon;Thunder Fall II;35
+211;Rapidmon;Nanomachine Break III;45
+212;Lillymon;Flower Cannon;1
+212;Lillymon;Rune Forest I;15
+212;Lillymon;X-Heal;25
+212;Lillymon;Gaia Element III;35
+212;Lillymon;Rune Forest II;45
+213;Lucemon FM;Dead or Alive;1
+213;Lucemon FM;Shining Laser II;20
+213;Lucemon FM;Hell Crusher II;35
+213;Lucemon FM;Spirit Drain;50
+213;Lucemon FM;Hell Crusher III;65
+213;Lucemon FM;Shining Laser III;80
+214;LadyDevimon;Darkness Wave;1
+214;LadyDevimon;Hell Crusher I;15
+214;LadyDevimon;Spirit Drain;25
+214;LadyDevimon;Nightmare III;35
+214;LadyDevimon;Hell Crusher II;45
+215;WereGarurumon;Wolf Claw;1
+215;WereGarurumon;Awesome Quake I;15
+215;WereGarurumon;Meteor Fall I;25
+215;WereGarurumon;Comet Hammer III;35
+215;WereGarurumon;Awesome Quake II;45
+216;WereGarurumon (Blk);Full Moon Kick;1
+216;WereGarurumon (Blk);Mach Rush I;15
+216;WereGarurumon (Blk);Wolkenapalm II;25
+216;WereGarurumon (Blk);Comet Hammer III;35
+216;WereGarurumon (Blk);Mach Rush II;45
+217;Wisemon;Pandora Dialogue;1
+217;Wisemon;Hell Crusher I;15
+217;Wisemon;Mirror Reflection;25
+217;Wisemon;Hell Crusher II;35
+217;Wisemon;Nightmare III;45
+218;Arcadiamon Mega;Dot Matrix;1
+218;Arcadiamon Mega;Destruction Cannon III;20
+218;Arcadiamon Mega;Speed Break Field;35
+218;Arcadiamon Mega;Saint Knuckle III;50
+218;Arcadiamon Mega;Mach Rush III;65
+218;Arcadiamon Mega;Chain Loss;80
+219;Alphamon;Blade of the Dragon King;1
+219;Alphamon;Soul Digitalization;1
+219;Alphamon;Power Energy III;20
+219;Alphamon;Mental Charge Field;35
+219;Alphamon;Speed Break Field;50
+219;Alphamon;Hydro Water III;65
+219;Alphamon;Mach Rush III;80
+220;UlforceVeedramon;The Ray of Victory;1
+220;UlforceVeedramon;Victory Sword;1
+220;UlforceVeedramon;Wind Claw III;20
+220;UlforceVeedramon;Mental Charge Field;35
+220;UlforceVeedramon;Speed Charge Field;50
+220;UlforceVeedramon;Gale Storm II;65
+220;UlforceVeedramon;Gale Storm III;80
+221;Ebemon;Brain Rupture;1
+221;Ebemon;Attack Break Field;20
+221;Ebemon;Heaven's Thunder III;35
+221;Ebemon;Chain Loss;50
+221;Ebemon;Thunder Fall II;65
+221;Ebemon;Character Reversal;80
+222;Imperialdramon DM;Megadeath;1
+222;Imperialdramon DM;Heavy Strike III;20
+222;Imperialdramon DM;Attack Charge Field;35
+222;Imperialdramon DM;Meteor Fall III;50
+222;Imperialdramon DM;Sonic Void III;65
+222;Imperialdramon DM;Mach Rush III;80
+223;Imperialdramon FM;Positron Laser;1
+223;Imperialdramon FM;Heavy Strike III;20
+223;Imperialdramon FM;Attack Charge Field;35
+223;Imperialdramon FM;Meteor Fall III;50
+223;Imperialdramon FM;Sonic Void III;65
+223;Imperialdramon FM;Mach Rush III;80
+224;Vikemon;Arctic Blizzard;1
+224;Vikemon;Ice Archery III;20
+224;Vikemon;X-Heal;35
+224;Vikemon;Mental Charge Field;50
+224;Vikemon;Gaia Element III;65
+224;Vikemon;Ocean Wave III;80
+225;Valkyrimon;Fenrir Sword;1
+225;Valkyrimon;Holy Light III;20
+225;Valkyrimon;Final Heal;35
+225;Valkyrimon;Speed Charge Field;50
+225;Valkyrimon;Gale Storm III;65
+225;Valkyrimon;Perfect Revival;80
+226;Varodurumon;Aurora Undulation;1
+226;Varodurumon;Holy Light III;20
+226;Varodurumon;Safety Guard;35
+226;Varodurumon;Final Aura;50
+226;Varodurumon;Shining Laser III;65
+226;Varodurumon;Perfect Revival;80
+227;VenomMyotismon;Venom Infusion;1
+227;VenomMyotismon;Destruction Cannon III;20
+227;VenomMyotismon;Destruction;35
+227;VenomMyotismon;Physical Drain;50
+227;VenomMyotismon;Guard Break Field;65
+227;VenomMyotismon;Hell Crusher III;80
+228;WarGreymon;Terra Force;1
+228;WarGreymon;Great Tornado;1
+228;WarGreymon;Meteor Fall II;20
+228;WarGreymon;Wolkenapalm III;35
+228;WarGreymon;Attack Charge Field;50
+228;WarGreymon;Heavy Strike III;65
+228;WarGreymon;Meteor Fall III;80
+229;Ophanimon;Eden's Javelin;1
+229;Ophanimon;Shining Laser II;20
+229;Ophanimon;Perfect Revival;35
+229;Ophanimon;Final Aura;50
+229;Ophanimon;Holy Light III;65
+229;Ophanimon;Shining Laser III;80
+230;Gaiomon;Will-o'-Wisp Slash;1
+230;Gaiomon;Destruction;20
+230;Gaiomon;Wolkenapalm III;35
+230;Gaiomon;Guard Break Field;50
+230;Gaiomon;Meteor Fall II;65
+230;Gaiomon;Meteor Fall III;80
+231;KaiserGreymon;Firedrake Strike;1
+231;KaiserGreymon;Wolkenapalm III;20
+231;KaiserGreymon;Wind Claw III;35
+231;KaiserGreymon;Shock;50
+231;KaiserGreymon;Awesome Quake II;65
+231;KaiserGreymon;Meteor Fall III;80
+232;ChaosGallantmon;Demonic Disaster;1
+232;ChaosGallantmon;Judecca Prison;1
+232;ChaosGallantmon;Destruction Cannon III;20
+232;ChaosGallantmon;Mental Break Field;35
+232;ChaosGallantmon;Destruction;50
+232;ChaosGallantmon;Hydro Water III;65
+232;ChaosGallantmon;Ocean Wave III;80
+233;Chaosdramon;Hyper Infinity Cannon;1
+233;Chaosdramon;Destroyed Hook;1
+233;Chaosdramon;Mach Rush II;20
+233;Chaosdramon;Acceleration Boost;35
+233;Chaosdramon;Nanomachine Break III;50
+233;Chaosdramon;Thunder Fall II;65
+233;Chaosdramon;Thunder Fall III;80
+234;Gankoomon;Quake!Blast!Fire!Father!;1
+234;Gankoomon;Table Flip;1
+234;Gankoomon;Wolkenapalm III;20
+234;Gankoomon;Acceleration Boost;35
+234;Gankoomon;Attack Charge Field;50
+234;Gankoomon;Meteor Fall II;65
+234;Gankoomon;Meteor Fall III;80
+235;KingEtemon;Monkey Wrench;1
+235;KingEtemon;Awesome Quake II;20
+235;KingEtemon;Attack Charge Field;35
+235;KingEtemon;Chain Loss;50
+235;KingEtemon;Comet Hammer III;65
+235;KingEtemon;Mach Rush III;80
+236;Kuzuhamon;Taizoukai Mandala;1
+236;Kuzuhamon;Nightmare III;20
+236;Kuzuhamon;Hell Crusher II;35
+236;Kuzuhamon;Status Barrier;50
+236;Kuzuhamon;Chain Loss;65
+236;Kuzuhamon;Hell Crusher III;80
+237;GranKuwagamon;Dimension Scissor;1
+237;GranKuwagamon;Physical Drain;20
+237;GranKuwagamon;Crescent Leaf III;35
+237;GranKuwagamon;Gale Storm II;50
+237;GranKuwagamon;Attack Break Field;65
+237;GranKuwagamon;Speed Charge Field;80
+238;GranDracmon;Crystal Revolution;1
+238;GranDracmon;Eye of the Gorgon;1
+238;GranDracmon;Nightmare III;20
+238;GranDracmon;Panic Wisp;35
+238;GranDracmon;Ice Archery III;50
+238;GranDracmon;Mental Break Field;65
+238;GranDracmon;Hell Crusher III;80
+239;GroundLocomon;Destruction Crush;1
+239;GroundLocomon;Heaven's Thunder III;20
+239;GroundLocomon;Antidote;35
+239;GroundLocomon;Guard Charge Field;50
+239;GroundLocomon;Thunder Fall II;65
+239;GroundLocomon;Thunder Fall III;80
+240;Gryphonmon;Supersonic Voice;1
+240;Gryphonmon;Wind Claw III;20
+240;Gryphonmon;Shining Laser II;35
+240;Gryphonmon;Speed Charge Field;50
+240;Gryphonmon;Gale Storm III;65
+240;Gryphonmon;Revive;80
+241;Craniamon;Waltz's End;1
+241;Craniamon;Breath of the Gods;1
+241;Craniamon;Grand Rock III;20
+241;Craniamon;Awesome Quake II;35
+241;Craniamon;Guard Charge Field;50
+241;Craniamon;Gaia Element III;65
+241;Craniamon;Awesome Quake III;80
+242;Kerpymon (Blk);Lightning Spear;1
+242;Kerpymon (Blk);Nightmare III;20
+242;Kerpymon (Blk);Spirit Drain;35
+242;Kerpymon (Blk);Hell Crusher II;50
+242;Kerpymon (Blk);Hell Crusher III;65
+242;Kerpymon (Blk);Status Barrier;80
+243;Kerpymon (Good);Heaven's Judgment;1
+243;Kerpymon (Good);Holy Light III;20
+243;Kerpymon (Good);X-Aura;35
+243;Kerpymon (Good);Shining Laser II;50
+243;Kerpymon (Good);Shining Laser III;65
+243;Kerpymon (Good);Safety Guard;80
+244;Goldramon;God Flame;1
+244;Goldramon;Saint Knuckle III;20
+244;Goldramon;Wolkenapalm III;35
+244;Goldramon;X-Aura;50
+244;Goldramon;Support End;65
+244;Goldramon;Thunder Fall III;80
+245;SaberLeomon;Howling Crusher;1
+245;SaberLeomon;Wind Claw III;20
+245;SaberLeomon;Acceleration Boost;35
+245;SaberLeomon;Gale Storm II;50
+245;SaberLeomon;Guard Break Field;65
+245;SaberLeomon;Gale Storm III;80
+246;Sakuyamon;Amethyst Mandala;1
+246;Sakuyamon;Restore;20
+246;Sakuyamon;Shining Laser II;35
+246;Sakuyamon;Final Heal;50
+246;Sakuyamon;Holy Light III;65
+246;Sakuyamon;Status Barrier;80
+247;Jesmon;Judgement of the Blade;1
+247;Jesmon;Weltgeist;1
+247;Jesmon;Guard Charge Field;20
+247;Jesmon;Revive;35
+247;Jesmon;Attack Charge Field;50
+247;Jesmon;Mach Rush III;65
+247;Jesmon;Meteor Fall III;80
+248;ShineGreymon;GeoGrey Sword;1
+248;ShineGreymon;Saint Knuckle III;20
+248;ShineGreymon;Aura;35
+248;ShineGreymon;Awesome Quake II;50
+248;ShineGreymon;Chain Max;65
+248;ShineGreymon;Meteor Fall III;80
+249;ShineGreymon BM;Final Shining Burst;1
+249;ShineGreymon BM;Attack Charge;20
+249;ShineGreymon BM;Attack Break Field;35
+249;ShineGreymon BM;Heavy Strike III;50
+249;ShineGreymon BM;Acceleration Boost;65
+249;ShineGreymon BM;Status Barrier;80
+250;Justimon;Justice Kick;1
+250;Justimon;Saint Knuckle III;20
+250;Justimon;Acceleration Boost;35
+250;Justimon;Cross-Counter;50
+250;Justimon;Revive;65
+250;Justimon;Chain Max;80
+251;Kentaurosmon;Bifrost;1
+251;Kentaurosmon;Odin's Breath;1
+251;Kentaurosmon;Shining Laser II;20
+251;Kentaurosmon;Saint Knuckle III;35
+251;Kentaurosmon;Shining Laser III;50
+251;Kentaurosmon;Restore;65
+251;Kentaurosmon;Final Heal;80
+252;Slayerdramon;Divine Dragon Slash;1
+252;Slayerdramon;Heavy Strike III;20
+252;Slayerdramon;Attack Charge Field;35
+252;Slayerdramon;Speed Charge Field;50
+252;Slayerdramon;X-Aura;65
+252;Slayerdramon;Gale Storm III;80
+253;Seraphimon;Strike of the Seven Stars;1
+253;Seraphimon;Holy Light III;20
+253;Seraphimon;Shining Laser II;35
+253;Seraphimon;Final Heal;50
+253;Seraphimon;Shining Laser III;65
+253;Seraphimon;Perfect Revival;80
+254;MegaGargomon;Burst Shot;1
+254;MegaGargomon;Heaven's Thunder III;20
+254;MegaGargomon;Mental Charge Field;35
+254;MegaGargomon;Thunder Fall II;50
+254;MegaGargomon;Gaia Element III;65
+254;MegaGargomon;Chain Max;80
+255;Darkdramon;Dark Roar;1
+255;Darkdramon;Critical Charge;20
+255;Darkdramon;Acceleration Boost;35
+255;Darkdramon;Guard Break Field;50
+255;Darkdramon;Nanomachine Break III;65
+255;Darkdramon;Thunder Fall III;80
+256;TigerVespamon;Mach Stinger V;1
+256;TigerVespamon;Nanomachine Break III;20
+256;TigerVespamon;Speed Charge Field;35
+256;TigerVespamon;Crescent Leaf III;50
+256;TigerVespamon;Mirror Reflection;65
+256;TigerVespamon;Thunder Fall III;80
+257;Titamon;Soul Core Attack;1
+257;Titamon;Awesome Quake II;20
+257;Titamon;Comet Hammer III;35
+257;Titamon;Guard Break Field;50
+257;Titamon;Crescent Leaf III;65
+257;Titamon;Awesome Quake III;80
+258;TyrantKabuterimon;Shine of Bee;1
+258;TyrantKabuterimon;Crescent Leaf III;20
+258;TyrantKabuterimon;Thunder Fall II;35
+258;TyrantKabuterimon;Meteor Fall II;50
+258;TyrantKabuterimon;Speed Break Field;65
+258;TyrantKabuterimon;Speed Charge Field;80
+259;Dianamon;Good Night Moon;1
+259;Dianamon;Dispel;20
+259;Dianamon;Mirror Reflection;35
+259;Dianamon;Nightmare III;50
+259;Dianamon;Restore;65
+259;Dianamon;Ocean Wave III;80
+260;Diaboromon;Catastrophe Cannon;1
+260;Diaboromon;Destruction Cannon III;20
+260;Diaboromon;Destruction;35
+260;Diaboromon;Mach Rush II;50
+260;Diaboromon;Guard Break Field;65
+260;Diaboromon;Meteor Fall III;80
+261;Creepymon;Flame Inferno;1
+261;Creepymon;Nightmare III;20
+261;Creepymon;Thunder Fall II;35
+261;Creepymon;Mental Break Field;50
+261;Creepymon;Burst Flame III;65
+261;Creepymon;Hell Crusher III;80
+262;Gallantmon;Lightning Joust;1
+262;Gallantmon;Shield of the Just;1
+262;Gallantmon;Saint Knuckle III;20
+262;Gallantmon;X-Heal;35
+262;Gallantmon;Guard Charge Field;50
+262;Gallantmon;Burst Flame III;65
+262;Gallantmon;Meteor Fall III;80
+263;Dynasmon;Wyvern's Breath;1
+263;Dynasmon;Dragon's Roar;1
+263;Dynasmon;Wind Claw III;20
+263;Dynasmon;Gale Storm II;35
+263;Dynasmon;Meteor Fall II;50
+263;Dynasmon;Attack Break Field;65
+263;Dynasmon;Gale Storm III;80
+264;Durandamon;Zwei Glanze;1
+264;Durandamon;Heavy Strike III;20
+264;Durandamon;Support End;35
+264;Durandamon;Cross-Counter;50
+264;Durandamon;Attack Charge Field;65
+264;Durandamon;Mach Rush III;80
+265;Leopardmon;Extinction Wave;1
+265;Leopardmon;Black Aura Blast;1
+265;Leopardmon;Saint Knuckle III;20
+265;Leopardmon;Speed Break Field;35
+265;Leopardmon;Shining Laser III;50
+265;Leopardmon;Awesome Quake III;65
+265;Leopardmon;Support End;80
+266;Leopardmon LM;Vulcan Crusher;1
+266;Leopardmon LM;Saint Knuckle III;20
+266;Leopardmon LM;Speed Break Field;35
+266;Leopardmon LM;Shining Laser III;50
+266;Leopardmon LM;Awesome Quake III;65
+266;Leopardmon LM;Support End;80
+267;Dorugoramon;Brave Metal;1
+267;Dorugoramon;Wolkenapalm III;20
+267;Dorugoramon;Acceleration Boost;35
+267;Dorugoramon;Comet Hammer III;50
+267;Dorugoramon;Attack Charge Field;65
+267;Dorugoramon;Meteor Fall III;80
+268;Neptunemon;Vortex Penetration;1
+268;Neptunemon;Ice Archery III;20
+268;Neptunemon;Idle Bubble;35
+268;Neptunemon;Mirror Reflection;50
+268;Neptunemon;Ocean Wave III;65
+268;Neptunemon;Hydro Water III;80
+269;HiAndromon;Atomic Ray;1
+269;HiAndromon;Thunder Fall II;20
+269;HiAndromon;Power Energy III;35
+269;HiAndromon;Heaven's Thunder III;50
+269;HiAndromon;Guard Charge Field;65
+269;HiAndromon;Thunder Fall III;80
+270;PileVolcamon;Volcanic Driver;1
+270;PileVolcamon;Mach Rush II;20
+270;PileVolcamon;Wolkenapalm III;35
+270;PileVolcamon;Cross-Counter;50
+270;PileVolcamon;Meteor Fall II;65
+270;PileVolcamon;Mach Rush III;80
+271;Barbamon;Pandemonium Lost;1
+271;Barbamon;Nightmare III;20
+271;Barbamon;Hell Crusher II;35
+271;Barbamon;Burst Flame III;50
+271;Barbamon;Spirit Drain;65
+271;Barbamon;Hell Crusher III;80
+272;BanchoLeomon;Flashy Boss Punch;1
+272;BanchoLeomon;Awesome Quake II;20
+272;BanchoLeomon;Acceleration Boost;35
+272;BanchoLeomon;Comet Hammer III;50
+272;BanchoLeomon;Attack Charge Field;65
+272;BanchoLeomon;Awesome Quake III;80
+273;Piedmon;Trump Sword;1
+273;Piedmon;Destruction;20
+273;Piedmon;Hell Crusher II;35
+273;Piedmon;Nightmare III;50
+273;Piedmon;Texture Blow;65
+273;Piedmon;Hell Crusher III;80
+274;Puppetmon;Puppet Pummel;1
+274;Puppetmon;Crescent Leaf III;20
+274;Puppetmon;Grand Rock III;35
+274;Puppetmon;Mental Break Field;50
+274;Puppetmon;Rune Forest II;65
+274;Puppetmon;Rune Forest III;80
+275;PlatinumNumemon;Platinum Junk;1
+275;PlatinumNumemon;Escape Dash;20
+275;PlatinumNumemon;Attack Break Field;35
+275;PlatinumNumemon;Guard Break Field;50
+275;PlatinumNumemon;Mental Break Field;65
+275;PlatinumNumemon;Speed Break Field;80
+276;BlackWarGreymon;Dark Terra Force;1
+276;BlackWarGreymon;Black Tornado;1
+276;BlackWarGreymon;Meteor Fall II;20
+276;BlackWarGreymon;Wolkenapalm III;35
+276;BlackWarGreymon;Guard Charge Field;50
+276;BlackWarGreymon;Mach Rush II;65
+276;BlackWarGreymon;Meteor Fall III;80
+277;PrinceMamemon;Smile Warhead;1
+277;PrinceMamemon;Chain Minus;20
+277;PrinceMamemon;Escape Dash;35
+277;PrinceMamemon;Power Energy III;50
+277;PrinceMamemon;Mental Charge Field;65
+277;PrinceMamemon;Final Heal;80
+278;Breakdramon;Destroyed Rush;1
+278;Breakdramon;Thunder Fall II;20
+278;Breakdramon;Guard Break Field;35
+278;Breakdramon;Nanomachine Break III;50
+278;Breakdramon;Thunder Fall III;65
+278;Breakdramon;Awesome Quake III;80
+279;Plesiomon;Sorrow Blue;1
+279;Plesiomon;Ocean Wave II;20
+279;Plesiomon;X-Aura;35
+279;Plesiomon;Hydro Water III;50
+279;Plesiomon;Status Barrier;65
+279;Plesiomon;Ocean Wave III;80
+280;HerculesKabuterimon;Giga Blaster;1
+280;HerculesKabuterimon;Gaia Element III;20
+280;HerculesKabuterimon;Thunder Fall II;35
+280;HerculesKabuterimon;Rune Forest II;50
+280;HerculesKabuterimon;Mental Charge Field;65
+280;HerculesKabuterimon;Rune Forest III;80
+281;Beelzemon;Double Impact;1
+281;Beelzemon;Destruction Cannon III;20
+281;Beelzemon;Physical Drain;35
+281;Beelzemon;Comet Hammer III;50
+281;Beelzemon;Meteor Fall II;65
+281;Beelzemon;Hell Crusher III;80
+282;Beelzemon BM;Corona Destroyer;1
+282;Beelzemon BM;Wind Claw III;20
+282;Beelzemon BM;Acceleration Boost;35
+282;Beelzemon BM;Wolkenapalm III;50
+282;Beelzemon BM;Attack Charge Field;65
+282;Beelzemon BM;Meteor Fall III;80
+283;Belphemon SM;Eternal Nightmare;1
+283;Belphemon SM;Destruction Cannon III;20
+283;Belphemon SM;Chain Minus;35
+283;Belphemon SM;Grand Rock III;50
+283;Belphemon SM;Mental Break Field;65
+283;Belphemon SM;Hell Crusher III;80
+284;Hououmon;Starlight Explosion;1
+284;Hououmon;Burst Flame III;20
+284;Hououmon;Status Barrier;35
+284;Hououmon;Power Energy III;50
+284;Hououmon;Final Heal;65
+284;Hououmon;Safety Guard;80
+285;Magnadramon;Fire Tornado;1
+285;Magnadramon;Shining Laser II;20
+285;Magnadramon;Holy Light III;35
+285;Magnadramon;Perfect Revival;50
+285;Magnadramon;X-Aura;65
+285;Magnadramon;Shining Laser III;80
+286;Boltmon;Tomahawk Stinger;1
+286;Boltmon;Nanomachine Break III;20
+286;Boltmon;Cross-Counter;35
+286;Boltmon;Speed Charge Field;50
+286;Boltmon;Attack Break Field;65
+286;Boltmon;Thunder Fall III;80
+287;MagnaGarurumon;Machinegun Destroyer;1
+287;MagnaGarurumon;Saint Knuckle III;20
+287;MagnaGarurumon;Destruction Cannon II;35
+287;MagnaGarurumon;Aura;50
+287;MagnaGarurumon;Chain Max;65
+287;MagnaGarurumon;Thunder Fall III;80
+288;MagnaGarurumon (SV);Starlight Velocity;1
+288;MagnaGarurumon (SV);Saint Knuckle III;20
+288;MagnaGarurumon (SV);Destruction Cannon II;35
+288;MagnaGarurumon (SV);Aura;50
+288;MagnaGarurumon (SV);Chain Max;65
+288;MagnaGarurumon (SV);Thunder Fall III;80
+289;Mastemon;Chaos Degradation;1
+289;Mastemon;Shining Laser III;20
+289;Mastemon;Hell Crusher III;35
+289;Mastemon;Final Aura;50
+289;Mastemon;Chain Max;65
+289;Mastemon;Safety Guard;80
+290;MarineAngemon;Ocean Love;1
+290;MarineAngemon;Hydro Water III;20
+290;MarineAngemon;Ocean Wave II;35
+290;MarineAngemon;Dispel;50
+290;MarineAngemon;Final Aura;65
+290;MarineAngemon;Safety Guard;80
+291;Minervamon;Strike Roll;1
+291;Minervamon;Heavy Strike III;20
+291;Minervamon;Mach Rush II;35
+291;Minervamon;Guard Break Field;50
+291;Minervamon;Crescent Leaf III;65
+291;Minervamon;Mach Rush III;80
+292;MirageGaogamon;Full Moon Blaster;1
+292;MirageGaogamon;Gale Storm II;20
+292;MirageGaogamon;Wind Claw III;35
+292;MirageGaogamon;Mirror Reflection;50
+292;MirageGaogamon;Speed Charge Field;65
+292;MirageGaogamon;Gale Storm III;80
+293;MirageGaogamon BM;Full Moon Meteor Impact;1
+293;MirageGaogamon BM;Saint Knuckle III;20
+293;MirageGaogamon BM;Attack Break Field;35
+293;MirageGaogamon BM;Holy Light III;50
+293;MirageGaogamon BM;Final Aura;65
+293;MirageGaogamon BM;Shining Laser III;80
+294;Machinedramon;Infinity Cannon;1
+294;Machinedramon;Mach Rush II;20
+294;Machinedramon;Nanomachine Break III;35
+294;Machinedramon;Attack Charge Field;50
+294;Machinedramon;Speed Break Field;65
+294;Machinedramon;Thunder Fall III;80
+295;Megidramon;Megiddo Flame;1
+295;Megidramon;Meteor Fall II;20
+295;Megidramon;Wolkenapalm III;35
+295;Megidramon;Destruction Cannon II;50
+295;Megidramon;Chain Loss;65
+295;Megidramon;Meteor Fall III;80
+296;MetalEtemon;Banana Slip;1
+296;MetalEtemon;Escape Dash;20
+296;MetalEtemon;Mental Break Field;35
+296;MetalEtemon;Awesome Quake II;50
+296;MetalEtemon;Chain Loss;65
+296;MetalEtemon;Awesome Quake III;80
+297;MetalGarurumon;Ice Wolf Claw;1
+297;MetalGarurumon;Freezing Breath;1
+297;MetalGarurumon;Ice Archery III;20
+297;MetalGarurumon;Aura;35
+297;MetalGarurumon;Speed Charge Field;50
+297;MetalGarurumon;Sonic Void III;65
+297;MetalGarurumon;Ocean Wave III;80
+298;MetalGarurumon (Blk);Ice Wolf Claw;1
+298;MetalGarurumon (Blk);Garuru Tomahawk;1
+298;MetalGarurumon (Blk);Thunder Fall II;20
+298;MetalGarurumon (Blk);Ice Archery III;35
+298;MetalGarurumon (Blk);Heaven's Thunder III;50
+298;MetalGarurumon (Blk);Speed Break Field;65
+298;MetalGarurumon (Blk);Thunder Fall III;80
+299;MetalSeadramon;River of Power;1
+299;MetalSeadramon;Hydro Water III;20
+299;MetalSeadramon;Ocean Wave II;35
+299;MetalSeadramon;Attack Break Field;50
+299;MetalSeadramon;Heaven's Thunder III;65
+299;MetalSeadramon;Ocean Wave III;80
+300;Merukimon;Thousand Fists;1
+300;Merukimon;Awesome Quake II;20
+300;Merukimon;Wind Claw III;35
+300;Merukimon;Revive;50
+300;Merukimon;Sonic Void III;65
+300;Merukimon;Gale Storm III;80
+301;RustTyranomon;Terrors Cluster;1
+301;RustTyranomon;Mach Rush II;20
+301;RustTyranomon;Nanomachine Break III;35
+301;RustTyranomon;Guard Charge Field;50
+301;RustTyranomon;Speed Break Field;65
+301;RustTyranomon;Thunder Fall III;80
+302;Leviamon;Biting Crush;1
+302;Leviamon;Ice Archery III;20
+302;Leviamon;Grand Rock III;35
+302;Leviamon;Guard Break Field;50
+302;Leviamon;Power Energy III;65
+302;Leviamon;Ocean Wave III;80
+303;Lilithmon;Phantom Pain;1
+303;Lilithmon;Hell Crusher II;20
+303;Lilithmon;Spirit Drain;35
+303;Lilithmon;Nightmare III;50
+303;Lilithmon;Attack Break Field;65
+303;Lilithmon;Hell Crusher III;80
+304;Ravemon;Celestial Blade;1
+304;Ravemon;Sonic Void III;20
+304;Ravemon;Aura;35
+304;Ravemon;Gale Storm II;50
+304;Ravemon;Speed Charge Field;65
+304;Ravemon;Gale Storm III;80
+305;Ravemon BM;Mourning Dance;1
+305;Ravemon BM;Texture Blow;20
+305;Ravemon BM;Speed Break Field;35
+305;Ravemon BM;Character Reversal;50
+305;Ravemon BM;Status Barrier;65
+305;Ravemon BM;Support End;80
+306;Crusadermon;Spiral Masquerade;1
+306;Crusadermon;Fist of Athena;1
+306;Crusadermon;Destruction Cannon III;20
+306;Crusadermon;Hell Crusher II;35
+306;Crusadermon;Speed Break Field;50
+306;Crusadermon;Gaia Element III;65
+306;Crusadermon;Hell Crusher III;80
+307;Rosemon;Thorn Whip;1
+307;Rosemon;Rune Forest II;20
+307;Rosemon;Gaia Element III;35
+307;Rosemon;Final Aura;50
+307;Rosemon;Mental Charge Field;65
+307;Rosemon;Rune Forest III;80
+308;Rosemon BM;Aguichant Levres;1
+308;Rosemon BM;Final Heal;20
+308;Rosemon BM;Mental Break Field;35
+308;Rosemon BM;Revive;50
+308;Rosemon BM;Safety Guard;65
+308;Rosemon BM;Perfect Revival;80
+309;Lotosmon;Seven's Fantasia;1
+309;Lotosmon;Rune Forest II;20
+309;Lotosmon;Gaia Element III;35
+309;Lotosmon;X-Aura;50
+309;Lotosmon;Support End;65
+309;Lotosmon;Rune Forest III;80
+310;Armageddemon;Ultimate Flare;1
+310;Armageddemon;Black Rain;1
+310;Armageddemon;Hell Crusher III;20
+310;Armageddemon;Venom Trap;35
+310;Armageddemon;Mach Rush III;50
+310;Armageddemon;Wolkenapalm III;65
+310;Armageddemon;Mental Break Field;80
+311;Arcadiamon Ultra;God Matrix;1
+311;Arcadiamon Ultra;Heavy Strike III;20
+311;Arcadiamon Ultra;Character Reversal;35
+311;Arcadiamon Ultra;Mental Break Field;50
+311;Arcadiamon Ultra;Guard Break Field;65
+311;Arcadiamon Ultra;Hell Crusher III;80
+312;Alphamon Ouryuken;Ultimate Ouryuken;1
+312;Alphamon Ouryuken;Heavy Strike III;20
+312;Alphamon Ouryuken;Final Aura;35
+312;Alphamon Ouryuken;Chain Max;50
+312;Alphamon Ouryuken;Saint Knuckle III;65
+312;Alphamon Ouryuken;Destruction Cannon III;80
+313;Imperialdramon PM;Omni Sword;1
+313;Imperialdramon PM;Holy Light III;20
+313;Imperialdramon PM;Mental Charge Field;35
+313;Imperialdramon PM;Saint Knuckle III;50
+313;Imperialdramon PM;Restore;65
+313;Imperialdramon PM;Perfect Revival;80
+314;Examon;Pendragon's Glory;1
+314;Examon;Dragonic Impact;1
+314;Examon;Wind Claw III;20
+314;Examon;Gale Storm II;35
+314;Examon;Meteor Fall II;50
+314;Examon;Attack Break Field;65
+314;Examon;Gale Storm III;80
+315;Omnimon;Transcendent Sword;1
+315;Omnimon;Supreme Cannon;1
+315;Omnimon;Saint Knuckle III;20
+315;Omnimon;Cross-Counter;35
+315;Omnimon;Attack Charge Field;50
+315;Omnimon;Chain Max;65
+315;Omnimon;Holy Light III;80
+316;Omnimon Zwart;Transcendent Sword;1
+316;Omnimon Zwart;Supreme Cannon;1
+316;Omnimon Zwart;Destruction Cannon III;20
+316;Omnimon Zwart;Mirror Reflection;35
+316;Omnimon Zwart;Acceleration Boost;50
+316;Omnimon Zwart;Chain Loss;65
+316;Omnimon Zwart;Hell Crusher III;80
+317;Chaosmon;Bantyo Blade;1
+317;Chaosmon;Dark Prominence;1
+317;Chaosmon;Safety Guard;20
+317;Chaosmon;Destruction;35
+317;Chaosmon;Destruction Cannon III;50
+317;Chaosmon;Saint Knuckle III;65
+317;Chaosmon;Character Reversal;80
+318;Chaosmon VA;Bantyo Blade;1
+318;Chaosmon VA;Aurora Blaster;1
+318;Chaosmon VA;Safety Guard;20
+318;Chaosmon VA;Support End;35
+318;Chaosmon VA;Holy Light III;50
+318;Chaosmon VA;Saint Knuckle III;65
+318;Chaosmon VA;Character Reversal;80
+319;Susanomon;Celestial Blade;1
+319;Susanomon;Heaven's Thunder;1
+319;Susanomon;Saint Knuckle III;20
+319;Susanomon;Shining Laser III;35
+319;Susanomon;Dispel;50
+319;Susanomon;Chain Max;65
+319;Susanomon;Perfect Revival;80
+320;Gallantmon CM;Quo Vadis;1
+320;Gallantmon CM;Shining Laser III;20
+320;Gallantmon CM;Mach Rush III;35
+320;Gallantmon CM;Dispel;50
+320;Gallantmon CM;Restore;65
+320;Gallantmon CM;Final Heal;80
+321;Belphemon RM;Gift of Darkness;1
+321;Belphemon RM;Destruction Cannon III;20
+321;Belphemon RM;Chain Minus;35
+321;Belphemon RM;Grand Rock III;50
+321;Belphemon RM;Mental Break Field;65
+321;Belphemon RM;Hell Crusher III;80
+322;Lucemon SM;Divine Atonement;1
+322;Lucemon SM;Nightmare III;20
+322;Lucemon SM;Mental Break Field;35
+322;Lucemon SM;Mach Rush III;50
+322;Lucemon SM;Hell Crusher III;65
+322;Lucemon SM;Support End;80
+323;Flamedramon;Flaming Fist;1
+323;Flamedramon;Acceleration Boost;10
+323;Flamedramon;Cross-Counter;18
+323;Flamedramon;Wolkenapalm III;25
+324;Magnamon;S-Gold Solar Storm;1
+324;Magnamon;Plasma Shot;1
+324;Magnamon;Awesome Quake II;20
+324;Magnamon;Revive;35
+324;Magnamon;Comet Hammer III;50
+324;Magnamon;Guard Charge Field;65
+324;Magnamon;Awesome Quake III;80
+325;Rapidmon (Armor);Golden Triangle;1
+325;Rapidmon (Armor);Saint Knuckle III;20
+325;Rapidmon (Armor);Shining Laser II;35
+325;Rapidmon (Armor);Dispel;50
+325;Rapidmon (Armor);Speed Charge Field;65
+325;Rapidmon (Armor);Shining Laser III;80
+326;Shoutmon;Fiery Fastball;1
+326;Shoutmon;Heavy Strike I;6
+326;Shoutmon;Shock;12
+327;OmniShoutmon;Hard Rock Spirit;1
+327;OmniShoutmon;Flame Cannon;
+327;OmniShoutmon;Acceleration Boost;20
+327;OmniShoutmon;Cross-Counter;35
+327;OmniShoutmon;Speed Charge Field;50
+327;OmniShoutmon;Meteor Fall III;65
+327;OmniShoutmon;Mach Rush III;80
+328;Ryudamon;Katana Attack;1
+328;Ryudamon;Heavy Strike I;6
+328;Ryudamon;Critical Charge;12
+329;Ginryumon;Metal Armor Blade;1
+329;Ginryumon;Heavy Strike II;10
+329;Ginryumon;Attack Charge;18
+329;Ginryumon;Speed Charge;25
+330;Hisyaryumon;Legendary Dragon Blade;1
+330;Hisyaryumon;Thunder Fall I;20
+330;Hisyaryumon;Speed Break;35
+330;Hisyaryumon;Nanomachine Break II;50
+330;Hisyaryumon;Critical Charge;65
+331;Ouryumon;Eiseiryuoujin;1
+331;Ouryumon;Wind Claw III;20
+331;Ouryumon;Acceleration Boost;35
+331;Ouryumon;Nanomachine Break III;50
+331;Ouryumon;Attack Charge Field;65
+331;Ouryumon;Mach Rush III;80
+332;Apocalymon;Darkness Zone;1
+332;Apocalymon;Destruction;20
+332;Apocalymon;Physical Drain;35
+332;Apocalymon;Spirit Drain;50
+332;Apocalymon;Nightmare III;65
+332;Apocalymon;Mach Rush III;80
+333;Sistermon Blanc;Divine Pierce;1
+333;Sistermon Blanc;Protect Wave;1
+333;Sistermon Blanc;Heal;6
+333;Sistermon Blanc;Holy Light I;12
+334;Sistermon B (Awake.);Divine Pierce (Awake);1
+334;Sistermon B (Awake.);Protect Wave (Awake);1
+334;Sistermon B (Awake.);Holy Light III;25
+334;Sistermon B (Awake.);Revive;40
+334;Sistermon B (Awake.);Shining Laser III;55
+334;Sistermon B (Awake.);Safety Guard;70
+334;Sistermon B (Awake.);Perfect Revival;90
+335;Sistermon Ciel;Silent Bullet;1
+335;Sistermon Ciel;Fury Fire;1
+335;Sistermon Ciel;Destruction Cannon I;6
+335;Sistermon Ciel;Hell Crusher I;12
+336;Sistermon C (Awake.);Silent Bullet (Awake);1
+336;Sistermon C (Awake.);Fury Fire (Awake);1
+336;Sistermon C (Awake.);Attack Charge Field;25
+336;Sistermon C (Awake.);Destruction Cannon III;40
+336;Sistermon C (Awake.);Acceleration Boost;55
+336;Sistermon C (Awake.);Support End;70
+336;Sistermon C (Awake.);Final Aura;90
+337;Alphamon NX;Blade of the Dragon King;1
+337;Alphamon NX;Soul Digitalization;1
+337;Alphamon NX;Character Reversal;25
+337;Alphamon NX;Guard Break Field;40
+337;Alphamon NX;Attack Break Field;55
+337;Alphamon NX;Shining Laser III;70
+337;Alphamon NX;Chain Max;90
+338;Crusadermon NX;Spiral Masquerade;1
+338;Crusadermon NX;Fist of Athena;1
+338;Crusadermon NX;Acceleration Boost;25
+338;Crusadermon NX;Meteor Fall III;40
+338;Crusadermon NX;Awesome Quake III;55
+338;Crusadermon NX;Thunder Fall III;70
+338;Crusadermon NX;Mach Rush III;90
+339;Leopardmon NX;Extinction Wave;1
+339;Leopardmon NX;Black Aura Blast;1
+339;Leopardmon NX;Hell Crusher III;25
+339;Leopardmon NX;Attack Charge Field;40
+339;Leopardmon NX;Mental Charge Field;55
+339;Leopardmon NX;Final Heal;70
+339;Leopardmon NX;Ocean Wave III;90
+340;Omnimon NX;Transcendent Sword;1
+340;Omnimon NX;Supreme Cannon;1
+340;Omnimon NX;X-Aura;25
+340;Omnimon NX;Speed Charge Field;40
+340;Omnimon NX;Status Barrier;55
+340;Omnimon NX;Safety Guard;70
+340;Omnimon NX;Perfect Revival;90
+341;Gallantmon NX;Lightning Joust;1
+341;Gallantmon NX;Shield of the Just;1
+341;Gallantmon NX;Acceleration Boost;25
+341;Gallantmon NX;Nanomachine Break III;40
+341;Gallantmon NX;Grand Rock III;55
+341;Gallantmon NX;Crescent Leaf III;70
+341;Gallantmon NX;Sonic Void III;90
