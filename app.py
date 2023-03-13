@@ -206,8 +206,48 @@ def login():
         print ("logging in form")
         return render_template("login.html")
 
+@app.route("/compare",  methods=["GET", "POST"])
+def compare():
+    """ Compare Page """
+    
+    if request.method == 'GET':
+        print("This is the saved session:" + session.get('db-type'))
+        if session.get('db-type') == 'mongodb':
+            # get a reference to the collection
+            collection = mongodb["digimon_stats"]
+
+            # find all documents in the collection
+            documents = collection.find()
+
+            # iterate over the documents and print each document
+            for document in documents:
+                print(document)
+            
+        # Read the colors from the JSON file
+        with open('./templates/colors.json') as f:
+            colors = json.load(f)
+
+        digimons = db.execute("SELECT * FROM digimon").fetchall()
+        digimons_fixed_list = []
+
+        for digimon in digimons:
+            digimon_list = list(digimon)
+            element = digimon_list[3]
+            if element:
+                # Retrieve the color from the colors dict based on the element type
+                color = colors[element]
+                digimon_list.append(color)
+                digimons_fixed_list.append(digimon_list)
+        return render_template('compare.html', digimons=digimons_fixed_list)
+    
+    if (request.method == "POST"):
+        print(request.form.get("digimon_name"))
+
+        # Redirect to landing page with digimon name as a URL parameter
+        return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
+
 @app.route("/landing",  methods=["GET", "POST"])
-async def landing():
+def landing():
     """ Landing Page """
     
     if request.method == 'GET':

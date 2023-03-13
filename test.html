@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        .dropdown {
+            position: relative;
+            width: 400px;
+            filter: url(#goo);
+        }
+
+        .dropdown__face,
+        .dropdown__items {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        .dropdown__face {
+            display: block;
+            position: relative;
+        }
+
+        .dropdown__items {
+            margin: 0;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 100%;
+            height: 330px;
+            visibility: hidden;
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+        }
+
+        .dropdown__items::before {
+            content: "";
+            background-color: #fff;
+            position: absolute;
+            bottom: 100%;
+            right: 20%;
+            height: 40px;
+            width: 20px;
+        }
+
+        .dropdown__arrow {
+            border-bottom: 2px solid #000;
+            border-right: 2px solid #000;
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            width: 10px;
+            height: 10px;
+            transform: rotate(45deg) translateY(-50%);
+            transform-origin: right;
+        }
+
+        .dropdown input {
+            position: absolute;
+            width: 370px;
+            padding: 0 8px;
+            left: 16px;
+            top: 50%;
+            transform: translateY( -50%);
+            font-size: 16px;
+            z-index: 2;
+            background-color: transparent;
+            border: none;
+        }
+
+        input:focus{
+            outline: none;
+            border: none;
+            background-color: transparent;
+        }
+        .dropdown__text{
+            height: 16px;
+        }
+
+        .dropdown_ul_items{
+            list-style: none;
+            list-style-type: none;
+            overflow: auto;
+            height: 300px;
+        }
+
+        .dropdown__items li{
+           display: block;
+        }
+
+        .goo-svg {
+            display: none;
+        }
+
+        .dropdown__items.add-dropdown{
+            top: calc(100% + 25px);
+            visibility: visible;
+            opacity: 1;
+        }
+
+        [type="search"]::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            appearance: none;
+            margin: 2px 8px 0 8px;
+            height: 10px;
+            width: 10px;
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjEyMy4wNXB4IiBoZWlnaHQ9IjEyMy4wNXB4IiB2aWV3Qm94PSIwIDAgMTIzLjA1IDEyMy4wNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTIzLjA1IDEyMy4wNTsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTEyMS4zMjUsMTAuOTI1bC04LjUtOC4zOTljLTIuMy0yLjMtNi4xLTIuMy04LjUsMGwtNDIuNCw0Mi4zOTlMMTguNzI2LDEuNzI2Yy0yLjMwMS0yLjMwMS02LjEwMS0yLjMwMS04LjUsMGwtOC41LDguNQ0KCQljLTIuMzAxLDIuMy0yLjMwMSw2LjEsMCw4LjVsNDMuMSw0My4xbC00Mi4zLDQyLjVjLTIuMywyLjMtMi4zLDYuMSwwLDguNWw4LjUsOC41YzIuMywyLjMsNi4xLDIuMyw4LjUsMGw0Mi4zOTktNDIuNGw0Mi40LDQyLjQNCgkJYzIuMywyLjMsNi4xLDIuMyw4LjUsMGw4LjUtOC41YzIuMy0yLjMsMi4zLTYuMSwwLTguNWwtNDIuNS00Mi40bDQyLjQtNDIuMzk5QzEyMy42MjUsMTcuMTI1LDEyMy42MjUsMTMuMzI1LDEyMS4zMjUsMTAuOTI1eiIvPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=);
+            background-size: 10px 10px;
+        }
+    </style>
+    <div
+        style="position: fixed; display:flex; justify-content: center; top: 20%;left: 50%; transform: translate(-50%, -50%);">
+        <div class="dropdown">
+            <input type="search" id="dropdown" onclick="dropdown()" oninput="instantSearch(this)" placeholder="Search Now">
+            <label class="dropdown__face" for="dropdown">
+                <div class="dropdown__text"></div>
+            </label>
+
+            <snap id="dropdown__items" class="dropdown__items">
+                <ul class="dropdown_ul_items">
+                    <li>🙂dddddddddddddddddddddddd sad sadsadasdasdsad saasssssssss</li>
+                    <li>😺</li>
+                    <li>😽</li>
+                    <li>😎</li>
+                    <li>🤗</li>
+                    <li>😽</li>
+                    <li>😎</li>
+                    <li>🤗</li>
+                    <li>😽</li>
+                    <li>😎</li>
+                    <li>🤗</li>
+                    <li>😽</li>
+                    <li>😎</li>
+                    <li>🤗</li>
+                    <li>😽</li>
+                    <li>😎</li>
+                    <li>🤗</li>
+                </ul>
+                
+            </snap>
+        </div>
+
+        <svg class="goo-svg">
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </svg>
+    </div>
+    <script>
+        function dropdown(){
+            var ele = document.getElementById("dropdown__items");
+            ele.classList.add("add-dropdown");
+        }
+
+        function instantSearch(event){
+            console.log(event.value);
+        }
+    </script>
+</body>
+
+</html>
