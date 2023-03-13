@@ -1,18 +1,26 @@
 import os
+import random
 import sqlite3
 
-from flask import Flask, redirect, render_template, request, session
+from flask import Flask, redirect, render_template, request, session, url_for
 from tempfile import TemporaryFile, mkdtemp
+import requests
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
+import aiosqlite
+import json
+import array
+from flask_bootstrap import Bootstrap
 
 from helpers import apology, login_required, allowed_file, placename, joinroute
+
 
 # Configure application
 UPLOAD_FOLDER = './static/images'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
+bootstrap = Bootstrap(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
 
@@ -34,6 +42,10 @@ app.jinja_env.filters["joinroute"] = joinroute
 # SQLite database
 db = sqlite3.connect("./dataset/digimon.db", check_same_thread=False)
 print(" * DB connection:", db.total_changes == 0)
+
+app.secret_key = 'secret_key'
+
+
 
 @app.route("/")
 def index():
@@ -160,24 +172,156 @@ def login():
         # Ensure password was submitted
         elif not request.form.get("password"):
             return apology("must provide password", 400)
-
+        
+        print((request.form.get("username")), (request.form.get("password")))
         # Query database for username
-        rows = db.execute("SELECT COUNT(id), id, hash FROM users WHERE username = ?", (request.form.get("username"),)).fetchone()
-
+        rows = db.execute("SELECT * FROM users WHERE login = ? AND password = ?", 
+                          ((request.form.get("username")), (request.form.get("password")))).fetchone()
+                
         # Ensure username exists and password is correct
-        if rows[0] != 1 or not check_password_hash(rows[2], request.form.get("password")):
+        if not rows:
             return apology("invalid username or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[1]
 
         # Redirect user to home page
-        return redirect("/around")
+        return redirect("/landing")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
+        print ("logging in form")
         return render_template("login.html")
 
+@app.route("/landing",  methods=["GET", "POST"])
+async def landing():
+    """ Landing Page """
+    
+    if request.method == 'GET':
+
+        # Read the colors from the JSON file
+        with open('./templates/colors.json') as f:
+            colors = json.load(f)
+
+        digimons = db.execute("SELECT * FROM digimon").fetchall()
+        digimons_fixed_list = []
+        print(type(digimons))
+        print(type(digimons[0]))
+        for digimon in digimons:
+            digimon_list = list(digimon)
+            element = digimon_list[3]
+            if element:
+                # Retrieve the color from the colors dict based on the element type
+                color = colors[element]
+                print(digimon_list)
+                digimon_list.append(color)
+                digimons_fixed_list.append(digimon_list)
+        print(digimons_fixed_list)
+        return render_template('landing.html', digimons=digimons_fixed_list)
+    
+    if (request.method == "POST"):
+        print(request.form.get("digimon_name"))
+
+        # Redirect to landing page with digimon name as a URL parameter
+        return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
+
+@app.route('/landing/<digimon_name>', methods=["GET", "POST"])
+def digimon_details(digimon_name):
+
+    # Retrieve the data from the URL parameters and store it in a dictionary
+    print("retrieving digimon stats for:" + digimon_name)
+
+    # Get all the digimon names in order
+    digimon_names = db.execute("SELECT * FROM digimon").fetchall()
+    digimon_names = [name[0] for name in digimon_names]
+
+    # Find the index of the current digimon
+    current_index = digimon_names.index(digimon_name)
+
+    # Find the indices of the adjacent digimon names
+    if current_index == 0:
+        adjacent_indices = [1]
+    elif current_index == len(digimon_names) - 1:
+        adjacent_indices = [len(digimon_names) - 2]
+    else:
+        adjacent_indices = [current_index - 1, current_index + 1]
+
+    # Get the digimon information for the current and adjacent digimon names
+    adjacent_digimons = [db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_names[i],)).fetchone() for i in adjacent_indices]
+    current_digimon = db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_name,)).fetchone()
+
+    print(adjacent_digimons)
+    digimon_api_url = "https://www.digi-api.com/api/v1/digimon/{}".format(digimon_name)
+    response = requests.get(digimon_api_url)
+    english_description = "Unknown Description"
+
+    if response.ok:
+        digimon_description = response.json()
+        if (digimon_description):
+            for desc in digimon_description['descriptions']:
+                if desc['origin'] == 'reference_book' and desc['language'] == 'en_us':
+                    english_description = desc['description']
+                    break
+
+
+    # Check if the current digimon is the first or last in the list
+    first_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid ASC LIMIT 1").fetchone()
+    last_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid DESC LIMIT 1 OFFSET 1").fetchone()
+    
+    if current_digimon == first_digimon:
+        previous_digimon = "NA"
+    elif adjacent_digimons and adjacent_digimons[0]:
+        previous_digimon = adjacent_digimons[0][0]
+    else:
+        previous_digimon = "NA"
+
+    if current_digimon == last_digimon:
+        next_digimon = "NA"
+    elif adjacent_digimons and len(adjacent_digimons) > 1 and adjacent_digimons[1]:
+        next_digimon = adjacent_digimons[1][0]
+    elif adjacent_digimons and adjacent_digimons[0] and adjacent_digimons[0][0] > current_digimon[0]:
+        next_digimon = adjacent_digimons[0][0]
+    else:
+        next_digimon = "NA"
+
+
+
+    digivolution_paths_sql_query = """
+    WITH RECURSIVE digivolutions_cte(digimon_name, digivolves_to, path) AS (
+        SELECT digivolves_from, digivolves_to, CAST(digivolves_from AS TEXT) AS path
+        FROM digivolutions
+        WHERE digivolves_from = ?
+
+        UNION ALL
+
+        SELECT d.digivolves_from , d.digivolves_to, cte.path || ' -> ' || d.digivolves_from 
+        FROM digivolutions d
+        JOIN digivolutions_cte cte ON d.digivolves_from = cte.digivolves_to
+    )
+    SELECT DISTINCT path
+    FROM digivolutions_cte
+    WHERE digivolves_to IS NOT NULL;
+    """
+    digivolution_paths = db.execute(digivolution_paths_sql_query, (digimon_name,)).fetchall()
+    max_path_length = max([path[0].count('->') for path in digivolution_paths])
+    longest_paths = [path for path in digivolution_paths if path[0].count('->') == max_path_length]
+    random_longest_evolution_path = random.choice(longest_paths)
+
+    print(random_longest_evolution_path)
+
+    random_longest_evolution_list = random_longest_evolution_path[0].split(' -> ')
+    print(random_longest_evolution_list)
+
+    # Render the landing page template with the data
+    return render_template(
+        "details.html", 
+        digimon=current_digimon, 
+        digimon_description = english_description,
+        next_digimon = next_digimon,
+        previous_digimon = previous_digimon,
+        digivolution_paths = digivolution_paths,
+        random_longest_evolution_path = random_longest_evolution_list
+    )
 
 @app.route("/logout")
 def logout():
@@ -233,7 +377,11 @@ def errorhandler(e):
         e = InternalServerError()
     return apology(e.name, e.code)
 
-
 # Listen for errors
 for code in default_exceptions:
     app.errorhandler(code)(errorhandler)
+
+
+if __name__ == '__main__':
+    app.run(port=5000, host='localhost', debug=True)
+

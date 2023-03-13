@@ -25,7 +25,10 @@
         
         <!-- custom scripts-->
         <script src="/static/scripts.js" charset="utf-8"></script>
-        
+
+        <!-- Fontawesome stuff -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.css') }}">
+
         <title>spotOn {% block title %}{% endblock %}</title>
 
     </head>
@@ -63,7 +66,10 @@
             </div>
         </nav>
 
-        <main class="container p-5">
+        <main 
+            class="container p-1"
+            style="max-width: 2000px !important;"
+        >
             {% block main %}{% endblock %}
         </main>
         </div>

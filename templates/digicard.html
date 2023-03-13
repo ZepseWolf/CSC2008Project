@@ -1,0 +1,42 @@
+<!-- 
+<div class="row" text-align="center">
+    {% for data in rows %}
+    <div class="coloumn">
+        <div id="box">
+            <img src={{ data[5] | joinroute }} style="max-height:55%; max-width:100%"><br>
+            <div style="padding-left:2px;padding-right:2px">
+                Event | {{ data[0] }}<br>
+                Postal | {{ data[1] }}<br>
+                Place | {{ data[2] }}<br>
+                Created On {{ data[3] }} | 
+                {{ data[4] }}<br>
+                <form action="" method="post">
+                <button class="btn btn-danger" type="submit" name="del" value="{{ data[7] }}">Delete</button></form><br>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> -->
+
+<div class="row" text-align="center">
+    {% for digimon in digimons %}
+    <div class="coloumn">
+        <div id="box">
+            <!-- <a href="/digimon/{{ digimon.id }}">
+                <img class="card-img-top" style="width: 8rem;" alt="{{ digimon.name }}">
+            </a>
+            <div class="card-body {{ digimon.types[0].type.name }} rounded text-white">
+                <a href="/digimon/{{ digimon.name }}" class="card-link link-name">
+                    <h5 class="card-title"><strong>#{{ digimon.id }} {{ digimon.name|capitalize }}</strong></h5>
+                </a>
+            </div> -->
+            <img class="card-img-top" style="max-height:55%; max-width:100%" alt="{{ digimon.name }}"><br>
+            <div style="padding-left:2px;padding-right:2px">
+                Name | {{ digimon.name }}<br>
+                <form action="" method="post">
+                <button class="btn btn-danger" type="submit" name="view" value="{{ digimon.name }}">View</button></form><br>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
