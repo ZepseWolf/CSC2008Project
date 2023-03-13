@@ -11,6 +11,7 @@ import aiosqlite
 import json
 import array
 from flask_bootstrap import Bootstrap
+from pymongo import MongoClient
 
 from helpers import apology, login_required, allowed_file, placename, joinroute
 
@@ -20,6 +21,13 @@ UPLOAD_FOLDER = './static/images'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__)
+
+# set up a MongoDB client
+client = MongoClient("mongodb+srv://jonaw:digimondb123@digimondb.4zjqool.mongodb.net")
+
+# get a reference to the database
+mongodb = client["test"]
+
 bootstrap = Bootstrap(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
@@ -184,7 +192,12 @@ def login():
 
         # Remember which user has logged in
         session["user_id"] = rows[1]
+        
+        # Remember which type of db the user 
 
+        print("this is my db-type:" + request.form.get("db-type"))
+        session['db-type'] = request.form.get("db-type")
+        
         # Redirect user to home page
         return redirect("/landing")
 
@@ -198,25 +211,34 @@ async def landing():
     """ Landing Page """
     
     if request.method == 'GET':
+        print("This is the saved session:" + session.get('db-type'))
+        if session.get('db-type') == 'mongodb':
+            print("Trying to get data from mongodb")
+            # get a reference to the collection
+            collection = mongodb["digimon_stats"]
 
+            # find all documents in the collection
+            documents = collection.find()
+
+            # iterate over the documents and print each document
+            for document in documents:
+                print(document)
+            
         # Read the colors from the JSON file
         with open('./templates/colors.json') as f:
             colors = json.load(f)
 
         digimons = db.execute("SELECT * FROM digimon").fetchall()
         digimons_fixed_list = []
-        print(type(digimons))
-        print(type(digimons[0]))
+
         for digimon in digimons:
             digimon_list = list(digimon)
             element = digimon_list[3]
             if element:
                 # Retrieve the color from the colors dict based on the element type
                 color = colors[element]
-                print(digimon_list)
                 digimon_list.append(color)
                 digimons_fixed_list.append(digimon_list)
-        print(digimons_fixed_list)
         return render_template('landing.html', digimons=digimons_fixed_list)
     
     if (request.method == "POST"):
