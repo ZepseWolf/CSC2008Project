@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Digimon Selection
+{% endblock %}
+
+{% block styles %}
+    {{ bootstrap.load_css() }}
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="digimon_name_1">First Digimon</label>
+                        <input type="text" class="form-control" id="digimon_name_1" name="digimon_name_1" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="digimon_name_2">Second Digimon</label>
+                        <input type="text" class="form-control" id="digimon_name_2" name="digimon_name_2" autocomplete="off">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Find Evolution Path</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ bootstrap.load_js() }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Retrieve the list of available digimon names from the server
+            $.get("/api/digimon_names", function(data) {
+                // Convert the list to an array of strings
+                var digimonNames = data.map(function(digimon) { return digimon.name });
+
+                // Enable autocomplete on the digimon name input fields
+                $("#digimon_name_1, #digimon_name_2").autocomplete({
+                    source: digimonNames,
+                    minLength: 2
+                });
+            });
+        });
+    </script>
+{% endblock %}

@@ -2,7 +2,7 @@ import os
 import random
 import sqlite3
 
-from flask import Flask, redirect, render_template, request, session, url_for
+from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
 from tempfile import TemporaryFile, mkdtemp
 import requests
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
@@ -207,11 +207,11 @@ def login():
         return render_template("login.html")
 
 @app.route("/landing",  methods=["GET", "POST"])
-async def landing():
+def landing():
     """ Landing Page """
     
     if request.method == 'GET':
-        print("This is the saved session:" + session.get('db-type'))
+        print(f"This is the saved session: {session.get('db-type')}")
         if session.get('db-type') == 'mongodb':
             print("Trying to get data from mongodb")
             # get a reference to the collection
@@ -246,6 +246,74 @@ async def landing():
 
         # Redirect to landing page with digimon name as a URL parameter
         return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
+    
+@app.route("/selection",  methods=["GET", "POST"])
+def selection():
+    """Landing Page"""
+
+    if request.method == "GET":
+        # Retrieve the list of all available digimon from the database
+        digimons = db.execute("SELECT * FROM digimon").fetchall()
+
+        # Render the landing page with the list of digimon
+        return render_template("selection.html", digimons=digimons)
+
+    if request.method == "POST":
+        # Retrieve the names of the selected digimon from the form data
+        digimon_name_1 = request.form.get("digimon_name_1")
+        digimon_name_2 = request.form.get("digimon_name_2")
+
+        # Redirect to the evolution page with the selected digimon names as URL parameters
+        return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
+
+    
+@app.route("/evolution")
+def evolution_path():
+    """Evolution Path Page"""
+
+    # Retrieve the names of the selected digimon from the URL parameters
+    digimon_name_1 = request.args.get("digimon_name_1")
+    digimon_name_2 = request.args.get("digimon_name_2")
+
+    # Query the database to retrieve the evolution path between the two digimon
+    path_query = """
+    WITH start_node(digimon_name) AS (
+    SELECT digimon_name
+    FROM Digimon
+    WHERE digimon_name = :digimon_name_1
+    ),
+    evolution_path(level, from_digimon, to_digimon, chain) AS (
+        SELECT 1, sn.digimon_name, d2.digimon_name, sn.digimon_name || ',' || d2.digimon_name
+        FROM start_node sn
+        JOIN Digivolutions AS e ON e.digivolves_from = sn.digimon_name
+        JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
+        UNION ALL
+        SELECT ep.level + 1, ep.from_digimon, d2.digimon_name, ep.chain || ',' || d2.digimon_name
+        FROM evolution_path AS ep
+        JOIN Digivolutions AS e ON e.digivolves_from = ep.to_digimon
+        JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
+        WHERE instr(ep.chain, d2.digimon_name) = 0
+        AND ep.level < (SELECT COUNT(*) FROM Digimon)
+    )
+    SELECT chain
+    FROM evolution_path
+    WHERE to_digimon = :digimon_name_2
+    ORDER BY level
+    LIMIT 1;
+    """
+    path = db.execute(path_query, {"digimon_name_1": digimon_name_1, "digimon_name_2": digimon_name_2}).fetchone()
+    print(path)
+    if path:
+        digimon_path = path[0].split(',')
+    else:
+        digimon_path = None
+
+    print(digimon_path)
+
+    # Render the evolution path page with the selected digimon names and the evolution path
+    return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=digimon_path)
+
+
 
 @app.route('/landing/<digimon_name>', methods=["GET", "POST"])
 def digimon_details(digimon_name):
@@ -305,8 +373,6 @@ def digimon_details(digimon_name):
         next_digimon = adjacent_digimons[0][0]
     else:
         next_digimon = "NA"
-
-
 
     digivolution_paths_sql_query = """
     WITH RECURSIVE digivolutions_cte(digimon_name, digivolves_to, path) AS (
@@ -406,4 +472,3 @@ for code in default_exceptions:
 
 if __name__ == '__main__':
     app.run(port=5000, host='localhost', debug=True)
-

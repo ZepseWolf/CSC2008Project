@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Evolution Path
+{% endblock %}
+
+{% block styles %}
+    {{ bootstrap.load_css() }}
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                <h1>Evolution Path from {{ digimon_name_1 }} to {{ digimon_name_2 }}</h1>
+                {% if path %}
+                    <p>The path is:</p>
+                    <ul>
+                        {% for digimon in path %}
+                            <li>
+                                {{ digimon }}
+                                <div 
+                                    class="image-container"
+                                    id="box"
+                                >
+                                    <img 
+                                        class="card-img-top" 
+                                        style="
+                                            max-height:55%; 
+                                            max-width:100%;
+                                            line-height: 320px;
+                                            font-size: 200px;
+                                        " 
+                                        src="https://digimon-api.com/images/digimon/w/{{ digimon }}.png"
+                                        alt="?"><br>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No evolution path found.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ bootstrap.load_js() }}
+{% endblock %}
