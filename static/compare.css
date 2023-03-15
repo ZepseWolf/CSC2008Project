@@ -11,6 +11,7 @@
 }
 
 .compare-items-container{
+  position: relative;
   flex: 500px 0 0 ;
   height: calc(100%);
   padding: 40px;

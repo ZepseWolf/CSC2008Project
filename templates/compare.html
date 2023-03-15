@@ -13,31 +13,34 @@
 <div style="position: relative;">
     <div class="main-container "> 
         <div class="compare-items-container">
-            <div class="compare-item item-hover" onclick="popout(this,true)">
+            <img id="left-winner" class="close" src="../static/images/winner.png" width="150px" height="100px" style="position:absolute; top:8px;right: 2px;">
+            <div id="digimon-card-1" class="compare-item item-hover" onclick="popout(this,true)">
                 <svg class="svg-icon" style="width: 4em; height: 4em;vertical-align: middle;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M836 476H548V188c0-19.8-16.2-36-36-36s-36 16.2-36 36v288H188c-19.8 0-36 16.2-36 36s16.2 36 36 36h288v288c0 19.8 16.2 36 36 36s36-16.2 36-36V548h288c19.8 0 36-16.2 36-36s-16.2-36-36-36z"  /></svg>
             </div>
         </div>
         <div class="compare-items-container" >
-            <div class="compare-item item-hover" onclick="popout(this,false)">
+            <img id="right-winner" class="close" src="../static/images/winner.png" width="150px" height="100px" style="position:absolute; top:8px;right: 2px;">
+            <div id="digimon-card-2" class="compare-item item-hover" onclick="popout(this,false)">
                 <svg class="svg-icon" style="width: 4em; height: 4em;vertical-align: middle;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M836 476H548V188c0-19.8-16.2-36-36-36s-36 16.2-36 36v288H188c-19.8 0-36 16.2-36 36s16.2 36 36 36h288v288c0 19.8 16.2 36 36 36s36-16.2 36-36V548h288c19.8 0 36-16.2 36-36s-16.2-36-36-36z"  /></svg>
             </div>
         </div>
+        <div id="test"></div>
     </div>
     <div id="select-popout" class="select-popout close">
         <div onclick="closeSelect()" style="width: 100%; height: 100%;position: fixed;">
-
         </div>    
         <div style="position: fixed; display:flex; justify-content: center; top: 20%;left: 50%; transform: translate(-50%, -50%);">
         <div class="dropdown">
-            <input type="search" id="dropdown" onclick="dropdown()" oninput="instantSearch(this)" placeholder="Search Now">
+            <input type="search" id="dropdown" onclick="dropdown()" onkeyup="instantSearch()" placeholder="Search Now">
+            <!-- oninput="instantSearch(this)"  -->
             <label class="dropdown__face" for="dropdown">
                 <div class="dropdown__text"></div>
             </label>
 
             <snap id="dropdown__items" class="dropdown__items">
-                <ul class="dropdown_ul_items">
+                <ul id="digi-list"class="dropdown_ul_items">
                     {% for digimon in digimons %}
-                        <li onclick="selectDigiMon('{{digimon[0]}}')">{{digimon[0]}}</li>
+                        <li onclick="selectDigiMon({{loop.index-1}})">{{digimon[0]}}</li>
                     {% endfor %}
                 </ul>
                 
@@ -56,14 +59,20 @@
     </div>
 </div>
 <script>
-    var selectedElement = null; //true(left) or false(right)
+    const DIGIMONS = {{ digimons|tojson }}
+    var selectedElement = null;
     var leftPopulate = false;
     var rightPopulate = false;
-
+    var isItLeft = null;
+    var leftDigimon,rightDigimon;
+    var leftWinningChance = 0;
+    
     function popout(event, isLeft){
+        isItLeft = isLeft
         if(isLeft){
             leftPopulate = true;
-        }else{
+        }
+        else{
             rightPopulate = true;
         }
         selectedElement = event;
@@ -75,30 +84,355 @@
         var dropdownEle = document.getElementById("dropdown__items");
         dropdownEle.classList.remove("add-dropdown");
         var ele = document.getElementById("select-popout");
-        ele.classList.add("close");
-        
+        ele.classList.add("close");    
     }
+
     function dropdown(){
         var ele = document.getElementById("dropdown__items");
         ele.classList.add("add-dropdown");
     }
 
-    function instantSearch(event){
-        console.log(event.value);
-    }
 
-    function selectDigiMon(digimonName){
-        var newEle = document.createElement("div");
-        newEle.innerText  = digimonName;
-        console.log(newEle);
-        console.log(selectedElement);
-        selectedElement.replaceChildren(newEle);
+    function selectDigiMon(index){
+        var selectedDigimon = DIGIMONS[index];
+        // Reset
+        document.getElementById("left-winner").classList.add("close");
+        document.getElementById("right-winner").classList.add("close");
+     
+        if(isItLeft){
+            leftDigimon = selectedDigimon;
+        }else{
+            rightDigimon= selectedDigimon;
+        }
+        console.log(selectedDigimon);
+        var mainWrapper = document.createElement("div");
+        var title = document.createElement("div");
+        var imgEle = document.createElement("img");
+        var imgCover = document.createElement("div");
+        var type = document.createElement("div");
+        var stats = document.createElement("div");
+        var sum = document.createElement("div");
+        // fetch('https://jsonplaceholder.typicode.com/posts/1')
+        //     .then((response) => response.json())
+        //     .then((data) => console.log(data));
+        imgCover.style.width = "100%";
+        imgCover.style.height = "400px";
+
+        imgEle.src = `https://digimon-api.com/images/digimon/w/${selectedDigimon[0].replace(/ /g, "_")}.png`
+        imgEle.addEventListener('error', () => imgEle.src  = `../static/images/image_unavailable.jpg`);
+        imgEle.style.width = "100%";
+        imgEle.style.height = "100%";
+        imgEle.style.objectFit = "contain";
+
+        title.style.textAlign = "center";
+        title.style.fontSize =  "16px";
+        title.padding = "16px"
+        title.style.fontWeight = "600";
+        title.innerText  = selectedDigimon[0];
+
+        type.innerHTML =`<b>Type:</b> ${selectedDigimon[2]} <b> | </b> <b>Attribute: </b>${selectedDigimon[3]} `;
+
+        // stats.innerText = "Hp: "+selectedDigimon[6] +
+        //                 "\nSP: "+selectedDigimon[7] +
+        //                 "\nATK: "+selectedDigimon[8] +
+        //                 "\nDEF: "+selectedDigimon[9] +
+        //                 "\nINT: "+selectedDigimon[10] +
+        //                 "\nSPD: "+selectedDigimon[11];
+
+        mainWrapper.style.color =  "black";
+        mainWrapper.style.width = "100%";
+        mainWrapper.style.height =  "100%";
+        mainWrapper.style.overflow = "auto";
+        mainWrapper.style.background = "white";
+        mainWrapper.style.borderRadius = "10px";
+        mainWrapper.style.padding = "16px 8px"
+
+        imgCover.appendChild(imgEle);
+        mainWrapper.appendChild(title);
+        mainWrapper.appendChild(imgCover);
+        mainWrapper.appendChild(type);
+        mainWrapper.appendChild(stats);
+        mainWrapper.appendChild(sum);
+        selectedElement.replaceChildren(mainWrapper);
         closeSelect();
+        compare();
     }
 
-    function compare(){
+    function getStatsBar( title,num1,num2) {
+        //Always 1 compare to 2 , not the other way around
+        var statsTitle = document.createElement("div");
+        var barWrapper = document.createElement("div");
+        var orginalExtraWrapper = document.createElement("div");
+        var orginalStats = document.createElement("div");
+        var extraStats = document.createElement("div");
+        var differenceTitle = document.createElement("div");
+
+        statsTitle.innerText = title;
+        statsTitle.style.flex = "42px 0 0";
+        statsTitle.style.textAlign = "center";
+        statsTitle.style.fontWeight = "600";
+
+        differenceTitle.style.textAlign = "center";
+        differenceTitle.style.flex = "42px 0 0";
+        differenceTitle.style.fontWeight = "600";
         
+        orginalStats.style.background = "#000000";
+        orginalStats.style.height = "100%"
+        orginalStats.style.color = "White"
+
+        extraStats.style.height = "100%"
+        leftWinningChance += num1/num2;
+        if(num1 == num2){
+            orginalStats.style.width = `100%`;
+            orginalStats.style.borderRadius = "5px";
+            differenceTitle.innerText = "+-0";
+        }else{
+            
+            if(num1 > num2){
+                // user wining 
+                var percentage = Math.floor((num2/num1)*100)
+                extraStats.style.width = `${100 - percentage}%`
+                extraStats.style.backgroundColor = "#73ca4c"
+                orginalStats.style.width = `${percentage}%`
+                differenceTitle.innerText = `+${num1-num2}`;
+                
+            }else{
+                // user losing
+                var percentage = Math.floor((num1/num2)*100)
+                extraStats.style.backgroundColor = "#da0000"
+                extraStats.style.width = `${100 - percentage}%`
+                orginalStats.style.width = `${percentage}%`
+                differenceTitle.innerText = `-${num2-num1}`;
+            }
+            orginalStats.style.borderRadius = "5px 0 0 5px";
+            extraStats.style.borderRadius = "0 5px 5px 0";
+        }
+        orginalExtraWrapper.style.height ="100%";
+        orginalExtraWrapper.style.flex = "300px 0 0";
+        orginalExtraWrapper.style.display = "flex";
+        orginalExtraWrapper.style.borderRadius ="5px"
+        orginalExtraWrapper.appendChild(orginalStats);
+        orginalExtraWrapper.appendChild(extraStats);
+
+        barWrapper.appendChild(statsTitle);
+        barWrapper.appendChild(orginalExtraWrapper);
+        barWrapper.appendChild(differenceTitle);
+
+        barWrapper.style.display = "flex";
+        barWrapper.style.alignItems =  "center";
+        barWrapper.style.justifyContent = "center";
+        barWrapper.style.width = "100%";
+        barWrapper.style.height = "28px";
+        barWrapper.style.margin = "8px 4px"
+
+        return barWrapper;
     }
+
+    
+    var list = document.getElementById('digi-list').getElementsByTagName('li');
+    var searchInput = document.getElementById('dropdown');
+
+    function filterList() {
+        var filter = searchInput.value.toLowerCase();
+        var filteredList = Array.from(list).filter(function(item) {
+            return item.textContent.toLowerCase().includes(filter);
+        });
+        return filteredList;
+    }
+
+    function instantSearch(){
+        var filteredList = filterList();
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.display = 'none';
+        }
+        for (var i = 0; i < filteredList.length; i++) {
+            filteredList[i].style.display = 'block';
+        }
+    }
+
+    function typeMultipler(type1,type2){
+        // Type 1 attacks >  type 2 
+        if(type1 == "Virus"){
+            if(type2 == "Virus"){
+                return 1;
+            } 
+            else if(type2 == "Data"){
+                return 2;
+            }
+            else if(type2 == "Vaccine"){
+                return 0.5;
+            }
+        }
+        else if(type1 == "Data"){
+            if(type2 == "Virus"){
+                return 0.5;
+            } 
+            else if(type2 == "Data"){
+                return 1;
+            }
+            else if(type2 == "Vaccine"){
+                return 2;
+            }
+        }
+        else if(type1 == "Vaccine"){
+            if(type2 == "Virus"){
+                return 2;
+            } 
+            else if(type2 == "Data"){
+                return 0.5;
+            }
+            else if(type2 == "Vaccine"){
+                return 1;
+            }
+        }
+        else{
+            return 1;
+        }
+    }
+
+    function attackMultiplier(opponentAttribute,attackType){
+        // User attacked by type, whats the damage mutiplier. 
+        if(attackType == "Fire"){
+            if(opponentAttribute == "Plant") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Water"){
+            if(opponentAttribute == "Fire") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Plant"){
+            if(opponentAttribute == "Water") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Electric"){
+            if(opponentAttribute == "Wind") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Earth"){
+            if(opponentAttribute == "Electric") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Wind"){
+            if(opponentAttribute == "Earth") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Light"){
+            if(opponentAttribute == "Dark") return 1.5;
+            else return 1;
+        }
+        else if(attackType == "Dark"){
+            if(opponentAttribute == "Light") return 1.5;
+            else return 1;
+        }
+        else{
+            return 1;
+        }
+    }
+
+    function bestAttackType(opponentAttribute){
+        // To know what attack to use , return what attack to use is the best
+        // Avoid is to use when instead of opponent's Attribute is user's Attribute
+        if(opponentAttribute == "Fire"){
+            return {bestAttackTypeToUse : "Plant", avoid : "Water"}
+        }
+        else if(opponentAttribute == "Water"){
+            return {bestAttackTypeToUse :"Fire", avoid : "Plant"}
+        }
+        else if(opponentAttribute == "Plant"){
+            return {bestAttackTypeToUse :"Water", avoid : "Water"}
+        }
+        else if(opponentAttribute == "Electric"){
+            return {bestAttackTypeToUse :"Wind", avoid : "Water"}
+        }
+        else if(opponentAttribute == "Earth"){
+            return {bestAttackTypeToUse :"Electric", avoid : "Water"}            
+        }
+        else if(opponentAttribute == "Wind"){
+            return {bestAttackTypeToUse :"Earth", avoid : "Water"}           
+        }
+        else if(opponentAttribute == "Light"){
+            return {bestAttackTypeToUse :"Dark", avoid : "Light"}           
+        }
+        else if(opponentAttribute == "Dark"){
+            return {bestAttackTypeToUse :"Light", avoid : "Dark"}
+        }
+        else{
+            return {bestAttackTypeToUse :"None", avoid : "None"};
+        }
+    }
+   
+    function compare(){
+        if(leftPopulate && rightPopulate){
+            var leftCard = document.getElementById('digimon-card-1');
+            var rightCard = document.getElementById('digimon-card-2');
+            
+            var leftEle = document.createElement("div");
+            var rightEle = document.createElement("div");
+            var titleArr = ["Hp: ", "SP: ", "ATK" , "DEF: " ,"INT: ", "SPD: "] 
+            var realLeftWinChance =0;
+            for(var i = 6; i < 6+titleArr.length ; i <i++ ){
+                leftEle.appendChild(getStatsBar(titleArr[i-6],leftDigimon[i],rightDigimon[i]))
+            }
+            realLeftWinChance = leftWinningChance;
+            
+            for(var i = 6; i < 6+titleArr.length ; i <i++ ){
+                rightEle.appendChild(getStatsBar(titleArr[i-6],rightDigimon[i],leftDigimon[i]))
+            }
+            leftWinningChance = 0;
+            leftCard.children[0].children[3].replaceChildren(leftEle);
+            rightCard.children[0].children[3].replaceChildren(rightEle);
+
+            var winningString = "";
+            console.log(realLeftWinChance);
+            var calWin = (realLeftWinChance/6) * typeMultipler(leftDigimon[2],rightDigimon[2]);
+            console.log("cal win ",calWin);
+            if(calWin == 1){
+                winningString = "As their stats and type are equally matched. It is hard to determine the winner."
+            }else if(calWin > 1){
+                var leftWin = document.getElementById("left-winner");
+                leftWin.classList.remove("close")
+                winningString = `It is estimated that ${leftDigimon[0]} has the higher chance to win ${rightDigimon[0]}.`
+            }
+            else if(calWin < 1){
+                var rightWin = document.getElementById("right-winner");
+                rightWin.classList.remove("close");
+                winningString = `It is estimated that ${rightDigimon[0]} has the higher chance to win ${leftDigimon[0]}.`
+            }
+            // Check for left best 
+            var leftSummary = document.createElement("div");
+            var rightSummary = document.createElement("div");
+            
+            // Left summary / perspective
+            leftSummary.innerHTML = `
+            <div style="font-weight:600;align-text:center">Digimon Summary</div><div>
+            ${leftDigimon[0]} is ${checkNetural(typeMultipler(leftDigimon[2], rightDigimon[2]))} 
+            against ${rightDigimon[0]}. 
+            Best attack against ${rightDigimon[0]} is <span style="font-weight:600;color: #73ca4c">${bestAttackType(rightDigimon[3]).bestAttackTypeToUse}</span>
+            , however ${leftDigimon[0]} should avoid <span style="font-weight:600;color: #da0000">${bestAttackType(leftDigimon[3]).avoid}</span> attacks.
+            ${winningString}
+            </div>`
+            
+            // To do right sum , jsut change all left to right, and right to left 
+            rightSummary.innerHTML = `
+            <div style="font-weight:600;align-text:center">Digimon Summary</div><div>
+            ${rightDigimon[0]} is ${checkNetural(typeMultipler(rightDigimon[2], leftDigimon[2]))} 
+            against ${leftDigimon[0]}. 
+            Best attack against ${leftDigimon[0]} is <span style="font-weight:600;color: #73ca4c">${bestAttackType(leftDigimon[3]).bestAttackTypeToUse}</span>
+            , however ${rightDigimon[0]} should avoid <span style="font-weight:600;color: #da0000">${bestAttackType(rightDigimon[3]).avoid}</span> attacks.
+            ${winningString}
+            </div>`
+            
+            leftCard.children[0].children[4].replaceChildren(leftSummary);
+            rightCard.children[0].children[4].replaceChildren(rightSummary);
+        }
+    }
+
+    function checkNetural(damage){
+        if (damage == 1) return '<span style="font-weight:600">Netural</span>'
+        if (damage == 0.5) return '<span style="font-weight:600;color: #da0000">Not Effective</span>' 
+        if (damage == 2) return '<span style="font-weight:600;color : #73ca4c">Super Effective</span>'
+    }
+
 </script>
 {% endblock %}
 
