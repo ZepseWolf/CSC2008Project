@@ -2,7 +2,7 @@ import os
 import random
 import sqlite3
 
-from flask import Flask, abort, flash, redirect, render_template, request, session, url_for
+from flask import Flask, abort, flash, redirect, render_template, request, session, url_for, make_response
 from tempfile import TemporaryFile, mkdtemp
 import requests
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
@@ -12,6 +12,7 @@ import json
 import array
 from flask_bootstrap import Bootstrap
 from pymongo import MongoClient
+from users import users
 
 from helpers import apology, login_required, allowed_file, placename, joinroute
 
@@ -28,6 +29,8 @@ client = MongoClient("mongodb+srv://jonaw:digimondb123@digimondb.4zjqool.mongodb
 # get a reference to the database
 mongodb = client["test"]
 
+print(" * MONGO Connection: Success")
+
 bootstrap = Bootstrap(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
@@ -35,12 +38,19 @@ app.config['MAX_CONTENT_LENGTH'] = 6 * 1024 * 1024
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+
 # Ensure responses aren't cached
 @app.after_request
 def after_request(response):
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Expires"] = 0
     response.headers["Pragma"] = "no-cache"
+
+    # NO CACHE TO RELOAD JS/ CSS
+    response.headers['Cache-Control'] = 'public, max-age=0'
+
     return response
 
 # Custom Jinja filter
@@ -54,39 +64,38 @@ print(" * DB connection:", db.total_changes == 0)
 app.secret_key = 'secret_key'
 
 
-
 @app.route("/")
 def index():
-    """Home page"""
+    """Index page"""
     return render_template("index.html")
 
-@app.route("/me", methods=["GET", "POST"])
+
+app.route("/home")
 @login_required
-def me():
-    """Me Page"""
+def home():
+    """USER HOME"""
 
-    sess_id = session["user_id"]
-    rows = db.execute("SELECT des, postal, placename, date, time, pic, p_id FROM spots WHERE p_id = ? ORDER BY date DESC, time DESC", (sess_id,)).fetchall()
-    username = db.execute("SELECT username FROM users WHERE id = ?", (sess_id,)).fetchone()[0]
+    username = request.cookies.get('username')
 
-    if request.method == "POST":
+    user_data = users.get_user(db, username)
+    team_data = users.get_team(db, username)
+    digimon_data = users.get_all_digimons(db)
 
-        delPid = request.form.get("del")
-        db.execute("DELETE FROM spots WHERE p_id = ?", (int(delPid),))
-        db.commit()
-    
-        return redirect("/me")
+    print(type(user_data), user_data)
+    print(type(team_data), team_data)
 
-    return render_template("me.html", rows=rows, username=username)
+    return render_template("home.html", user_data = user_data, team_data = team_data, digimon_data = digimon_data)
+
+
 
 @app.route("/profile", methods=["GET"])
 @login_required
 def profile():
     """Profile Page"""
 
-    sess_id = session["user_id"]
-    rows = db.execute("SELECT profilepic, username, email FROM users WHERE id = ?", (sess_id,)).fetchone()
-    return render_template("profile.html", rows=rows)
+    username = request.cookies.get('username')
+    data = users.get_user(db, username)
+    return render_template("profile.html", rows=data)
     
 
 @app.route("/change", methods=["GET", "POST"])
@@ -94,7 +103,7 @@ def profile():
 def change():
     """Change Profile Page"""
 
-    sess_id = session["user_id"]
+    username = request.cookies.get('username')
     
     if request.method == "POST":
         pw = generate_password_hash(request.form.get("password"))
@@ -167,39 +176,39 @@ def groups():
 def login():
     """Log user in"""
 
-    # Forget any user_id
-    session.clear()
-
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+        username = request.form.get("username")
+        password = request.form.get("password")
+        db_type = request.form.get("db-type")
+
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 400)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not password:
             return apology("must provide password", 400)
         
-        print((request.form.get("username")), (request.form.get("password")))
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE login = ? AND password = ?", 
-                          ((request.form.get("username")), (request.form.get("password")))).fetchone()
+        res = users.check_credentials(db, username, password)
                 
         # Ensure username exists and password is correct
-        if not rows:
-            return apology("invalid username or password", 400)
+        if res == False:
+            return apology("password and username does not match", 400)
 
-        # Remember which user has logged in
-        session["user_id"] = rows[1]
+        # Set cookie and redirect
+        resp = make_response(redirect("/landing"))
+        resp.set_cookie('username', username)
+        resp.set_cookie('db-type', db_type)
+        return resp
         
         # Remember which type of db the user 
 
-        print("this is my db-type:" + request.form.get("db-type"))
-        session['db-type'] = request.form.get("db-type")
+        # print("this is my db-type:" + request.form.get("db-type"))
+        # session['db-type'] = request.form.get("db-type")
         
-        # Redirect user to home page
-        return redirect("/landing")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
@@ -416,10 +425,12 @@ def logout():
     """Log user out"""
 
     # Forget any user_id
-    session.clear()
 
-    # Redirect user to login form
-    return redirect("/")
+    resp = make_response(redirect("/"))
+    resp.set_cookie('username', '', max_age=0)
+    resp.set_cookie('db_type', '', max_age=0)
+    return resp
+
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -428,28 +439,38 @@ def register():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":    
-        rows = db.execute("SELECT COUNT(id) FROM users WHERE username = ?", (request.form.get("username"),)).fetchone()
+
+        # pw = generate_password_hash(request.form.get("password"))
+
         username = request.form.get("username")
-        pw = generate_password_hash(request.form.get("password"))
         email = request.form.get("email")
+        name = request.form.get("name")
+        password = request.form.get("password")
+
+        if users.get_user(db, username) != None:
+            return apology("username already exists", 400)
+        
     
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if not username:
             return apology("must provide username", 400)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif not email:
+            return apology("must provide email", 400)
+        
+        elif not name:
+            return apology("must provide name", 400)
+        
+        elif not password:
             return apology("must provide password", 400)
         
-        elif request.form.get("confirmation") != request.form.get("password"):
-            return apology("password does not match", 400)
+        res = users.create_user(db, username, email, name, password)
         
-        elif rows[0] == 1:
-            return apology("Username already exist", 400)
+        if res == False:
+            return apology("internal server error", 500)
         
-        db.execute("INSERT INTO users (username, hash, email) VALUES (?, ?, ?)", (username, pw, email,))
-
-        db.commit()
+        res = users.create_team(db, username, "", "", "", "", "", "")
         
         # Redirect user to success
         return render_template("success.html")
@@ -471,4 +492,4 @@ for code in default_exceptions:
 
 
 if __name__ == '__main__':
-    app.run(port=5000, host='localhost', debug=True)
+    app.run(port=8080, host='0.0.0.0', debug=True)

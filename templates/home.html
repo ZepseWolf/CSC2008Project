@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <div id="box" style="width:90%; margin:auto">
+        <h1>{{ username }}'s Digimon</h1>
+    </div>
+
+    <div class="row" text-align="center">
+        {% for data in digimon_data %}
+        <div class="coloumn">
+            <div id="box">
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+{% endblock %}
