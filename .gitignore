@@ -1,3 +1,4 @@
 # VIRTUALENV DO NOT COMMIT
 venv/
 __pycache__/
+myenv/

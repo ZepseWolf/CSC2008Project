@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Evolution Path
+{% endblock %}
+
+{% block styles %}
+    {{ bootstrap.load_css() }}
+    <style>
+        .scrollable-container {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+    </style>
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <div class="row justify-content-left mt-5">
+            <div class="col-12 text-center mb-4">
+                <h1>Evolution Path from {{ digimon_name_1 }} to {{ digimon_name_2 }}</h1>
+            </div>
+            {% if path %}
+                <div class="scrollable-container">
+                    <div class="d-flex justify-content-center align-items-center">
+                        {% for digimon in path %}
+                            <div class="mx-2 text-center">
+                                {% if loop.index0 == 0 %}
+                                    <p style="color: red; font-weight: bold; border: 2px solid red; padding: 3px 5px; border-radius: 5px;">Start</p>
+                                {% elif loop.index0 == path|length - 1 %}
+                                    <p style="color: red; font-weight: bold; border: 2px solid red; padding: 3px 5px; border-radius: 5px;">End</p>
+                                {% else %}
+                                    <p style="opacity: 0; font-weight: bold; border: 2px solid white; padding: 3px 5px; border-radius: 5px;">&nbsp;</p>
+                                {% endif %}
+                                <a href="{{ url_for('digimon_details', digimon_name=digimon) }}" class="d-flex flex-column align-items-center text-decoration-none text-dark">
+                                    <div class="image-container" id="box">
+                                        <img class="card-img-top" style="max-height:55%; max-width:100%; line-height: 320px; font-size: 200px;" src="https://digimon-api.com/images/digimon/w/{{ digimon }}.png" alt="?">
+                                    </div>
+                                    <p>{{ digimon }}</p>
+                                </a>
+                            </div>
+                            {% if not loop.last %}
+                                <div class="arrow">&rarr;</div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% else %}
+                <p>No evolution path found.</p>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ bootstrap.load_js() }}
+{% endblock %}

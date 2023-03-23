@@ -69,3 +69,29 @@ CREATE TABLE IF NOT EXISTS Digimon_Skills(
   FOREIGN KEY (digimon_name) REFERENCES Digimon(digimon_name),
   FOREIGN KEY (skill) REFERENCES Skills_Info(skill)
 );
+
+CREATE TABLE IF NOT EXISTS Users(
+  username TEXT,
+  email TEXT,
+  name TEXT,
+  password TEXT,
+  PRIMARY KEY (username)
+);
+
+CREATE TABLE IF NOT EXISTS User_Digimon(
+  username TEXT,
+  digimon_1 TEXT,
+  digimon_2 TEXT,
+  digimon_3 TEXT,
+  digimon_4 TEXT,
+  digimon_5 TEXT,
+  digimon_6 TEXT,
+  PRIMARY KEY (username),
+  FOREIGN KEY (username) REFERENCES Users(username),
+  FOREIGN KEY (digimon_1) REFERENCES Digimon(digimon_name),
+  FOREIGN KEY (digimon_2) REFERENCES Digimon(digimon_name),
+  FOREIGN KEY (digimon_3) REFERENCES Digimon(digimon_name),
+  FOREIGN KEY (digimon_4) REFERENCES Digimon(digimon_name),
+  FOREIGN KEY (digimon_5) REFERENCES Digimon(digimon_name),
+  FOREIGN KEY (digimon_6) REFERENCES Digimon(digimon_name)
+);

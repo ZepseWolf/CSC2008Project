@@ -1,6 +1,6 @@
 import requests
 
-from flask import redirect, render_template, session
+from flask import redirect, render_template, session, request
 from functools import wraps
 
 # configurations
@@ -29,7 +29,8 @@ def login_required(f):
     """
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if session.get("user_id") is None:
+        if request.cookies.get('username') is None or request.cookies.get('username') == "":
+        # if session.get("user_id") is None:
             return redirect("/login")
         return f(*args, **kwargs)
     return decorated_function
