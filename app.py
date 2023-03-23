@@ -220,7 +220,7 @@ def compare():
     """ Compare Page """
     
     if request.method == 'GET':
-        print("This is the saved session:" + session.get('db-type'))
+        # print("This is the saved session:" + session.get('db-type'))
         if session.get('db-type') == 'mongodb':
             # get a reference to the collection
             collection = mongodb["digimon_stats"]
