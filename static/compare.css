@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #0000002b;
+  border: 2px solid #ffffff49;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -43,7 +43,7 @@
 }
 
 .svg-icon{
-  fill: #0000002b;
+  fill: #ffffff49;
 }
 
 .select-popout{

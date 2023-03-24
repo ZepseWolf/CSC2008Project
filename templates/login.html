@@ -5,7 +5,83 @@
 {% endblock %}
 
 {% block main %}
-    <div text-align="center">
+<link rel="stylesheet" href="/static/login.css">
+	<a href="https://front.codes/" class="logo" target="_blank">
+		<img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+	</a>
+
+	<div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center ">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+                                            <form action="/login" method="post">
+											<h4 class="mb-4 pb-3">Log In</h4>
+											<div class="form-group">
+												<input autofocus type="text" name="username" class="form-style" placeholder="Your Username" id="logemail" autocomplete="off">
+												<i class="input-icon uil uil-at"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<input type="password" name="password" class="form-style" minlength="3" placeholder="Your Password" id="logpass" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+                                            <div class="form-check form-check-inline" style="margin-top:12px ;">
+                                                <input class="form-check-input" type="radio" name="db-type" id="mongodb-radio" value="mongodb" checked>
+                                                <label class="form-check-label" for="mongodb-radio">MongoDB</label>
+                                            </div>
+                                            <div class="form-check form-check-inline ">
+                                                <input class="form-check-input" type="radio" name="db-type" id="sqlite-radio" value="sqlite">
+                                                <label class="form-check-label" for="sqlite-radio">SQLite</label>
+                                            </div>  
+                                            <a href="#" class="btn mt-4" onclick="document.forms[0].submit();">Submit</a>
+                                        </form>
+                            				<!-- <p class="mb-0 mt-4 text-center"><a href="#0" class="link">Forgot your password?</a></p> -->
+				      					</div>
+			      					</div>
+			      				</div>
+								<div class="card-back">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Sign Up</h4>
+                                            <form action="/register" method="post">
+											<div class="form-group">
+												<input type="text" autofocus name="name" class="form-style" placeholder="Your Full Name" id="logname" autocomplete="off">
+												<i class="input-icon uil uil-user"></i>
+											</div>	
+                                            <div class="form-group mt-2">
+												<input type="text" name="username" class="form-style" placeholder="Your Username" id="logusername" autocomplete="off">
+												<i class="input-icon uil uil-at"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="email" name="email" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off">
+												<i class="input-icon uil uil-at"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<input type="password" name="password"  minlength="3" class="form-style" placeholder="Your Password" id="logpass" autocomplete="off">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+											<a href="#" class="btn mt-4" onclick="document.forms[1].submit();">Submit</a>
+                                        </form>
+				      					</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
+
+    <!-- <div text-align="center">
 
         <br><br>
         <h1>Don't have an account?</h1>
@@ -16,7 +92,7 @@
     <div>
     <form action="/login" method="post">
         <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name ="username" placeholder="Username" type="text" required>
+            <input autocomplete="off" class="form-control" name ="username" placeholder="Username" type="text" required>
         </div>
         <div class="form-group">
             <input autocomplete="off" class="form-control" name ="password" minlength="3" placeholder="Password (min. 3 char)" type="password" required>
@@ -31,5 +107,5 @@
         </div>     
         <button id="btn" type="submit">Login</button>
     </form>
-    </div>
+    </div> -->
 {% endblock %}

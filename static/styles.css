@@ -3,6 +3,7 @@
     top: 0;
     width: 100%;
     z-index: 9999;
+    background-color: #000000;
 }
 
 .mainbrand {
@@ -46,6 +47,7 @@ main .form-control
   background-color: rgba(255,255,255,0.3);
   border: 1px solid white;
   color: white;
+  border-radius: 10px;
   font-weight: 200;
   font-size: 20px;
   transition: 0.5s;
@@ -59,8 +61,8 @@ main .form-control:hover{
 main
 {
     /* Center contents */
+
     text-align: center;
-    
 }
 
 main img
@@ -135,7 +137,8 @@ body {
   padding-top: 60px;
   /* background: linear-gradient(to right, #9ED9CCFF 0%, #008C76FF 100%); */
   /* background-image: url("/static/img/wallpaper.gif"); */
-  background-color:#000000;
+  color: #e0e0e0;
+  background-color: #1f2029;
   font-family: "Verdana", sans-serif;
 }
 

@@ -87,5 +87,6 @@ class StarrySky extends React.Component {constructor(...args) {super(...args);_d
   }}
 
 ReactDOM.render( /*#__PURE__*/React.createElement(StarrySky, null), document.getElementById("root"));
-
 });
+console.log("replace " ,window.location.href);
+
