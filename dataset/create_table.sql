@@ -95,3 +95,10 @@ CREATE TABLE IF NOT EXISTS User_Digimon(
   FOREIGN KEY (digimon_5) REFERENCES Digimon(digimon_name),
   FOREIGN KEY (digimon_6) REFERENCES Digimon(digimon_name)
 );
+
+CREATE TABLE IF NOT EXISTS Skill_Type_Advantage (
+  attacking_type TEXT,
+  defending_type TEXT,
+  advantage INTEGER,
+  PRIMARY KEY (attacking_type, defending_type)
+);
