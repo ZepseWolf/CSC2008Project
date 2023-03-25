@@ -302,10 +302,15 @@ def selection():
 
     if request.method == "GET":
         # Retrieve the list of all available digimon from the database
-        digimons = db.execute("SELECT * FROM digimon").fetchall()
+        digimons = db.execute("SELECT * FROM Digimon").fetchall()
+        print("digimons:", digimons)
 
-        # Render the landing page with the list of digimon
-        return render_template("selection.html", digimons=digimons)
+        # Extract the list of digimon names
+        digimon_names = [digimon[0] for digimon in digimons]
+        print("digimon_names:", digimon_names)
+
+        # Render the landing page with the list of digimon names
+        return render_template("selection.html", digimon_names=digimon_names)
 
     if request.method == "POST":
         # Retrieve the names of the selected digimon from the form data
@@ -327,9 +332,9 @@ def evolution_path():
     # Query the database to retrieve the evolution path between the two digimon
     path_query = """
     WITH start_node(digimon_name) AS (
-    SELECT digimon_name
-    FROM Digimon
-    WHERE digimon_name = :digimon_name_1
+        SELECT digimon_name
+        FROM Digimon
+        WHERE digimon_name = :digimon_name_1
     ),
     evolution_path(level, from_digimon, to_digimon, chain) AS (
         SELECT 1, sn.digimon_name, d2.digimon_name, sn.digimon_name || ',' || d2.digimon_name
@@ -347,20 +352,15 @@ def evolution_path():
     SELECT chain
     FROM evolution_path
     WHERE to_digimon = :digimon_name_2
-    ORDER BY level
-    LIMIT 1;
+    ORDER BY level;
     """
-    path = db.execute(path_query, {"digimon_name_1": digimon_name_1, "digimon_name_2": digimon_name_2}).fetchone()
-    print(path)
-    if path:
-        digimon_path = path[0].split(',')
-    else:
-        digimon_path = None
-
-    print(digimon_path)
+    paths = db.execute(path_query, {"digimon_name_1": digimon_name_1, "digimon_name_2": digimon_name_2}).fetchall()
+    for p in paths:
+        path = p[0].split(',')
+        print(' -> '.join(path))
 
     # Render the evolution path page with the selected digimon names and the evolution path
-    return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=digimon_path)
+    return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=paths)
 
 
 
