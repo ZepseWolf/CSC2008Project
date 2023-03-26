@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
+
 {% block title %}
-    Digimon Selection
+    My Compare Page
 {% endblock %}
 
 {% block styles %}
@@ -8,51 +9,194 @@
 {% endblock %}
 
 {% block main %}
-    <div class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-                <form action="" method="post">
-                    <div class="form-group">
-                        <label for="digimon_name_1">First Digimon</label>
-                        <select class="form-control" id="digimon_name_1" name="digimon_name_1">
-                            <option value="">Select a Digimon</option>
-                            {% for digimon_name in digimon_names %}
-                                <option value="{{ digimon_name }}">{{ digimon_name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="digimon_name_2">Second Digimon</label>
-                        <select class="form-control" id="digimon_name_2" name="digimon_name_2">
-                            <option value="">Select a Digimon</option>
-                            {% for digimon_name in digimon_names %}
-                                <option value="{{ digimon_name }}">{{ digimon_name }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <button class="btn-evolution" type="submit">Find Evolution Path</button>
-                </form>
+<link rel="stylesheet" href="/static/compare.css">
+<div style="position: relative;">
+    <div class="main-container "> 
+        <div class="compare-items-container">
+            <img id="left-winner" class="close" src="../static/images/winner.png" width="150px" height="100px" style="position:absolute; top:8px;right: 2px;">
+            <div id="digimon-card-1" class="compare-item item-hover" onclick="popout(this,true)">
+                <svg class="svg-icon" style="width: 4em; height: 4em;vertical-align: middle;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M836 476H548V188c0-19.8-16.2-36-36-36s-36 16.2-36 36v288H188c-19.8 0-36 16.2-36 36s16.2 36 36 36h288v288c0 19.8 16.2 36 36 36s36-16.2 36-36V548h288c19.8 0 36-16.2 36-36s-16.2-36-36-36z"  /></svg>
+                <div class="compare-item-text">FROM</div>
             </div>
         </div>
+        <div class="compare-items-container" >
+            <img id="right-winner" class="close" src="../static/images/winner.png" width="150px" height="100px" style="position:absolute; top:8px;right: 2px;">
+            <div id="digimon-card-2" class="compare-item item-hover" onclick="popout(this,false)">
+                <svg class="svg-icon" style="width: 4em; height: 4em;vertical-align: middle;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M836 476H548V188c0-19.8-16.2-36-36-36s-36 16.2-36 36v288H188c-19.8 0-36 16.2-36 36s16.2 36 36 36h288v288c0 19.8 16.2 36 36 36s36-16.2 36-36V548h288c19.8 0 36-16.2 36-36s-16.2-36-36-36z"  /></svg>
+                <div class="compare-item-text">TO</div>
+            </div>
+        </div>
+        <div id="test"></div>
     </div>
+    <div class="compare-items-container" style="display:flex; justify-content:center; margin-top: 30px;">
+        <button id="compare-button" class="btn btn-primary" onclick="compare()">Compare</button>
+    </div>
+    <div id="select-popout" class="select-popout close">
+        <div onclick="closeSelect()" style="width: 100%; height: 100%;position: fixed;">
+        </div>    
+        <div style="position: fixed; display:flex; justify-content: center; top: 20%;left: 50%; transform: translate(-50%, -50%);">
+        <div class="dropdown">
+            <input type="search" id="dropdown" onclick="dropdown()" onkeyup="instantSearch()" placeholder="Search Now">
+            <!-- oninput="instantSearch(this)"  -->
+            <label class="dropdown__face" for="dropdown">
+                <div class="dropdown__text"></div>
+            </label>
+
+            <snap id="dropdown__items" class="dropdown__items">
+                <ul id="digi-list"class="dropdown_ul_items">
+                    {% for digimon in digimons %}
+                        <li onclick="selectDigiMon({{loop.index-1}})">{{digimon[0]}}</li>
+                    {% endfor %}
+                </ul>
+            </snap>
+        </div>
+
+        <svg class="goo-svg">
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                    result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </svg>
+    </div>
+    </div>
+</div>
+<script>
+    const DIGIMONS = {{ digimons|tojson }}
+    var selectedElement = null;
+    var leftPopulate = false;
+    var rightPopulate = false;
+    var isItLeft = null;
+    var leftDigimon,rightDigimon;
+    var leftWinningChance = 0;
+    
+    function popout(event, isLeft){
+        isItLeft = isLeft
+        if(isLeft){
+            leftPopulate = true;
+        }
+        else{
+            rightPopulate = true;
+        }
+        selectedElement = event;
+        var ele = document.getElementById("select-popout");
+        ele.classList.toggle("close");
+    }
+
+    function closeSelect(){
+        var dropdownEle = document.getElementById("dropdown__items");
+        dropdownEle.classList.remove("add-dropdown");
+        var ele = document.getElementById("select-popout");
+        ele.classList.add("close");    
+    }
+
+    function dropdown(){
+        var ele = document.getElementById("dropdown__items");
+        ele.classList.add("add-dropdown");
+    }
+
+
+    function selectDigiMon(index){
+        var selectedDigimon = DIGIMONS[index];
+        // Reset
+        document.getElementById("left-winner").classList.add("close");
+        document.getElementById("right-winner").classList.add("close");
+     
+        if(isItLeft){
+            leftDigimon = selectedDigimon;
+        }else{
+            rightDigimon= selectedDigimon;
+        }
+        console.log(selectedDigimon);
+        var mainWrapper = document.createElement("div");
+        var title = document.createElement("div");
+        var imgEle = document.createElement("img");
+        var imgCover = document.createElement("div");
+        var type = document.createElement("div");
+        var stats = document.createElement("div");
+        var sum = document.createElement("div");
+        // fetch('https://jsonplaceholder.typicode.com/posts/1')
+        //     .then((response) => response.json())
+        //     .then((data) => console.log(data));
+        imgCover.style.width = "100%";
+        imgCover.style.height = "400px";
+
+        imgEle.src = `https://digimon-api.com/images/digimon/w/${selectedDigimon[0].replace(/ /g, "_")}.png`
+        imgEle.addEventListener('error', () => imgEle.src  = `../static/images/image_unavailable.jpg`);
+        imgEle.style.width = "100%";
+        imgEle.style.height = "100%";
+        imgEle.style.objectFit = "contain";
+
+        title.style.textAlign = "center";
+        title.style.fontSize =  "16px";
+        title.padding = "16px"
+        title.style.fontWeight = "600";
+        title.innerText  = selectedDigimon[0];
+
+        type.innerHTML =`<b>Type:</b> ${selectedDigimon[2]} <b> | </b> <b>Attribute: </b>${selectedDigimon[3]} `;
+
+        // stats.innerText = "Hp: "+selectedDigimon[6] +
+        //                 "\nSP: "+selectedDigimon[7] +
+        //                 "\nATK: "+selectedDigimon[8] +
+        //                 "\nDEF: "+selectedDigimon[9] +
+        //                 "\nINT: "+selectedDigimon[10] +
+        //                 "\nSPD: "+selectedDigimon[11];
+
+        mainWrapper.style.color =  "black";
+        mainWrapper.style.width = "100%";
+        mainWrapper.style.height =  "100%";
+        mainWrapper.style.overflow = "auto";
+        mainWrapper.style.background = "white";
+        mainWrapper.style.borderRadius = "10px";
+        mainWrapper.style.padding = "16px 8px"
+
+        imgCover.appendChild(imgEle);
+        mainWrapper.appendChild(title);
+        mainWrapper.appendChild(imgCover);
+        mainWrapper.appendChild(type);
+        mainWrapper.appendChild(stats);
+        mainWrapper.appendChild(sum);
+        selectedElement.replaceChildren(mainWrapper);
+        closeSelect();
+    }
+
+    
+    var list = document.getElementById('digi-list').getElementsByTagName('li');
+    var searchInput = document.getElementById('dropdown');
+
+    function filterList() {
+        var filter = searchInput.value.toLowerCase();
+        var filteredList = Array.from(list).filter(function(item) {
+            return item.textContent.toLowerCase().includes(filter);
+        });
+        return filteredList;
+    }
+
+    function instantSearch(){
+        var filteredList = filterList();
+        for (var i = 0; i < list.length; i++) {
+            list[i].style.display = 'none';
+        }
+        for (var i = 0; i < filteredList.length; i++) {
+            filteredList[i].style.display = 'block';
+        }
+    }
+
+    function compare() {
+        if (leftDigimon && rightDigimon) {
+            const params = new URLSearchParams({
+            digimon_name_1: leftDigimon[0],
+            digimon_name_2: rightDigimon[0],
+            });
+            window.location.href = "/evolution?" + params.toString();
+        }
+    }
+
+</script>
 {% endblock %}
 
 {% block scripts %}
-    {{ bootstrap.load_js() }}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Retrieve the list of available digimon names from the server
-            $.get("/api/digimon_names", function(data) {
-                // Convert the list to an array of strings
-                var digimonNames = data.map(function(digimon) { return digimon.name });
 
-                // Enable autocomplete on the digimon name input fields
-                $("#digimon_name_1, #digimon_name_2").autocomplete({
-                    source: digimonNames,
-                    minLength: 2
-                });
-            });
-        });
-    </script>
+    {{ bootstrap.load_js() }}
 {% endblock %}

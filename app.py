@@ -296,29 +296,72 @@ def landing():
         # Redirect to landing page with digimon name as a URL parameter
         return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
     
-@app.route("/selection",  methods=["GET", "POST"])
+# @app.route("/selection",  methods=["GET", "POST"])
+# def selection():
+#     """Landing Page"""
+
+#     if request.method == "GET":
+#         # Retrieve the list of all available digimon from the database
+#         digimons = db.execute("SELECT * FROM Digimon").fetchall()
+#         print("digimons:", digimons)
+
+#         # Extract the list of digimon names
+#         digimon_names = [digimon[0] for digimon in digimons]
+#         print("digimon_names:", digimon_names)
+
+#         # Render the landing page with the list of digimon names
+#         return render_template("selection.html", digimon_names=digimon_names)
+
+#     if request.method == "POST":
+#         # Retrieve the names of the selected digimon from the form data
+#         digimon_name_1 = request.form.get("digimon_name_1")
+#         digimon_name_2 = request.form.get("digimon_name_2")
+
+#         # Redirect to the evolution page with the selected digimon names as URL parameters
+#         return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
+
+@app.route("/selection", methods=["GET", "POST"])
 def selection():
-    """Landing Page"""
+    """ Compare Page """
 
-    if request.method == "GET":
-        # Retrieve the list of all available digimon from the database
-        digimons = db.execute("SELECT * FROM Digimon").fetchall()
-        print("digimons:", digimons)
+    if request.method == 'GET':
+        # print("This is the saved session:" + session.get('db-type'))
+        if session.get('db-type') == 'mongodb':
+            # get a reference to the collection
+            collection = mongodb["digimon_stats"]
 
-        # Extract the list of digimon names
-        digimon_names = [digimon[0] for digimon in digimons]
-        print("digimon_names:", digimon_names)
+            # find all documents in the collection
+            documents = collection.find()
 
-        # Render the landing page with the list of digimon names
-        return render_template("selection.html", digimon_names=digimon_names)
+            # iterate over the documents and print each document
+            for document in documents:
+                print(document)
+            
+        # Read the colors from the JSON file
+        with open('./templates/colors.json') as f:
+            colors = json.load(f)
 
+        digimons = db.execute("SELECT * FROM digimon").fetchall()
+        digimons_fixed_list = []
+
+        for digimon in digimons:
+            digimon_list = list(digimon)
+            element = digimon_list[3]
+            if element:
+                # Retrieve the color from the colors dict based on the element type
+                color = colors[element]
+                digimon_list.append(color)
+                digimons_fixed_list.append(digimon_list)
+        return render_template('selection.html', digimons=digimons_fixed_list)
+    
     if request.method == "POST":
         # Retrieve the names of the selected digimon from the form data
         digimon_name_1 = request.form.get("digimon_name_1")
         digimon_name_2 = request.form.get("digimon_name_2")
 
-        # Redirect to the evolution page with the selected digimon names as URL parameters
+        # Redirect to evolution page with the selected digimon names as URL parameters
         return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
+
 
     
 @app.route("/evolution")
