@@ -351,8 +351,8 @@ def landing():
 #         # Redirect to the evolution page with the selected digimon names as URL parameters
 #         return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
 
-@app.route("/selection", methods=["GET", "POST"])
-def selection():
+@app.route("/path", methods=["GET", "POST"])
+def path():
     """ Compare Page """
 
     if request.method == 'GET':
