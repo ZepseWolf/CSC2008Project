@@ -4,20 +4,18 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
-  body {
-    background: url(https://tinypic.host/images/2023/03/20/Shapes-Abstraction-Background-2466799.jpg) no-repeat center;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
   .profile-card {
     width: 420px;
     overflow: hidden;
     text-align: center;
     position: relative;
     box-shadow: 0 0 10px #111;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:25px;
+    border:10px;
+    margin-top:150px;;
+
   }
   .top-section {
     padding: 60px 40px;

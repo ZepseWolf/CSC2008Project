@@ -61,7 +61,8 @@ main .form-control:hover{
 main
 {
     /* Center contents */
-
+    background-color:black;
+    background:black;
     text-align: center;
 }
 
@@ -133,12 +134,23 @@ th {
   color: white;
 }
 
+.team_card {
+  max-height:55%;
+  max-width:100%;
+  line-height:320px;
+  font-size:200px;
+  border-radius:25px;
+  border:20px;
+  box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
+}
+
 body {
   padding-top: 60px;
   /* background: linear-gradient(to right, #9ED9CCFF 0%, #008C76FF 100%); */
   /* background-image: url("/static/img/wallpaper.gif"); */
+  background-color:black;
+  background:black;
   color: #e0e0e0;
-  background-color: #1f2029;
   font-family: "Verdana", sans-serif;
 }
 

@@ -9,10 +9,6 @@
 {% endblock %}
 
 {% block main %}
-    <div 
-        class="container"
-        style="max-width: 2000px !important;"
-    >
         <div class="row justify-content-center mt-5">
             {% for digimon in digimons %}
                 <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -35,7 +31,7 @@
                             {{digimon[0]}}<br>
                             {{ loop.index }}<br>
                             <form action="" method="post">
-                                <button class="btn btn-danger" type="submit" name="digimon_name" value="{{digimon[0]}}">View</button>
+                                <button class="btn btn-danger" style="z-index:200;" type="submit" name="digimon_name" value="{{digimon[0]}}">View</button>
                                 {% if not loop.first %}
                                     <input type="hidden" name="previous_digimon" value="{{ digimons[loop.index-2][0] }}">
                                 {% else %}
@@ -53,7 +49,6 @@
                 </div>
             {% endfor %}
         </div>
-    </div>
 {% endblock %}
 
 {% block scripts %}

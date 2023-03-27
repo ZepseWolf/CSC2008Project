@@ -56,17 +56,22 @@ def after_request(response):
 # Custom Jinja filter
 app.jinja_env.filters["joinroute"] = joinroute
 
-
 # SQLite database
 db = sqlite3.connect("./dataset/digimon.db", check_same_thread=False)
 print(" * DB connection:", db.total_changes == 0)
 
 app.secret_key = 'secret_key'
 
-
 @app.route("/")
 def index():
     """Index page"""
+
+    username = request.cookies.get('username')
+
+    if username != None:
+        if len(username) > 0:
+            return redirect("/landing")
+    
     return render_template("index.html")
 
 
@@ -84,7 +89,7 @@ def home():
     print(type(user_data), user_data)
     print(type(team_data), team_data)
 
-    return render_template("home.html", user_data = user_data, team_data = team_data, digimon_data = digimon_data)
+    return render_template("home.html", user_data = user_data, team_data = team_data, digimon_data = digimon_data, login = username)
 
 
 @app.route("/team", methods=['GET', 'POST'])
@@ -94,6 +99,7 @@ def team():
 
     username = request.cookies.get('username')
     all_digimons = users.get_all_digimons(db)
+    print(all_digimons)
     team = users.get_team(db, username)
     print(team)
 
@@ -116,17 +122,10 @@ def team():
                           digimon_6
                           )
         
-        return '', 204
+        return redirect('/team')
 
-    return render_template("team.html", all_digimons = all_digimons)
+    return render_template("team.html", all_digimons = all_digimons, team = team, login = username)
 
-
-
-
-
-
-
-    
 
 @app.route("/profile", methods=["GET"])
 @login_required
@@ -135,52 +134,8 @@ def profile():
 
     username = request.cookies.get('username')
     data = users.get_user(db, username)
-    return render_template("profile.html", rows=data)
-    
+    return render_template("profile.html", rows=data, login = username)
 
-@app.route("/change", methods=["GET", "POST"])
-@login_required
-def change():
-    """Change Profile Page"""
-
-    username = request.cookies.get('username')
-    
-    if request.method == "POST":
-        pw = generate_password_hash(request.form.get("password"))
-        email = request.form.get("email")
-        file = request.files["file"]
-        sess_id = session["user_id"]
-        
-        # filename checker
-        if allowed_file(file.filename):
-            # own filenaming convention
-            f = (str(sess_id), "_pp.", file.content_type[6:])
-            filename = "".join(f)
-            print(filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        else:
-            return apology("Invalid file", 400)
-            
-        # password confirmation
-        if request.form.get("confirmation") != request.form.get("password"):
-            return apology("password does not match", 400)
-        
-        # checks if there's a response
-        if len(filename) > 1:
-            db.execute("UPDATE users SET profilepic = ? WHERE id = ?", (filename, sess_id,))
-        
-        if len(request.form.get("password")) > 1:
-            db.execute("UPDATE users SET hash = ? WHERE id = ?", (pw, sess_id,))
-        
-        if len(email) > 1:
-            db.execute("UPDATE users SET email = ? WHERE id = ?", (email, sess_id,))
-        
-        db.commit()
-
-        return redirect("/profile")
-        
-    else:
-        return render_template("change.html")
         
 
 @app.route("/login", methods=["GET", "POST"])
@@ -230,8 +185,11 @@ def login():
         return render_template("login.html")
 
 @app.route("/compare",  methods=["GET", "POST"])
+@login_required
 def compare():
     """ Compare Page """
+
+    username = request.cookies.get('username')
     
     if request.method == 'GET':
         # print("This is the saved session:" + session.get('db-type'))
@@ -292,7 +250,7 @@ def compare():
                 color = colors[element]
                 digimon_list.append(color)
                 digimons_fixed_list.append(digimon_list)
-        return render_template('compare.html', digimons=digimons_fixed_list)
+        return render_template('compare.html', digimons=digimons_fixed_list, login = username)
     
     if (request.method == "POST"):
         print(request.form.get("digimon_name"))
@@ -301,8 +259,11 @@ def compare():
         return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
 
 @app.route("/landing",  methods=["GET", "POST"])
+@login_required
 def landing():
     """ Landing Page """
+
+    username = request.cookies.get('username')
     
     if request.method == 'GET':
         print(f"This is the saved session: {request.cookies.get('db-type')}")
@@ -337,7 +298,7 @@ def landing():
                             digimon_list.append(color)
                 digimons_fixed_list.append(digimon_list)
             # print(digimons_fixed_list)
-            return render_template('landing.html', digimons=digimons_fixed_list)
+            return render_template('landing.html', digimons=digimons_fixed_list, login = username)
 
         # SQLite3 implementation
         if request.cookies.get('db-type') == 'sqlite':
@@ -352,7 +313,7 @@ def landing():
                     color = colors[element]
                     digimon_list.append(color)
                     digimons_fixed_list.append(digimon_list)
-            return render_template('landing.html', digimons=digimons_fixed_list)
+            return render_template('landing.html', digimons=digimons_fixed_list, login=username)
 
     
     if (request.method == "POST"):
@@ -386,8 +347,11 @@ def landing():
 #         return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
 
 @app.route("/path", methods=["GET", "POST"])
+@login_required
 def path():
     """ Compare Page """
+
+    username = request.cookies.get('username')
 
     if request.method == 'GET':
         # print("This is the saved session:" + session.get('db-type'))
@@ -417,7 +381,7 @@ def path():
                 color = colors[element]
                 digimon_list.append(color)
                 digimons_fixed_list.append(digimon_list)
-        return render_template('selection.html', digimons=digimons_fixed_list)
+        return render_template('selection.html', digimons=digimons_fixed_list, login=username)
     
     if request.method == "POST":
         # Retrieve the names of the selected digimon from the form data
@@ -427,12 +391,13 @@ def path():
         # Redirect to evolution page with the selected digimon names as URL parameters
         return redirect(url_for("evolution_path", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2))
 
-
     
 @app.route("/evolution")
+@login_required
 def evolution_path():
     """Evolution Path Page"""
 
+    username = request.cookies.get('username')
     # Retrieve the names of the selected digimon from the URL parameters
     digimon_name_1 = request.args.get("digimon_name_1")
     digimon_name_2 = request.args.get("digimon_name_2")
@@ -468,12 +433,14 @@ def evolution_path():
         print(' -> '.join(path))
 
     # Render the evolution path page with the selected digimon names and the evolution path
-    return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=paths)
-
+    return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=paths, login=username)
 
 
 @app.route('/landing/<digimon_name>', methods=["GET", "POST"])
+@login_required
 def digimon_details(digimon_name):
+
+    username = request.cookies.get('username')
 
     if request.cookies.get('db-type') == "mongodb":
         print("Retrieving Details from MongoDB...")
@@ -568,7 +535,7 @@ def digimon_details(digimon_name):
             next_digimon = next_digimon,
             previous_digimon = previous_digimon,
             digivolution_paths = longest_path_list,
-            random_longest_evolution_path = longest_path_list
+            random_longest_evolution_path = longest_path_list, login = username
         )
 
     if request.cookies.get('db-type') == "sqlite":
@@ -632,8 +599,6 @@ def digimon_details(digimon_name):
         else:
             next_digimon = "NA"
 
-
-
         digivolution_paths_sql_query = """
         WITH RECURSIVE digivolutions_cte(digimon_name, digivolves_to, path) AS (
             SELECT digivolves_from, digivolves_to, CAST(digivolves_from AS TEXT) AS path
@@ -668,11 +633,13 @@ def digimon_details(digimon_name):
             next_digimon = next_digimon,
             previous_digimon = previous_digimon,
             digivolution_paths = digivolution_paths,
-            random_longest_evolution_path = random_longest_evolution_list
+            random_longest_evolution_path = random_longest_evolution_list, 
+            login = username
         )
 
 
 @app.route("/logout")
+@login_required
 def logout():
     """Log user out"""
 

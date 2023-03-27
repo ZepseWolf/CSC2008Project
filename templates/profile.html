@@ -7,26 +7,30 @@
 {% block main %}
 
 <link rel="stylesheet" href="/static/profile.css">
+<div id="root"></div>
 
-      <!-- <div id="userbox">
-          <h1 style="padding-top:10px">Profile</h1>
-      <hr>
-      Username | {{ rows[1] }}<hr>
-      Email | {{ rows[2] }}<hr>
-      </div>
-      <a href="/change"><button id="btn" type="submit">Edit Profile</button></a> -->
     <div class="profile-card">
         <div class="top-section">
           <i class="message fas fa-envelope"></i>
           <i class="notif fas fa-bell"></i>
           <div class="pic">
-            <img src="https://tinypic.host/images/2023/02/21/pikrepo.com-2.jpg" alt="profile picture">
+            <img src="https://cdn.myanimelist.net/images/characters/14/398750.jpg" alt="profile picture">
           </div>
-          <div class="name">
-            {{rows[2]}}
-          </div>
-          <div class="name">{{rows[1]}}</div>
-          <div class="name">{{rows[0]}}</div>
+          <br>
+          <table class="table table-borderless table-sm table-responsive" style="color:white">
+            <tr>
+              <td>Name</td>
+              <td>{{rows[2]}}</td>
+            </tr>
+            <tr>
+              <td>Email</td>
+              <td>{{rows[1]}}</td>
+            </tr>
+            <tr>
+              <td>Username</td>
+              <td>{{rows[0]}}</td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

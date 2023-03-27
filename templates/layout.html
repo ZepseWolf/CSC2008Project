@@ -42,170 +42,54 @@
   <!-- Fontawesome stuff -->
   <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.css') }}">
 
-  
-
   <title>DigiDex {% block title %}{% endblock %}</title>
 
 </head>
 
 <body>
-  <script>
-            // Play audio
-            // var audio = document.createElement("audio");
-            // audio.loop = true;
-            // audio.src = "../static/audios/breakup_theme.mp3";
-            // audio.autoplay = true;
-            // audio.play();
-  </script>
+
   <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-    <div class="container-fluid" style="justify-content:initial !important;">
-      <a class="navbar-brand" href="/">DigiDex</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div id="dynamic-nav">
-        <div class="collapse navbar-collapse" id="navbarScroll">
-          <!-- <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/register">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/compare">Compare</a>
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form> -->
-        </div>
-      </div>
-      
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/">DigiDex</a>
+  
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        {% if login %}
+        <li class="nav-item active">
+          <a class="nav-link" href="/team">Team</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/landing">All Digimon</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/compare">Compare</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/path">Evolution Path</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/profile">Profile</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/logout">Logout</a>
+        </li>
+        
+        {% else %}
+        
+        <li class="nav-item active">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+
+        {% endif %}
+
+      </ul>
     </div>
   </nav>
-  <script>
-    const NAV = document.getElementById("dynamic-nav")
-    const URLSTRING = window.location.origin;
-    var htmlDom  = document.createElement("div");
-    console.log(window.location.origin)
-    if(window.location.href == URLSTRING){ // Default need to login
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/login">Login/Register</a>
-                            </li>
-                          </ul>
-                        </div>`
-      
-    } else if( window.location.href.includes(`${URLSTRING}/login`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" href="/login">Login/Register</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    else if( window.location.href.includes(`${URLSTRING}/register`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" href="/login">Login/Register</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    else if( window.location.href.includes(`${URLSTRING}/landing`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link active" aria-current="page" href="/landing">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link" href="/compare">Comparison</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/path">Path</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/">Logout</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    else if( window.location.href.includes(`${URLSTRING}/compare`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/landing">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" href="/compare">Comparison</a>
-                            </li>
-                            <li class="nav-item">
-                              <li class="nav-item">
-                              <a class="nav-link " href="/path">Path</a>
-                            </li>
-                              <a class="nav-link " href="/">Logout</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    else if( window.location.href.includes(`${URLSTRING}/path`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/landing">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/compare">Comparison</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" href="/path">Path</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/">Logout</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    else if( window.location.href.includes(`${URLSTRING}/evolution`)){
-      htmlDom.innerHTML=`<div class="collapse navbar-collapse" id="navbarScroll">
-                          <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                            <li class="nav-item">
-                              <a class="nav-link " aria-current="page" href="/landing">Home</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/compare">Comparison</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link active" href="/path">Path</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="nav-link " href="/">Logout</a>
-                            </li>
-                          </ul>
-                        </div>`
-    }
-    NAV.children[0].replaceWith(htmlDom)
-  </script>
 
-  <main class="container" style="max-width: 2000px !important;">
+  <main class="container">
     {% block main %}{% endblock %}
   </main>
 

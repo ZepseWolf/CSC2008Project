@@ -4,13 +4,195 @@
     My Team
 {% endblock %}
 
-<label for="digimon_1">Select Digimon 1:</label>
+{% block main %}
 
-<select name="digimon_1" id="digimon_1">
-    {% for digimon in all_digimons %}
-  <option value={{digimon[0]}}>{{digimon[0]}}</option>
-  {% endfor %}
-</select>
+<div id="root"></div>
+
+<div class="hero-text">
+  <h1>My Team</h1>
+  <hr>
+
+  <form action="/team" method="POST">
+    <table class="table table-borderless table-sm" style="color:white;">
+      <tr>
+        <td>
+          {% if team[1] != ""  %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[1]}}.png" alt="?"><br>
+          {% endif %}
+
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[1] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_1">Select Digimon 1:</label>
+          <br>
+          <select name="digimon_1" id="digimon_1">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[1] %} selected {% endif %}>{{digimon[0]}}</option>
+            {% endfor %}
+          </select>
+        </td>
+
+        <td>
+          {% if team[2] != ""  %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[2]}}.png" alt="?"><br>
+
+          {% endif %}
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[2] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_2">Select Digimon 2:</label>
+          <br>
+          <select name="digimon_2" id="digimon_2">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[2] %} selected {% endif %}>{{digimon[0]}}</option>
+
+            {% if digimon[0] == team[2] %}
+            <p>
+              Digimon: {{ digimon[0] }}<br>
+              Stage: {{ digimon[1] }}<br>
+              Type: {{ digimon[2] }}<br>
+              Attribute: {{ digimon[3] }}
+            </p>
+            {% endif %}
+
+            {% endfor %}
+          </select>
+        </td>
+
+        <td>
+          {% if team[3] != ""  %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[3]}}.png" alt="?"><br>
+          {% endif %}
+
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[3] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_3">Select Digimon 3:</label>
+          <br>
+          <select name="digimon_3" id="digimon_3">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[3] %} selected {% endif %}>{{digimon[0]}}</option>
+            {% endfor %}
+          </select>
+        </td>
+
+        <td>
+          {% if team[4] != ""  %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[4]}}.png" alt="?"><br>
+
+          {% endif %}
+
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[4] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_4">Select Digimon 4:</label>
+          <br>
+          <select name="digimon_4" id="digimon_4">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[4] %} selected {% endif %}>{{digimon[0]}}</option>
+            {% endfor %}
+          </select>
+        </td>
+
+        <td>
+          {% if team[5] != ""  %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[5]}}.png" alt="?"><br>
+          {% endif %}
+
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[5] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_5">Select Digimon 5:</label>
+          <br>
+          <select name="digimon_5" id="digimon_5">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[5] %} selected {% endif %}>{{digimon[0]}}</option>
+            {% endfor %}
+          </select>
+        </td>
+
+        <td>
+          {% if team[6] != "" %}
+            <img class="team_card"
+            src="https://digimon-api.com/images/digimon/w/{{team[6]}}.png" alt="?"><br>
+          {% endif %}
+
+          <p>
+            {% for digimon in all_digimons %}
+              {% if digimon[0] == team[6] %}
+                <b>Digimon</b>: {{digimon[0]}}<br>
+                <b>Stage</b>: {{digimon[1]}}<br>
+                <b>Type</b>: {{digimon[2]}}<br>
+                <b>Attribute</b>: {{digimon[3]}}
+              {% endif %}
+            {% endfor %}
+          </p>
+
+          <label for="digimon_6">Select Digimon 6:</label>
+          <br>
+          <select name="digimon_6" id="digimon_6">
+              {% for digimon in all_digimons %}
+            <option value={{digimon[0]}} {% if digimon[0] == team[6] %} selected {% endif %}>{{digimon[0]}}</option>
+            {% endfor %}
+          </select>
+
+        </td>
+      </tr>
+
+    </table>
+
+    <button type="submit" class="btn btn-light">Update</button>
+
+  </form>
+
+
+</div>
+{% endblock %}
 
 
 
