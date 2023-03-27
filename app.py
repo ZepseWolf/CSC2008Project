@@ -291,8 +291,13 @@ def landing():
     """ Landing Page """
     
     if request.method == 'GET':
-        print(f"This is the saved session: {session.get('db-type')}")
-        if session.get('db-type') == 'mongodb':
+        print(f"This is the saved session: {request.cookies.get('db-type')}")
+        
+        # Read the colors from the JSON file
+        with open('./templates/colors.json') as f:
+            colors = json.load(f)
+            
+        if request.cookies.get('db-type')== 'mongodb':
             print("Trying to get data from mongodb")
             # get a reference to the collection
             collection = mongodb["digimon_stats"]
@@ -300,26 +305,41 @@ def landing():
             # find all documents in the collection
             documents = collection.find()
 
-            # iterate over the documents and print each document
+            # find all documents in the collection
+            documents = list(collection.find({}))
+
+            digimons_fixed_list = []
+
             for document in documents:
-                print(document)
-            
-        # Read the colors from the JSON file
-        with open('./templates/colors.json') as f:
-            colors = json.load(f)
-
-        digimons = db.execute("SELECT * FROM digimon").fetchall()
-        digimons_fixed_list = []
-
-        for digimon in digimons:
-            digimon_list = list(digimon)
-            element = digimon_list[3]
-            if element:
-                # Retrieve the color from the colors dict based on the element type
-                color = colors[element]
-                digimon_list.append(color)
+                digimon_list = []
+                for key in document:
+                    if key != "_id":
+                        value = document[key]
+                        digimon_list.append(value)
+                        print(f"{key}: {value}")
+                        if key == "Attribute" and value:
+                            # Retrieve the color from the colors dict based on the element type
+                            color = colors[value]
+                            digimon_list.append(color)
                 digimons_fixed_list.append(digimon_list)
-        return render_template('landing.html', digimons=digimons_fixed_list)
+            # print(digimons_fixed_list)
+            return render_template('landing.html', digimons=digimons_fixed_list)
+
+        # SQLite3 implementation
+        if request.cookies.get('db-type') == 'sqlite':
+            digimons = db.execute("SELECT * FROM digimon").fetchall()
+            digimons_fixed_list = []
+
+            for digimon in digimons:
+                digimon_list = list(digimon)
+                element = digimon_list[3]
+                if element:
+                    # Retrieve the color from the colors dict based on the element type
+                    color = colors[element]
+                    digimon_list.append(color)
+                    digimons_fixed_list.append(digimon_list)
+            return render_template('landing.html', digimons=digimons_fixed_list)
+
     
     if (request.method == "POST"):
         print(request.form.get("digimon_name"))
@@ -441,98 +461,202 @@ def evolution_path():
 @app.route('/landing/<digimon_name>', methods=["GET", "POST"])
 def digimon_details(digimon_name):
 
-    # Retrieve the data from the URL parameters and store it in a dictionary
-    print("retrieving digimon stats for:" + digimon_name)
+    if request.cookies.get('db-type') == "mongodb":
+        print("Retrieving Details from MongoDB...")
+        # Get all the digimon names in order
+        digimon_names = [doc['Digimon'] for doc in mongodb['digimon_stats'].find()]
 
-    # Get all the digimon names in order
-    digimon_names = db.execute("SELECT * FROM digimon").fetchall()
-    digimon_names = [name[0] for name in digimon_names]
+        # Find the index of the current digimon
+        current_index = digimon_names.index(digimon_name)
 
-    # Find the index of the current digimon
-    current_index = digimon_names.index(digimon_name)
+        # Find the indices of the adjacent digimon names
+        if current_index == 0:
+            adjacent_indices = [1]
+        elif current_index == len(digimon_names) - 1:
+            adjacent_indices = [len(digimon_names) - 2]
+        else:
+            adjacent_indices = [current_index - 1, current_index + 1]
 
-    # Find the indices of the adjacent digimon names
-    if current_index == 0:
-        adjacent_indices = [1]
-    elif current_index == len(digimon_names) - 1:
-        adjacent_indices = [len(digimon_names) - 2]
-    else:
-        adjacent_indices = [current_index - 1, current_index + 1]
+        # Get the digimon information for the current and adjacent digimon names
+        adjacent_digimons = [mongodb['digimon_stats'].find_one({'Digimon': digimon_names[i]}) for i in adjacent_indices]
+        current_digimon = mongodb['digimon_stats'].find_one({'Digimon': digimon_name})
 
-    # Get the digimon information for the current and adjacent digimon names
-    adjacent_digimons = [db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_names[i],)).fetchone() for i in adjacent_indices]
-    current_digimon = db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_name,)).fetchone()
+        digimon_api_url = "https://www.digi-api.com/api/v1/digimon/{}".format(digimon_name)
+        response = requests.get(digimon_api_url)
+        english_description = "Unknown Description"
 
-    print(adjacent_digimons)
-    digimon_api_url = "https://www.digi-api.com/api/v1/digimon/{}".format(digimon_name)
-    response = requests.get(digimon_api_url)
-    english_description = "Unknown Description"
+        if response.ok:
+            digimon_description = response.json()
+            if (digimon_description):
+                for desc in digimon_description['descriptions']:
+                    if desc['origin'] == 'reference_book' and desc['language'] == 'en_us':
+                        english_description = desc['description']
+                        break
+        
+        # Check if the current digimon is the first or last in the list
+        first_digimon = mongodb['digimon_stats'].find_one(sort=[('rowid', 1)])
+        last_digimon = mongodb['digimon_stats'].find_one(sort=[('rowid', -1)], skip=1)
 
-    if response.ok:
-        digimon_description = response.json()
-        if (digimon_description):
-            for desc in digimon_description['descriptions']:
-                if desc['origin'] == 'reference_book' and desc['language'] == 'en_us':
-                    english_description = desc['description']
+        if current_digimon == first_digimon:
+            previous_digimon = "NA"
+        elif adjacent_digimons and adjacent_digimons[0]:
+            previous_digimon = adjacent_digimons[0]['Digimon']
+        else:
+            previous_digimon = "NA"
+
+        if current_digimon == last_digimon:
+            next_digimon = "NA"
+        elif adjacent_digimons and len(adjacent_digimons) > 1 and adjacent_digimons[1]:
+            next_digimon = adjacent_digimons[1]['Digimon']
+        elif adjacent_digimons and adjacent_digimons[0] and adjacent_digimons[0]['Digimon'] > current_digimon['Digimon']:
+            next_digimon = adjacent_digimons[0]['Digimon']
+        else:
+            next_digimon = "NA"
+        
+        digivolutions = mongodb["digivolution"].find({'Digivolves from': digimon_name})
+        paths = []
+
+        for digivolution in digivolutions:
+            path = [digivolution['Digivolves from'], digivolution['Digivolves to']]
+            processed_evolutions = set([(digivolution['Digivolves from'], digivolution['Digivolves to'])])
+
+            while True:
+                previous_digivolution = mongodb["digivolution"].find_one({'Digivolves from': path[-1]}) # Modified line
+                if previous_digivolution is None:
                     break
 
+                # check if the evolution has already been processed in reverse
+                if (previous_digivolution['Digivolves from'], previous_digivolution['Digivolves to']) in processed_evolutions:
+                    break
 
-    # Check if the current digimon is the first or last in the list
-    first_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid ASC LIMIT 1").fetchone()
-    last_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid DESC LIMIT 1 OFFSET 1").fetchone()
-    
-    if current_digimon == first_digimon:
-        previous_digimon = "NA"
-    elif adjacent_digimons and adjacent_digimons[0]:
-        previous_digimon = adjacent_digimons[0][0]
-    else:
-        previous_digimon = "NA"
+                # check if the evolution can be reversed
+                if (previous_digivolution['Digivolves to'], previous_digivolution['Digivolves from']) in processed_evolutions:
+                    break
 
-    if current_digimon == last_digimon:
-        next_digimon = "NA"
-    elif adjacent_digimons and len(adjacent_digimons) > 1 and adjacent_digimons[1]:
-        next_digimon = adjacent_digimons[1][0]
-    elif adjacent_digimons and adjacent_digimons[0] and adjacent_digimons[0][0] > current_digimon[0]:
-        next_digimon = adjacent_digimons[0][0]
-    else:
-        next_digimon = "NA"
+                path.append(previous_digivolution['Digivolves to']) # Modified line
+                processed_evolutions.add((previous_digivolution['Digivolves from'], previous_digivolution['Digivolves to']))
 
-    digivolution_paths_sql_query = """
-    WITH RECURSIVE digivolutions_cte(digimon_name, digivolves_to, path) AS (
-        SELECT digivolves_from, digivolves_to, CAST(digivolves_from AS TEXT) AS path
-        FROM digivolutions
-        WHERE digivolves_from = ?
+            paths.append(' -> '.join(path))
 
-        UNION ALL
+        # Removes all the N/A in each digivolution
+        paths_fixed = [path.replace("-> N/A", "") if "N/A" in path else path for path in paths]
 
-        SELECT d.digivolves_from , d.digivolves_to, cte.path || ' -> ' || d.digivolves_from 
-        FROM digivolutions d
-        JOIN digivolutions_cte cte ON d.digivolves_from = cte.digivolves_to
-    )
-    SELECT DISTINCT path
-    FROM digivolutions_cte
-    WHERE digivolves_to IS NOT NULL;
-    """
-    digivolution_paths = db.execute(digivolution_paths_sql_query, (digimon_name,)).fetchall()
-    max_path_length = max([path[0].count('->') for path in digivolution_paths])
-    longest_paths = [path for path in digivolution_paths if path[0].count('->') == max_path_length]
-    random_longest_evolution_path = random.choice(longest_paths)
+        longest_path = max(paths_fixed, key=lambda path: path.count('->'))
+        longest_path_list = longest_path.split(' -> ')
+        
+        current_digimon_fixed = [value for key, value in current_digimon.items() if key != '_id']
 
-    print(random_longest_evolution_path)
+        # Render the landing page template with the data
+        return render_template(
+            "details.html", 
+            digimon=current_digimon_fixed, 
+            digimon_description = english_description,
+            next_digimon = next_digimon,
+            previous_digimon = previous_digimon,
+            digivolution_paths = longest_path_list,
+            random_longest_evolution_path = longest_path_list
+        )
 
-    random_longest_evolution_list = random_longest_evolution_path[0].split(' -> ')
-    print(random_longest_evolution_list)
+    if request.cookies.get('db-type') == "sqlite":
+        print("Retrieving details from sqlite")
+        # Retrieve the data from the URL parameters and store it in a dictionary
+        print("retrieving digimon stats for:" + digimon_name)
 
-    # Render the landing page template with the data
-    return render_template(
-        "details.html", 
-        digimon=current_digimon, 
-        digimon_description = english_description,
-        next_digimon = next_digimon,
-        previous_digimon = previous_digimon,
-        digivolution_paths = digivolution_paths,
-        random_longest_evolution_path = random_longest_evolution_list
-    )
+        # Get all the digimon names in order
+        digimon_names = db.execute("SELECT * FROM digimon").fetchall()
+        digimon_names = [name[0] for name in digimon_names]
+
+        # Find the index of the current digimon
+        current_index = digimon_names.index(digimon_name)
+
+        # Find the indices of the adjacent digimon names
+        if current_index == 0:
+            adjacent_indices = [1]
+        elif current_index == len(digimon_names) - 1:
+            adjacent_indices = [len(digimon_names) - 2]
+        else:
+            adjacent_indices = [current_index - 1, current_index + 1]
+
+        # Get the digimon information for the current and adjacent digimon names
+        adjacent_digimons = [db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_names[i],)).fetchone() for i in adjacent_indices]
+        current_digimon = db.execute("SELECT * FROM digimon WHERE digimon_name = ?", (digimon_name,)).fetchone()
+
+        print(adjacent_digimons)
+        digimon_api_url = "https://www.digi-api.com/api/v1/digimon/{}".format(digimon_name)
+        response = requests.get(digimon_api_url)
+        english_description = "Unknown Description"
+
+        if response.ok:
+            digimon_description = response.json()
+            if (digimon_description):
+                for desc in digimon_description['descriptions']:
+                    if desc['origin'] == 'reference_book' and desc['language'] == 'en_us':
+                        english_description = desc['description']
+                        break
+                    
+        print(english_description)
+        # Check if the current digimon is the first or last in the list
+        first_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid ASC LIMIT 1").fetchone()
+        last_digimon = db.execute("SELECT * FROM digimon ORDER BY rowid DESC LIMIT 1 OFFSET 1").fetchone()
+        
+        
+        print(first_digimon)
+        print(last_digimon)
+        if current_digimon == first_digimon:
+            previous_digimon = "NA"
+        elif adjacent_digimons and adjacent_digimons[0]:
+            previous_digimon = adjacent_digimons[0][0]
+        else:
+            previous_digimon = "NA"
+
+        if current_digimon == last_digimon:
+            next_digimon = "NA"
+        elif adjacent_digimons and len(adjacent_digimons) > 1 and adjacent_digimons[1]:
+            next_digimon = adjacent_digimons[1][0]
+        elif adjacent_digimons and adjacent_digimons[0] and adjacent_digimons[0][0] > current_digimon[0]:
+            next_digimon = adjacent_digimons[0][0]
+        else:
+            next_digimon = "NA"
+
+
+
+        digivolution_paths_sql_query = """
+        WITH RECURSIVE digivolutions_cte(digimon_name, digivolves_to, path) AS (
+            SELECT digivolves_from, digivolves_to, CAST(digivolves_from AS TEXT) AS path
+            FROM digivolutions
+            WHERE digivolves_from = ?
+
+            UNION ALL
+
+            SELECT d.digivolves_from , d.digivolves_to, cte.path || ' -> ' || d.digivolves_from 
+            FROM digivolutions d
+            JOIN digivolutions_cte cte ON d.digivolves_from = cte.digivolves_to
+        )
+        SELECT DISTINCT path
+        FROM digivolutions_cte
+        WHERE digivolves_to IS NOT NULL;
+        """
+        digivolution_paths = db.execute(digivolution_paths_sql_query, (digimon_name,)).fetchall()
+        max_path_length = max([path[0].count('->') for path in digivolution_paths])
+        longest_paths = [path for path in digivolution_paths if path[0].count('->') == max_path_length]
+        random_longest_evolution_path = random.choice(longest_paths)
+
+        print(random_longest_evolution_path)
+
+        random_longest_evolution_list = random_longest_evolution_path[0].split(' -> ')
+        print(random_longest_evolution_list)
+
+        # Render the landing page template with the data
+        return render_template(
+            "details.html", 
+            digimon=current_digimon, 
+            digimon_description = english_description,
+            next_digimon = next_digimon,
+            previous_digimon = previous_digimon,
+            digivolution_paths = digivolution_paths,
+            random_longest_evolution_path = random_longest_evolution_list
+        )
+
 
 @app.route("/logout")
 def logout():
