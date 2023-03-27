@@ -192,63 +192,94 @@ def compare():
     username = request.cookies.get('username')
     
     if request.method == 'GET':
-        # print("This is the saved session:" + session.get('db-type'))
-        if session.get('db-type') == 'mongodb':
+        if request.cookies.get('db-type') == 'mongodb':
             # get a reference to the collection
             collection = mongodb["digimon_stats"]
+            digimon_collection = mongodb["digimon_stats"]
+            pipeline = [
+                {
+                    "$match": {
+                        "$or": [
+                            {"Digimon": "Agumon"},
+                            {"Digimon": "Betamon"}
+                        ]
+                    }
+                },
+                {
+                    "$group": {
+                        "_id": None,
+                        "Type": {"$push": "$Type"}
+                    }
+                },
+                {
+                    "$project": {
+                        "locale": {
+                            "$switch": {
+                                "branches": [
+                                    {
+                                        "case": {
+                                            "$or": [
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Vaccine"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Virus"]}]},
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Virus"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Data"]}]},
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Data"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Vaccine"]}]},
+                                            ]
+                                        },
+                                        "then": "Super Effective"
+                                    }
+                                ],
+                                "default": "Neutral"
+                            }
+                        }
+                    }
+                }
+            ]
 
-            # find all documents in the collection
-            documents = collection.find()
+            for doc in digimon_collection.aggregate(pipeline):
+                print(doc.locale)
 
-            # iterate over the documents and print each document
-            for document in documents:
-                print(document)
-            
+            digimons = collection.find()
+            digimons_fixed_list = []
+            for digimon in digimons:
+                digimon_list = list(digimon.values())[1:]
+                digimons_fixed_list.append(digimon_list)
+            return render_template('compare.html', digimons=digimons_fixed_list)
+        else:
         # Read the colors from the JSON file
-        with open('./templates/colors.json') as f:
-            colors = json.load(f)
-
-        digimonTypeEffective = db.execute("""
-                              SELECT
-                                IIF(
-                                    (d1.digimon_type = 'Vaccine' and d2.digimon_type = 'Virus') or
-                                    (d1.digimon_type = 'Virus' and d2.digimon_type = 'Data') or
-                                    (d1.digimon_type = 'Data' and d2.digimon_type = 'Vaccine') 
-                                    ,
-                                    'Super Effective',
-                                    'Neutral')
-                                    AS locale
-                                
-                                FROM
-                                digimon d1,digimon d2
-                                Where d1.digimon_name = "Agumon" and d2.digimon_name = "Betamon"
-                              """).fetchall()
-        
-        digimonBestAttack = db.execute("""
-                              SELECT s1.skill AS best_move
-                                FROM Digimon_Skills AS ds1
-                                JOIN Skills_Info AS s1 ON ds1.skill = s1.skill
-                                JOIN Digimon AS dg1 ON dg1.digimon_name = ds1.digimon_name
-                                JOIN Digimon AS dg2 
-                                JOIN Skill_Type_Advantage AS sta ON s1.attribute = sta.attacking_type AND dg2.attribute = sta.defending_type
-                                WHERE dg1.digimon_name = 'Agumon' AND dg2.digimon_name = 'Tanemon' AND sta.advantage = 2   
-                                LIMIT 1;                
-                    """).fetchall()
-        
-        digimons = db.execute("""
-                              SELECT * from digimon;
-                    """).fetchall()
-        digimonBestAttack
-        digimonTypeEffective
-        digimons_fixed_list = []
-
-        for digimon in digimons:
-            digimon_list = list(digimon)
-            element = digimon_list[3]
-            if element:
-                # Retrieve the color from the colors dict based on the element type
-                color = colors[element]
-                digimon_list.append(color)
+            digimonTypeEffective = db.execute("""
+                                SELECT
+                                    IIF(
+                                        (d1.digimon_type = 'Vaccine' and d2.digimon_type = 'Virus') or
+                                        (d1.digimon_type = 'Virus' and d2.digimon_type = 'Data') or
+                                        (d1.digimon_type = 'Data' and d2.digimon_type = 'Vaccine') 
+                                        ,
+                                        'Super Effective',
+                                        'Neutral')
+                                        AS locale
+                                    
+                                    FROM
+                                    digimon d1,digimon d2
+                                    Where d1.digimon_name = "Agumon" and d2.digimon_name = "Betamon"
+                                """).fetchall()
+            
+            digimonBestAttack = db.execute("""
+                                SELECT s1.skill AS best_move
+                                    FROM Digimon_Skills AS ds1
+                                    JOIN Skills_Info AS s1 ON ds1.skill = s1.skill
+                                    JOIN Digimon AS dg1 ON dg1.digimon_name = ds1.digimon_name
+                                    JOIN Digimon AS dg2 
+                                    JOIN Skill_Type_Advantage AS sta ON s1.attribute = sta.attacking_type AND dg2.attribute = sta.defending_type
+                                    WHERE dg1.digimon_name = 'Agumon' AND dg2.digimon_name = 'Tanemon' AND sta.advantage = 2   
+                                    LIMIT 1;                
+                        """).fetchall()
+            
+            digimons = db.execute("""
+                                SELECT * from digimon;
+                        """).fetchall()
+            digimonBestAttack
+            digimonTypeEffective
+            digimons_fixed_list = []
+            for digimon in digimons:
+                digimon_list = list(digimon)
                 digimons_fixed_list.append(digimon_list)
         return render_template('compare.html', digimons=digimons_fixed_list, login = username)
     
