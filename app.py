@@ -81,13 +81,11 @@ def home():
     """USER HOME"""
 
     username = request.cookies.get('username')
+    db_type = request.cookies.get('db-type')
 
     user_data = users.get_user(db, username)
     team_data = users.get_team(db, username)
     digimon_data = users.get_all_digimons(db)
-
-    print(type(user_data), user_data)
-    print(type(team_data), team_data)
 
     return render_template("home.html", user_data = user_data, team_data = team_data, digimon_data = digimon_data, login = username)
 
