@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  body {
+    background: url(https://tinypic.host/images/2023/03/20/Shapes-Abstraction-Background-2466799.jpg) no-repeat center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .profile-card {
+    width: 420px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px #111;
+  }
+  .top-section {
+    padding: 60px 40px;
+    background: #2c2c54aa;
+  }
+  .message,
+  .notif {
+    position: absolute;
+    top: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ffffff50
+  }
+  .message {
+    right: 40px;
+  }
+  .notif {
+    left: 40px;
+  }
+  .message:hover,
+  .notif:hover {
+    color: #f1f1f1;
+  }
+  .pic {
+    width: 150px;
+    height:150px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 8px;
+    position: relative;
+  }
+  .pic:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 1px solid #fff;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: wave 1.5s infinite linear;
+  }
+  @keyframes wave{
+    to {
+      transform: scale(1.3);
+      opacity: 0;
+    }
+  }
+  .pic img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .name {
+    color: #f1f1f1;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .tag {
+    font-size: 18px;
+    color: #222;
+  }
+  .bottom-section {
+    background: #f1f1f1;
+    padding: 60px 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: centre;
+    text-transform: uppercase;
+    font-size: 28px;
+  }
+  .bottom-section span {
+    font-size: 14px;
+    display: block;
+  }
+  .border {
+    width: 1px; 
+    height: 20px;
+    background: #bbb;
+    margin: 0 30px;
+  }
+  .social-media {
+    position: absolute;
+    width: 100%;
+    top: -30px;
+    left: 0;
+    z-index: 1;
+  }
+  .social-media i {
+    width: 60px;
+    height: 60px;
+    background: #2c3e50;
+    border-radius: 50%;
+    color: #f1f1f1;
+    line-height: 60px;
+    font-size: 20px;
+    margin: 0 10px;
+    position: relative;
+  }
+  .social-media i:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #2c3e50;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.4s linear;
+  }
+  .social-media i:hover:after {
+    transform: scale(1.3);
+    opacity: 0;
+  }

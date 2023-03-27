@@ -5,16 +5,32 @@
 {% endblock %}
 
 {% block main %}
-    <div id="userbox">
-        <h1 style="padding-top:10px">Profile</h1>
-    {% if rows[0] != None %}
-        <img src="{{ rows[0] | joinroute }}" style="max-height:55%"><br>
-    {% else %}    
-        Pic | None<hr>
-    {% endif %}
-    <hr>
-    Username | {{ rows[1] }}<hr>
-    Email | {{ rows[2] }}<hr>
+
+<link rel="stylesheet" href="/static/profile.css">
+
+      <!-- <div id="userbox">
+          <h1 style="padding-top:10px">Profile</h1>
+      <hr>
+      Username | {{ rows[1] }}<hr>
+      Email | {{ rows[2] }}<hr>
+      </div>
+      <a href="/change"><button id="btn" type="submit">Edit Profile</button></a> -->
+    <div class="profile-card">
+        <div class="top-section">
+          <i class="message fas fa-envelope"></i>
+          <i class="notif fas fa-bell"></i>
+          <div class="pic">
+            <img src="https://tinypic.host/images/2023/02/21/pikrepo.com-2.jpg" alt="profile picture">
+          </div>
+          <div class="name">
+            {{rows[2]}}
+          </div>
+          <div class="name">{{rows[1]}}</div>
+          <div class="name">{{rows[0]}}</div>
+        </div>
+      </div>
     </div>
-    <a href="/change"><button id="btn" type="submit">Edit Profile</button></a>
+
+
+
 {% endblock %}

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Team
+{% endblock %}
+
+<label for="digimon_1">Select Digimon 1:</label>
+
+<select name="digimon_1" id="digimon_1">
+    {% for digimon in all_digimons %}
+  <option value={{digimon[0]}}>{{digimon[0]}}</option>
+  {% endfor %}
+</select>
+
+
+
+

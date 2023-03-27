@@ -87,6 +87,46 @@ def home():
     return render_template("home.html", user_data = user_data, team_data = team_data, digimon_data = digimon_data)
 
 
+@app.route("/team", methods=['GET', 'POST'])
+@login_required
+def team():
+    '''TEAM PAGE'''
+
+    username = request.cookies.get('username')
+    all_digimons = users.get_all_digimons(db)
+    team = users.get_team(db, username)
+    print(team)
+
+    if request.method == 'POST':
+
+        digimon_1 = request.form.get('digimon_1')
+        digimon_2 = request.form.get('digimon_2')
+        digimon_3 = request.form.get('digimon_3')
+        digimon_4 = request.form.get('digimon_4')
+        digimon_5 = request.form.get('digimon_5')
+        digimon_6 = request.form.get('digimon_6')
+
+        users.update_team(db,
+                          username,
+                          digimon_1,
+                          digimon_2,
+                          digimon_3,
+                          digimon_4,
+                          digimon_5,
+                          digimon_6
+                          )
+        
+        return '', 204
+
+    return render_template("team.html", all_digimons = all_digimons)
+
+
+
+
+
+
+
+    
 
 @app.route("/profile", methods=["GET"])
 @login_required
@@ -142,35 +182,6 @@ def change():
     else:
         return render_template("change.html")
         
-@app.route("/groups", methods=["GET", "POST"])
-@login_required
-def groups():
-    """Groups"""
-    # User reached route via POST (as by submitting a form via POST)
-
-    sess_id = session["user_id"]
-    rows = db.execute("SELECT gname, gid FROM grps WHERE uid = ?", (sess_id,)).fetchall()
-
-    grpname = db.execute("SELECT gname, username FROM users JOIN grps ON grps.uid=users.id").fetchall()
-
-    if request.method == "POST":
-        if request.form.get("del") != None:
-            db.execute("DELETE FROM grps WHERE gid = ? AND uid = ?", (request.form.get("del"), sess_id))
-        elif request.form.get("join") == "1":
-            if db.execute("SELECT COUNT(gname) FROM grps WHERE gname = ? and uid != ?", (request.form.get("name"), sess_id,)).fetchone()[0] != 0:
-                db.execute("INSERT INTO grps(gname, uid) VALUES (?,?)", (request.form.get("name"),sess_id,))
-            else:
-                return apology("Group doesnt exist or already joined", 400)
-        else:
-            if db.execute("SELECT COUNT(gname) FROM grps WHERE gname = ?", (request.form.get("name"),)).fetchone()[0] == 0:
-                db.execute("INSERT INTO grps(gname, uid) VALUES (?,?)", (request.form.get("name"),sess_id,))
-            else:
-                return apology("Group exists", 400)
-
-        db.commit()
-        return redirect("/groups")
-
-    return render_template("grps.html", rows=rows, grpname=grpname)
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -182,6 +193,8 @@ def login():
         username = request.form.get("username")
         password = request.form.get("password")
         db_type = request.form.get("db-type")
+        
+        allowed_db_type = ['']
 
         # Ensure username was submitted
         if not username:
@@ -190,6 +203,7 @@ def login():
         # Ensure password was submitted
         elif not password:
             return apology("must provide password", 400)
+        
         
         # Query database for username
         res = users.check_credentials(db, username, password)
@@ -544,7 +558,6 @@ def logout():
     resp.set_cookie('username', '', max_age=0)
     resp.set_cookie('db_type', '', max_age=0)
     return resp
-
 
 
 @app.route("/register", methods=["GET", "POST"])
