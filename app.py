@@ -240,7 +240,7 @@ def compare():
             for digimon in digimons:
                 digimon_list = list(digimon.values())[1:]
                 digimons_fixed_list.append(digimon_list)
-            return render_template('compare.html', digimons=digimons_fixed_list)
+            return render_template('compare.html', digimons=digimons_fixed_list, login=username)
         else:
         # Read the colors from the JSON file
             digimonTypeEffective = db.execute("""
@@ -285,7 +285,7 @@ def compare():
         print(request.form.get("digimon_name"))
 
         # Redirect to landing page with digimon name as a URL parameter
-        return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name")))
+        return redirect(url_for('digimon_details', digimon_name=request.form.get("digimon_name"), login = username))
 
 @app.route("/landing",  methods=["GET", "POST"])
 @login_required
