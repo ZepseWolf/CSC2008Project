@@ -222,47 +222,47 @@ def compare():
         if request.cookies.get('db-type') == 'mongodb':
             # get a reference to the collection
             collection = mongodb["digimon_stats"]
-            # digimon_collection = mongodb["digimon_stats"]
-            # pipeline = [
-            #     {
-            #         "$match": {
-            #             "$or": [
-            #                 {"Digimon": "Agumon"},
-            #                 {"Digimon": "Betamon"}
-            #             ]
-            #         }
-            #     },
-            #     {
-            #         "$group": {
-            #             "_id": "$Digimon",
-            #             "Type": {"$push": "$Type"}
-            #         }
-            #     },
-            #     {
-            #         "$project": {
-            #             "locale": {
-            #                 "$switch": {
-            #                     "branches": [
-            #                         {
-            #                             "case": {
-            #                                 "$or": [
-            #                                     {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Vaccine"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Virus"]}]},
-            #                                     {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Virus"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Data"]}]},
-            #                                     {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Data"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Vaccine"]}]},
-            #                                 ]
-            #                             },
-            #                             "then": "Super Effective"
-            #                         }
-            #                     ],
-            #                     "default": "Neutral"
-            #                 }
-            #             }
-            #         }
-            #     }
-            # ]
+            digimon_collection = mongodb["digimon_stats"]
+            pipeline = [
+                {
+                    "$match": {
+                        "$or": [
+                            {"Digimon": "Agumon"},
+                            {"Digimon": "Betamon"}
+                        ]
+                    }
+                },
+                {
+                    "$group": {
+                        "_id": None,
+                        "Type": {"$push": "$Type"}
+                    }
+                },
+                {
+                    "$project": {
+                        "locale": {
+                            "$switch": {
+                                "branches": [
+                                    {
+                                        "case": {
+                                            "$or": [
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Vaccine"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Virus"]}]},
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Virus"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Data"]}]},
+                                                {"$and": [{"$eq": [{"$arrayElemAt": ["$Type", 0]}, "Data"]}, {"$eq": [{"$arrayElemAt": ["$Type", 1]}, "Vaccine"]}]},
+                                            ]
+                                        },
+                                        "then": "Super Effective"
+                                    }
+                                ],
+                                "default": "Neutral"
+                            }
+                        }
+                    }
+                }
+            ]
 
-            # for doc in digimon_collection.aggregate(pipeline):
-            #     print(doc)
+            for doc in digimon_collection.aggregate(pipeline):
+                print(doc.locale)
 
             digimons = collection.find()
             digimons_fixed_list = []
