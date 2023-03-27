@@ -232,8 +232,8 @@ def compare():
                 }
             ]
 
-            for doc in digimon_collection.aggregate(pipeline):
-                print(doc.locale)
+            # for doc in digimon_collection.aggregate(pipeline):
+            #     print(doc.locale)
 
             digimons = collection.find()
             digimons_fixed_list = []
