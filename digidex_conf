@@ -6,6 +6,6 @@ server {
 
     location / {
         include uwsgi_params;
-        uwsgi_pass unix:/var/edoc.sock;
+        uwsgi_pass unix:/var/digidex.sock;
     }
 }
