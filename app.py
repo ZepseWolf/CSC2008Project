@@ -426,43 +426,86 @@ def path():
 def evolution_path():
     """Evolution Path Page"""
 
-    username = request.cookies.get('username')
     # Retrieve the names of the selected digimon from the URL parameters
     digimon_name_1 = request.args.get("digimon_name_1")
     digimon_name_2 = request.args.get("digimon_name_2")
+    username = request.cookies.get('username')
 
-    # Query the database to retrieve the evolution path between the two digimon
-    path_query = """
-    WITH start_node(digimon_name) AS (
-        SELECT digimon_name
-        FROM Digimon
-        WHERE digimon_name = :digimon_name_1
-    ),
-    evolution_path(level, from_digimon, to_digimon, chain) AS (
-        SELECT 1, sn.digimon_name, d2.digimon_name, sn.digimon_name || ',' || d2.digimon_name
-        FROM start_node sn
-        JOIN Digivolutions AS e ON e.digivolves_from = sn.digimon_name
-        JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
-        UNION ALL
-        SELECT ep.level + 1, ep.from_digimon, d2.digimon_name, ep.chain || ',' || d2.digimon_name
-        FROM evolution_path AS ep
-        JOIN Digivolutions AS e ON e.digivolves_from = ep.to_digimon
-        JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
-        WHERE instr(ep.chain, d2.digimon_name) = 0
-        AND ep.level < (SELECT COUNT(*) FROM Digimon)
-    )
-    SELECT chain
-    FROM evolution_path
-    WHERE to_digimon = :digimon_name_2
-    ORDER BY level;
-    """
-    paths = db.execute(path_query, {"digimon_name_1": digimon_name_1, "digimon_name_2": digimon_name_2}).fetchall()
-    for p in paths:
-        path = p[0].split(',')
-        print(' -> '.join(path))
+    if request.method == 'GET':
+        if request.cookies.get('db-type') == 'mongodb':
+            # execute pipeline and print result
+            paths = []
+            path = list(find_all_paths(digimon_name_1, digimon_name_2, mongodb['digivolution']))
+            paths.append(path)
+            print(f"All possible digivolution paths from {digimon_name_1} to {digimon_name_2}:")
+            print(paths)
+
+        if request.cookies.get('db-type') == 'sqlite':
+
+            # Query the database to retrieve the evolution path between the two digimon
+            path_query = """
+            WITH start_node(digimon_name) AS (
+                SELECT digimon_name
+                FROM Digimon
+                WHERE digimon_name = :digimon_name_1
+            ),
+            evolution_path(level, from_digimon, to_digimon, chain) AS (
+                SELECT 1, sn.digimon_name, d2.digimon_name, sn.digimon_name || ',' || d2.digimon_name
+                FROM start_node sn
+                JOIN Digivolutions AS e ON e.digivolves_from = sn.digimon_name
+                JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
+                UNION ALL
+                SELECT ep.level + 1, ep.from_digimon, d2.digimon_name, ep.chain || ',' || d2.digimon_name
+                FROM evolution_path AS ep
+                JOIN Digivolutions AS e ON e.digivolves_from = ep.to_digimon
+                JOIN Digimon AS d2 ON e.digivolves_to = d2.digimon_name
+                WHERE instr(ep.chain, d2.digimon_name) = 0
+                AND ep.level < (SELECT COUNT(*) FROM Digimon)
+            )
+            SELECT chain
+            FROM evolution_path
+            WHERE to_digimon = :digimon_name_2
+            ORDER BY level;
+            """
+            paths = db.execute(path_query, {"digimon_name_1": digimon_name_1, "digimon_name_2": digimon_name_2}).fetchall()
+            print(paths)
+            for p in paths:
+                path = p[0].split(',')
+                print(' -> '.join(path))
 
     # Render the evolution path page with the selected digimon names and the evolution path
     return render_template("evolution_path.html", digimon_name_1=digimon_name_1, digimon_name_2=digimon_name_2, path=paths, login=username)
+
+def find_all_paths(start_digimon, target_digimon, digivolution_collection, visited=None, path=None):
+    # Create a visited set and a path list for the first call of the function
+    if visited is None:
+        visited = set()
+    if path is None:
+        path = start_digimon
+
+    # If the current Digimon is the target Digimon, yield the current path
+    if start_digimon == target_digimon:
+        print(path)
+        yield path
+
+    # Add the current Digimon to the visited set
+    visited.add(start_digimon)
+
+    # Retrieve the digivolution data for the current Digimon
+    digivolutions = digivolution_collection.find({"Digivolves from": start_digimon})
+    digivolutions = [doc["Digivolves to"] for doc in digivolutions]
+
+    # Recursively find all paths from the next Digimon
+    for next_digimon in digivolutions:
+        if next_digimon not in visited:
+            # Append the next Digimon to the path
+            new_path = path + ", " + next_digimon
+            # Yield all paths from the next Digimon
+            yield from find_all_paths(next_digimon, target_digimon, digivolution_collection, visited, new_path)
+
+
+
+
 
 
 @app.route('/landing/<digimon_name>', methods=["GET", "POST"])
