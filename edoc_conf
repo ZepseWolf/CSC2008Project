@@ -1,0 +1,11 @@
+server {
+
+    listen 80;
+    underscores_in_headers on;
+    client_max_body_size 256M;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/var/edoc.sock;
+    }
+}

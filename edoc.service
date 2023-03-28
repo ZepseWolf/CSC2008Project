@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve CSC2008Project
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=/root/CSC2008Project
+Environment="PATH=/root/CSC2008Project/venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin"
+ExecStart=/root/CSC2008Project/venv/bin/uwsgi --ini edoc.ini
+
+[Install]
+WantedBy=multi-user.target
